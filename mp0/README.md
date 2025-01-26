@@ -3,8 +3,10 @@
 Please contact the course staff if you have any concerns.
 
 
-source .venv/bin/activate
+python -m venv myenv
 
-.venv/bin/python
+source myenv/bin/activate
+
+myenv/bin/python
 
 deactivate

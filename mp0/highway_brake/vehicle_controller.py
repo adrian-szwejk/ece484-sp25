@@ -45,15 +45,20 @@ def decisionLogic(ego: State, other: State):
 
     # TODO: Edit this part of decision logic
     
-    if ego.agent_mode == VehicleMode.Normal and other.dist < 6:
-        output.agent_mode = VehicleMode.Brake
-
-    if ego.agent_mode == VehicleMode.Brake and other.dist < 3:
-        output.agent_mode = VehicleMode.HardBrake
-    if ego.agent_mode == VehicleMode.Brake and other.dist > 6:
+    # Stop accelerating
+    if ego.agent_mode == VehicleMode.Accel and other.dist < 6:
         output.agent_mode = VehicleMode.Normal
 
-    if ego.agent_mode == VehicleMode.HardBrake and other.dist > 6:
+    # Braking
+    if ego.agent_mode == VehicleMode.Normal and other.dist < 4:
+        output.agent_mode = VehicleMode.Brake
+    if ego.agent_mode == VehicleMode.Brake and other.dist < 3:
+        output.agent_mode = VehicleMode.HardBrake
+    
+    # Accel after stopping 
+    if (ego.agent_mode == VehicleMode.Brake or ego.agent_mode == VehicleMode.HardBrake) and other.dist > 6:
+        output.agent_mode = VehicleMode.Accel
+    if (ego.agent_mode == VehicleMode.Brake or ego.agent_mode == VehicleMode.HardBrake) and other.dist > 4:
         output.agent_mode = VehicleMode.Normal
     ###########################################
 

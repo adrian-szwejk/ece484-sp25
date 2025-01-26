@@ -52,7 +52,7 @@ def decisionLogic(ego: State, other: State):
         output.agent_mode = VehicleMode.HardBrake
     if ego.agent_mode == VehicleMode.Brake and other.dist > 6:
         output.agent_mode = VehicleMode.Normal
-        
+
     if ego.agent_mode == VehicleMode.HardBrake and other.dist > 6:
         output.agent_mode = VehicleMode.Normal
     ###########################################
@@ -61,3 +61,16 @@ def decisionLogic(ego: State, other: State):
     assert other.dist > 2.0, "Too Close!"
 
     return output 
+
+
+
+# MP0 Release 25SP
+
+Please contact the course staff if you have any concerns.
+
+
+source .venv/bin/activate
+
+.venv/bin/python
+
+deactivate

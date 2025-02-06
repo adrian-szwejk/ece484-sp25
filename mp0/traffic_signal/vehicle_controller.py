@@ -35,36 +35,22 @@ def decisionLogic(ego: State, other: State):
         # The car cannot be slow in this region if the light is red.
 
     # * Green Light: The car can drive normally.
-    if ego.agent_mode != VehicleMode.Normal and other.signal_mode == TLMode.GREEN:
+    if other.signal_mode == TLMode.GREEN:
+        if ego.agent_mode != VehicleMode.Accel and ego.x < other.x-20:
+            output.agent_mode = VehicleMode.Accel
+        
+    # In Exit [d − dout, d]
+    if other.signal_mode == TLMode.RED and ego.agent_mode != VehicleMode.Normal and other.x-15 <= ego.x <= other.x and ego.v < 1:
         output.agent_mode = VehicleMode.Normal
 
-    # * Yellow Light: If car is in the entrance region, it speed up to exit region, o.w. slow down
-    if other.signal_mode == TLMode.YELLOW:
-        # In Entrance [d − din, d − dout]
-        if ego.agent_mode != VehicleMode.Accel and ego.x > other.x-20 and ego.x < other.x-15:
-            output.agent_mode = VehicleMode.Accel
-        # In Exit [d − dout, d]
-        if ego.x > other.x-15 and ego.x < other.x:
-            if ego.v < 1:
-                output.agent_mode = VehicleMode.Normal
+    # * Yellow Light/Red Light
+    if other.signal_mode == TLMode.YELLOW or other.signal_mode == TLMode.RED:
         # Far from enterance
-        if ego.agent_mode != VehicleMode.Brake and ego.x > other.x-25 and ego.v > 1:
+        if ego.agent_mode != VehicleMode.Brake and ego.agent_mode != VehicleMode.HardBrake and other.x-60 < ego.x < other.x-40 and ego.v > 0:
             output.agent_mode = VehicleMode.Brake
         # Close to enterance
-        # if ego.agent_mode == VehicleMode.Brake and ego.x > other.x-22 and ego.v > 1:
-        #     output.agent_mode = VehicleMode.HardBrake
-
-    # * Red Light: If in exit region speed up, o.w. slow down/stop
-    if other.signal_mode == TLMode.RED:
-        # In Exit [d − dout, d]
-        if ego.agent_mode != VehicleMode.Accel and  ego.x > other.x-15 and ego.x < other.x:
-            output.agent_mode = VehicleMode.Accel
-        # Far from enterance
-        if ego.agent_mode != VehicleMode.Brake and ego.x > other.x-25 and ego.v > 1:
-            output.agent_mode = VehicleMode.Brake
-        # Close to enterance
-        # if ego.agent_mode == VehicleMode.Brake and ego.x > other.x-22 and ego.v > 1:
-        #     output.agent_mode = VehicleMode.HardBrake
+        if ego.agent_mode != VehicleMode.HardBrake and other.x-35 < ego.x <= other.x-20 and ego.v > 0:
+            output.agent_mode = VehicleMode.HardBrake
 
     
 

@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     traces = []
     fig = go.Figure()
-    n=300
+    n=1000
     for i in range(n):
         # * trace = scenario.simulate(time_horizon, time_step)
             # time_horizon: the total time for the scenario to evolve.
@@ -59,6 +59,15 @@ if __name__ == "__main__":
     # traces = scenario.simulate_multi(50, 0.1, init_dict_list) 
     avg_vel, unsafe_frac, unsafe_init = eval_velocity(traces)
     fig.show()
+    
+    # # ----------- verify no refine: Uncomment this block to perform verification without refinement ----------
+    traces = scenario.verify(50, 0.1)
+    fig = go.Figure()
+    fig = reachtube_tree_3d(traces, fig,\
+                              0,'time', 1,'x',2,'y')
+    fig.show()
+
+    
 
 # * traces = scenario.simulate_multi(time_horizon, time_step, init_dict_list) 
     # simulate from all initial points in the init_dict_list 

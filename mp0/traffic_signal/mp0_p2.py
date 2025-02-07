@@ -358,7 +358,7 @@ class TrafficSensor:
 
 def sample_init(scenario: Scenario, num_sample=50):
     """
-    TODO:   given the initial set,
+            given the initial set,
             generate multiple initial points located in the initial set
             as the input of multiple simulation.
             note that output should be formatted correctly and every point should be in inital set.
@@ -366,7 +366,6 @@ def sample_init(scenario: Scenario, num_sample=50):
     """
     init_dict = scenario.init_dict
     print(init_dict)
-    ############## Your Code Start Here ##############
     sample_dict_list = []
 
     np.random.seed(2023)
@@ -376,7 +375,6 @@ def sample_init(scenario: Scenario, num_sample=50):
             point = np.random.uniform(init_dict[agent][0], init_dict[agent][1]).tolist()
             sample_dict[agent] = point
         sample_dict_list.append(sample_dict)
-    ############## Your Code End Here ##############
     print(sample_dict_list)
 
     return sample_dict_list

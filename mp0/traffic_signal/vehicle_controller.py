@@ -40,16 +40,16 @@ def decisionLogic(ego: State, other: State):
             output.agent_mode = VehicleMode.Accel
         
     # In Exit [d − dout, d]
-    if other.signal_mode == TLMode.RED and ego.agent_mode != VehicleMode.Normal and other.x-15 <= ego.x <= other.x and ego.v < 1:
+    if ego.agent_mode != VehicleMode.Normal and other.x-15 <= ego.x and ego.v < 1:
         output.agent_mode = VehicleMode.Normal
 
     # * Yellow Light/Red Light
     if other.signal_mode == TLMode.YELLOW or other.signal_mode == TLMode.RED:
         # Far from enterance
-        if ego.agent_mode != VehicleMode.Brake and ego.agent_mode != VehicleMode.HardBrake and other.x-60 < ego.x < other.x-40 and ego.v > 0:
+        if ego.agent_mode != VehicleMode.Brake and ego.agent_mode != VehicleMode.HardBrake and other.x-70 < ego.x < other.x-50 and ego.v > 0:
             output.agent_mode = VehicleMode.Brake
         # Close to enterance
-        if ego.agent_mode != VehicleMode.HardBrake and other.x-35 < ego.x <= other.x-20 and ego.v > 0:
+        if ego.agent_mode != VehicleMode.HardBrake and other.x-50 < ego.x <= other.x-20 and ego.v > 0:
             output.agent_mode = VehicleMode.HardBrake
 
     

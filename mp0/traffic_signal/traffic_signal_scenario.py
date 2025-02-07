@@ -23,8 +23,8 @@ if __name__ == "__main__":
 
     # # ----------- Different initial ranges -------------
     # # Uncomment this block to use R1
-    init_car = [[0,-5,0,5],[50,5,0,5]]
-    init_trfficlight = [[300,0,0,0,0],[300,0,0,0,0]]
+    # init_car = [[0,-5,0,5],[50,5,0,5]]
+    # init_trfficlight = [[300,0,0,0,0],[300,0,0,0,0]]
     # # -----------------------------------------
 
     # # Uncomment this block to use R2
@@ -33,8 +33,8 @@ if __name__ == "__main__":
     # # -----------------------------------------
 
     # # Uncomment this block to use R3
-    # init_car = [[0,-5,0,3],[75,5,0,7]]
-    # init_trfficlight = [[300,0,0,0,0],[300,0,0,0,0]]
+    init_car = [[0,-5,0,3],[75,5,0,7]]
+    init_trfficlight = [[300,0,0,0,0],[300,0,0,0,0]]
     # # -----------------------------------------
 
     scenario.set_init_single(

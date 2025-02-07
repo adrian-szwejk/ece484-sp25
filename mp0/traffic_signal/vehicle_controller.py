@@ -36,12 +36,9 @@ def decisionLogic(ego: State, other: State):
 
     # * Green Light: The car can drive normally.
     if other.signal_mode == TLMode.GREEN:
-        if ego.agent_mode != VehicleMode.Accel and ego.x < other.x-20:
+        if ego.agent_mode != VehicleMode.Accel:
             output.agent_mode = VehicleMode.Accel
-        
-    # In Exit [d − dout, d]
-    if ego.agent_mode != VehicleMode.Normal and other.x-15 <= ego.x and ego.v < 1:
-        output.agent_mode = VehicleMode.Normal
+    
 
     # * Yellow Light/Red Light
     if other.signal_mode == TLMode.YELLOW or other.signal_mode == TLMode.RED:

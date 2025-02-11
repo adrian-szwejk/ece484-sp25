@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     traces = []
     fig = go.Figure()
-    n=10
+    n=300
     for i in range(n):
         # * trace = scenario.simulate(time_horizon, time_step)
             # time_horizon: the total time for the scenario to evolve.

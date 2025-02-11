@@ -11,11 +11,11 @@ from utils.visualization import visualize_first_prediction
 from torch.optim import Adam
 
 # Configurations
-BATCH_SIZE = 
-LR = 
-EPOCHS = 
+BATCH_SIZE = 64
+LR = 0.001
+EPOCHS = 64
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DATASET_PATH =  "/opt/data/TUSimple"
+DATASET_PATH =  "~/mps-sp25/mp1/TUSimple"
 CHECKPOINT_DIR = "checkpoints"
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
@@ -73,11 +73,11 @@ def train():
     # TODO: Data preparation: Load and preprocess the training and validation datasets.
     # Hint: Use the LaneDataset class and PyTorch's DataLoader.
     ################################################################################
-    # train_dataset = ...
-    # train_loader = DataLoader(...)
+    train_dataset = LaneDataset(DATASET_PATH)
+    train_loader = DataLoader(train_dataset, BATCH_SIZE, shuffle=True)
 
-    # val_dataset = ...
-    # val_loader = DataLoader(...)
+    val_dataset = LaneDataset(DATASET_PATH, mode= "val")
+    val_loader =  DataLoader(val_dataset, BATCH_SIZE, shuffle=True)
     ################################################################################
 
     # Model and optimizer initialization
@@ -86,7 +86,9 @@ def train():
     
     # TODO: Initialize the Adam optimizer with appropriate learning rate and weight decay.
     ################################################################################
-    # optimizer = ...
+    # https://stackoverflow.com/questions/39517431/should-we-do-learning-rate-decay-for-adam-optimizer
+    # Ex: https://builtin.com/machine-learning/adam-optimization
+    optimizer = torch.optim.Adam(enet_model.parameters(),lr=LR, weight_decay=0)
     
     ################################################################################
 
@@ -121,6 +123,26 @@ def train():
             # 3. Compute the binary and instance losses using `compute_loss`.
             # 4. Sum the losses (`loss = binary_loss + instance_loss`) for backpropagation.
             # 5. Zero out the optimizer gradients, backpropagate the loss, and take an optimizer step.
+            ################################################################################
+
+            #1
+            # https://stackoverflow.com/questions/53695105/why-we-need-image-tocuda-when-we-have-model-tocuda
+            images = images.to(DEVICE)
+            binary_labels = binary_labels.to(DEVICE)
+            instance_labels = instance_labels.to(DEVICE)
+            #2
+            binary_logits, instance_embeddings = enet_model.forward(images)
+            #3
+            binary_loss, instance_loss = compute_loss(binary_output=binary_logits, instance_output=instance_embeddings, binary_label=binary_labels, instance_label=instance_labels)
+            binary_losses.append(binary_loss)
+            instance_losses.append(instance_loss)
+            #4
+            loss = binary_loss + instance_loss
+            #5
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
 
 
 
@@ -162,7 +184,7 @@ def train():
         # Hint:
         # Call the `validate` function, passing the model and validation data loader.
         ################################################################################
-        # val_binary_loss, val_instance_loss, val_total_loss = ...
+        val_binary_loss, val_instance_loss, val_total_loss = validate(enet_model, val_loader)
         ################################################################################
         print(f"Validation Results - Epoch {epoch}: "
               f"Binary Loss = {val_binary_loss:.4f}, "

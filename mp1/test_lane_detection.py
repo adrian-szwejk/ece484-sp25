@@ -28,6 +28,35 @@ def perspective_transform(image):
     """
     
     ####################### TODO: Your code starts Here #######################
+    #1
+    height, width = image.shape
+    #2 https://theailearner.com/tag/cv2-getperspectivetransform/
+    # src = (height, width)
+    # dst = (0, 0)
+
+    pt_A = [41, 2001]
+    pt_B = [2438, 2986]
+    pt_C = [3266, 371]
+    pt_D = [1772, 136]
+
+    # Here, I have used L2 norm. You can use L1 also.
+    width_AD = np.sqrt(((pt_A[0] - pt_D[0]) ** 2) + ((pt_A[1] - pt_D[1]) ** 2))
+    width_BC = np.sqrt(((pt_B[0] - pt_C[0]) ** 2) + ((pt_B[1] - pt_C[1]) ** 2))
+    maxWidth = max(int(width_AD), int(width_BC))
+    
+    
+    height_AB = np.sqrt(((pt_A[0] - pt_B[0]) ** 2) + ((pt_A[1] - pt_B[1]) ** 2))
+    height_CD = np.sqrt(((pt_C[0] - pt_D[0]) ** 2) + ((pt_C[1] - pt_D[1]) ** 2))
+    maxHeight = max(int(height_AB), int(height_CD))
+
+    src = np.float32([pt_A, pt_B, pt_C, pt_D])
+    dst = np.float32([[0, 0],
+                            [0, maxHeight - 1],
+                            [maxWidth - 1, maxHeight - 1],
+                            [maxWidth - 1, 0]])
+    M = cv2.getPerspectiveTransform(src, dst)
+
+    transformed_image = cv2.warpPerspective(image,M,(maxWidth, maxHeight),flags=cv2.INTER_LINEAR)
 
     ####################### TODO: Your code ends Here #######################
     
@@ -48,7 +77,19 @@ def visualize_lanes_row(images, instances_maps, alpha=0.7):
     fig, axes = plt.subplots(1, num_images, figsize=(15, 5))
 
     ####################### TODO: Your code starts Here #######################
-    
+    for i in range(num_images):
+        # https://www.geeksforgeeks.org/image-resizing-using-opencv-python/
+        image = cv2.resize(images[i], (512, 256))
+        map = cv2.resize(instances_maps[i], (512, 256))
+
+        transformed_image = perspective_transform(image)
+        transformed_map = perspective_transform(map)
+        
+        overlay = cv2.addWeighted(transformed_image, 1-alpha, transformed_map, alpha, 0)
+
+        axes[i].imshow(cv2.cvtColor(overlay, cv2.COLOR_BGR2RGB))
+        axes[i].axis("off")
+
     ####################### TODO: Your code ends Here #######################
 
     plt.tight_layout()

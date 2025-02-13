@@ -7,7 +7,7 @@ from models.enet import ENet
 import os
 
 # Define dataset and checkpoint paths
-DATASET_PATH = "/opt/data/TUSimple/test_set"
+DATASET_PATH = "/home/ap/Documents/UIUC/ECE 484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"  # Path to the TUSimple dataset
 CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best.pth"  # Path to the trained model checkpoint
 
 # Function to load the ENet model
@@ -28,35 +28,63 @@ def perspective_transform(image):
     """
     
     ####################### TODO: Your code starts Here #######################
-    #1
-    height, width = image.shape
-    #2 https://theailearner.com/tag/cv2-getperspectivetransform/
-    # src = (height, width)
-    # dst = (0, 0)
+    
+    # Calculate the image height and width
+    height, width = image.shape[:2]
 
-    pt_A = [41, 2001]
-    pt_B = [2438, 2986]
-    pt_C = [3266, 371]
-    pt_D = [1772, 136]
+    # Define source points on the original image and corresponding destination points
+    # Define source points on the original image
+    # Bottom-left corner
+    # Bottom-right corner
+    # Mid-right point (shifted up and right)
+    # Mid-left point (shifted up and left)
 
-    # Here, I have used L2 norm. You can use L1 also.
-    width_AD = np.sqrt(((pt_A[0] - pt_D[0]) ** 2) + ((pt_A[1] - pt_D[1]) ** 2))
-    width_BC = np.sqrt(((pt_B[0] - pt_C[0]) ** 2) + ((pt_B[1] - pt_C[1]) ** 2))
-    maxWidth = max(int(width_AD), int(width_BC))
+    src_points = np.float32([
+        [0, 0], 
+        [width, 0], 
+        [(3 * width )// 8, 0.6 * height], 
+        [(3 * width )// 4, 0.6 * height]
+    ])
+    dst_points = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
+
+    # Compute the perspective transform matrix using cv2.getPerspectiveTransform
+    perspective_matrix = cv2.getPerspectiveTransform(src_points, dst_points)
+
+    # Warp the original image using cv2.warpPerspective to get the transformed output
+    transformed_image = cv2.warpPerspective(image, perspective_matrix, (width, height))
+
+
+    #alternate code
+    # #1
+    # height, width = image.shape[:2]
+    # #2 https://theailearner.com/tag/cv2-getperspectivetransform/
+    # # src = (height, width)
+    # # dst = (0, 0)
+
+    # pt_A = [41, 2001]
+    # pt_B = [2438, 2986]
+    # pt_C = [3266, 371]
+    # pt_D = [1772, 136]
+
+    # # Here, I have used L2 norm. You can use L1 also.
+    # width_AD = np.sqrt(((pt_A[0] - pt_D[0]) ** 2) + ((pt_A[1] - pt_D[1]) ** 2))
+    # width_BC = np.sqrt(((pt_B[0] - pt_C[0]) ** 2) + ((pt_B[1] - pt_C[1]) ** 2))
+    # maxWidth = max(int(width_AD), int(width_BC))
     
     
-    height_AB = np.sqrt(((pt_A[0] - pt_B[0]) ** 2) + ((pt_A[1] - pt_B[1]) ** 2))
-    height_CD = np.sqrt(((pt_C[0] - pt_D[0]) ** 2) + ((pt_C[1] - pt_D[1]) ** 2))
-    maxHeight = max(int(height_AB), int(height_CD))
+    # height_AB = np.sqrt(((pt_A[0] - pt_B[0]) ** 2) + ((pt_A[1] - pt_B[1]) ** 2))
+    # height_CD = np.sqrt(((pt_C[0] - pt_D[0]) ** 2) + ((pt_C[1] - pt_D[1]) ** 2))
+    # maxHeight = max(int(height_AB), int(height_CD))
 
-    src = np.float32([pt_A, pt_B, pt_C, pt_D])
-    dst = np.float32([[0, 0],
-                            [0, maxHeight - 1],
-                            [maxWidth - 1, maxHeight - 1],
-                            [maxWidth - 1, 0]])
-    M = cv2.getPerspectiveTransform(src, dst)
+    # src = np.float32([pt_A, pt_B, pt_C, pt_D])
+    # dst = np.float32([[0, 0],
+    #                         [0, maxHeight - 1],
+    #                         [maxWidth - 1, maxHeight - 1],
+    #                         [maxWidth - 1, 0]])
 
-    transformed_image = cv2.warpPerspective(image,M,(maxWidth, maxHeight),flags=cv2.INTER_LINEAR)
+    # M = cv2.getPerspectiveTransform(src, dst)
+
+    # transformed_image = cv2.warpPerspective(image,M,(maxWidth, maxHeight),flags=cv2.INTER_LINEAR)
 
     ####################### TODO: Your code ends Here #######################
     
@@ -77,19 +105,25 @@ def visualize_lanes_row(images, instances_maps, alpha=0.7):
     fig, axes = plt.subplots(1, num_images, figsize=(15, 5))
 
     ####################### TODO: Your code starts Here #######################
+
     for i in range(num_images):
-        # https://www.geeksforgeeks.org/image-resizing-using-opencv-python/
-        image = cv2.resize(images[i], (512, 256))
-        map = cv2.resize(instances_maps[i], (512, 256))
+        # Resize the original image and its instance map to 512 x 256
+        resized_image = cv2.resize(images[i], (512, 256), interpolation=cv2.INTER_NEAREST)
+        resized_instances_map = cv2.resize(instances_maps[i], (512, 256), interpolation=cv2.INTER_NEAREST)
 
-        transformed_image = perspective_transform(image)
-        transformed_map = perspective_transform(map)
-        
-        overlay = cv2.addWeighted(transformed_image, 1-alpha, transformed_map, alpha, 0)
+        # Apply perspective transform to both the original image and its instance map
+        transformed_image = perspective_transform(resized_image)
+        transformed_instances_map = perspective_transform(resized_instances_map)
 
-        axes[i].imshow(cv2.cvtColor(overlay, cv2.COLOR_BGR2RGB))
+        # Overlay the instance map to a plot with the corresponding original image using a specified alpha value 
+
+        axes[i].imshow(transformed_image, alpha=alpha, cmap="gray")
+        axes[i].imshow(transformed_instances_map, alpha=alpha, cmap="jet")
         axes[i].axis("off")
 
+    # Set the title for the plot
+    plt.suptitle("Lane Predictions")
+    
     ####################### TODO: Your code ends Here #######################
 
     plt.tight_layout()
@@ -103,11 +137,11 @@ def main():
 
     # List of test image paths
     sub_paths = [
-        "clips/0530/1492626047222176976_0/20.jpg",
-        "clips/0530/1492626286076989589_0/20.jpg",
-        "clips/0531/1492626674406553912/20.jpg",
-        "clips/0601/1494452381594376146/20.jpg",
-        "clips/0601/1494452431571697487/20.jpg"
+        "test_set/clips/0530/1492626047222176976_0/20.jpg",
+        "test_set/clips/0530/1492626286076989589_0/20.jpg",
+        "test_set/clips/0531/1492626674406553912/20.jpg",
+        "test_set/clips/0601/1494452381594376146/20.jpg",
+        "test_set/clips/0601/1494452431571697487/20.jpg"
     ]
     test_image_paths = [os.path.join(DATASET_PATH, sub_path) for sub_path in sub_paths]
 

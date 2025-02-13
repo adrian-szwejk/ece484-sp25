@@ -10,12 +10,15 @@ from models.losses import compute_loss
 from utils.visualization import visualize_first_prediction
 from torch.optim import Adam
 
+torch.cuda.empty_cache()
+torch.cuda.ipc_collect()
+
 # Configurations
-BATCH_SIZE = 64
-LR = 0.001
-EPOCHS = 64
+BATCH_SIZE = 8
+LR = 0.0001
+EPOCHS = 96
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DATASET_PATH =  "~/mps-sp25/mp1/TUSimple"
+DATASET_PATH =  "/home/ap/Documents/UIUC/ECE 484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"
 CHECKPOINT_DIR = "checkpoints"
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
@@ -73,22 +76,19 @@ def train():
     # TODO: Data preparation: Load and preprocess the training and validation datasets.
     # Hint: Use the LaneDataset class and PyTorch's DataLoader.
     ################################################################################
-    train_dataset = LaneDataset(DATASET_PATH)
-    train_loader = DataLoader(train_dataset, BATCH_SIZE, shuffle=True)
+    train_dataset = LaneDataset(DATASET_PATH, mode="train")
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
 
-    val_dataset = LaneDataset(DATASET_PATH, mode= "val")
-    val_loader =  DataLoader(val_dataset, BATCH_SIZE, shuffle=True)
+    val_dataset = LaneDataset(DATASET_PATH, mode="val")
+    val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
     ################################################################################
 
     # Model and optimizer initialization
     enet_model = ENet(binary_seg=2, embedding_dim=4).to(DEVICE)
     
-    
     # TODO: Initialize the Adam optimizer with appropriate learning rate and weight decay.
     ################################################################################
-    # https://stackoverflow.com/questions/39517431/should-we-do-learning-rate-decay-for-adam-optimizer
-    # Ex: https://builtin.com/machine-learning/adam-optimization
-    optimizer = torch.optim.Adam(enet_model.parameters(),lr=LR, weight_decay=0)
+    optimizer = Adam(enet_model.parameters(), lr=LR, weight_decay=1e-4)
     
     ################################################################################
 
@@ -119,35 +119,40 @@ def train():
             ################################################################################
             # Hint:
             # 1. Move `images`, `binary_labels`, and `instance_labels` to the correct device (e.g., GPU).
-            # 2. Perform a forward pass using `enet_model` to get predictions (`binary_logits` and `instance_embeddings`).
-            # 3. Compute the binary and instance losses using `compute_loss`.
-            # 4. Sum the losses (`loss = binary_loss + instance_loss`) for backpropagation.
-            # 5. Zero out the optimizer gradients, backpropagate the loss, and take an optimizer step.
-            ################################################################################
 
-            #1
-            # https://stackoverflow.com/questions/53695105/why-we-need-image-tocuda-when-we-have-model-tocuda
             images = images.to(DEVICE)
             binary_labels = binary_labels.to(DEVICE)
             instance_labels = instance_labels.to(DEVICE)
-            #2
-            binary_logits, instance_embeddings = enet_model.forward(images)
-            #3
-            binary_loss, instance_loss = compute_loss(binary_output=binary_logits, instance_output=instance_embeddings, binary_label=binary_labels, instance_label=instance_labels)
-            binary_losses.append(binary_loss)
-            instance_losses.append(instance_loss)
-            #4
+
+            # 2. Perform a forward pass using `enet_model` to get predictions (`binary_logits` and `instance_embeddings`).
+
+            binary_logits, instance_embeddings = enet_model(images)
+
+
+            # 3. Compute the binary and instance losses using `compute_loss`.
+
+            binary_loss, instance_loss = compute_loss(
+                binary_output=binary_logits,
+                instance_output=instance_embeddings,
+                binary_label=binary_labels,
+                instance_label=instance_labels,
+            )
+
+            
+            # 4. Sum the losses (`loss = binary_loss + instance_loss`) for backpropagation.
             loss = binary_loss + instance_loss
-            #5
+            epoch_loss += loss.item()
+            binary_losses.append(binary_loss.item())
+            instance_losses.append(instance_loss.item())
+
+            
+            # 5. Zero out the optimizer gradients, backpropagate the loss, and take an optimizer step.
+
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
 
-
-
-
-
-
+        
             ################################################################################
             
             
@@ -184,7 +189,10 @@ def train():
         # Hint:
         # Call the `validate` function, passing the model and validation data loader.
         ################################################################################
+
         val_binary_loss, val_instance_loss, val_total_loss = validate(enet_model, val_loader)
+
+
         ################################################################################
         print(f"Validation Results - Epoch {epoch}: "
               f"Binary Loss = {val_binary_loss:.4f}, "

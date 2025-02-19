@@ -13,8 +13,10 @@ import matplotlib.pyplot as plt
 # Configuration
 BATCH_SIZE = 10
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DATASET_PATH =  "/home/ap/Documents/UIUC/ECE 484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"  # Path to the TUSimple dataset
+DATASET_PATH =  "/home/ap/Documents/UIUC/ece_484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"  # Path to the TUSimple dataset
 CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best.pth"  # Path to the trained model checkpoint
+# CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best_disc2.pth"  # Path to the trained model checkpoint
+# CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best_seg2.pth"  # Path to the trained model checkpoint
 
 
 def evaluate():

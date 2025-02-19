@@ -7,8 +7,10 @@ from models.enet import ENet
 import os
 
 # Define dataset and checkpoint paths
-DATASET_PATH = "/home/ap/Documents/UIUC/ECE 484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"  # Path to the TUSimple dataset
-CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best.pth"  # Path to the trained model checkpoint
+DATASET_PATH = "/home/ap/Documents/UIUC/ece_484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"  # Path to the TUSimple dataset
+# CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best.pth"  # Path to the trained model checkpoint
+# CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best_disc.pth"  # Path to the trained model checkpoint
+CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best_seg2.pth"  # Path to the trained model checkpoint
 
 # Function to load the ENet model
 def load_enet_model(checkpoint_path, device="cuda"):
@@ -32,20 +34,13 @@ def perspective_transform(image):
     # Calculate the image height and width
     height, width = image.shape[:2]
 
-    # Define source points on the original image and corresponding destination points
-    # Define source points on the original image
-    # Bottom-left corner
-    # Bottom-right corner
-    # Mid-right point (shifted up and right)
-    # Mid-left point (shifted up and left)
-
     src_points = np.float32([
-        [0, 0], 
-        [width, 0], 
-        [(3 * width )// 8, 0.6 * height], 
-        [(3 * width )// 4, 0.6 * height]
+        [0.215 * width, 0.835 * height], 
+        [0.969 * width, 0.835 * height], 
+        [0.371 * width, 0.486 * height], 
+        [0.645 * width, 0.486 * height]
     ])
-    dst_points = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
+    dst_points = np.float32([[0, height], [width, height], [0, 0], [width, 0]])
 
     # Compute the perspective transform matrix using cv2.getPerspectiveTransform
     perspective_matrix = cv2.getPerspectiveTransform(src_points, dst_points)
@@ -53,38 +48,6 @@ def perspective_transform(image):
     # Warp the original image using cv2.warpPerspective to get the transformed output
     transformed_image = cv2.warpPerspective(image, perspective_matrix, (width, height))
 
-
-    #alternate code
-    # #1
-    # height, width = image.shape[:2]
-    # #2 https://theailearner.com/tag/cv2-getperspectivetransform/
-    # # src = (height, width)
-    # # dst = (0, 0)
-
-    # pt_A = [41, 2001]
-    # pt_B = [2438, 2986]
-    # pt_C = [3266, 371]
-    # pt_D = [1772, 136]
-
-    # # Here, I have used L2 norm. You can use L1 also.
-    # width_AD = np.sqrt(((pt_A[0] - pt_D[0]) ** 2) + ((pt_A[1] - pt_D[1]) ** 2))
-    # width_BC = np.sqrt(((pt_B[0] - pt_C[0]) ** 2) + ((pt_B[1] - pt_C[1]) ** 2))
-    # maxWidth = max(int(width_AD), int(width_BC))
-    
-    
-    # height_AB = np.sqrt(((pt_A[0] - pt_B[0]) ** 2) + ((pt_A[1] - pt_B[1]) ** 2))
-    # height_CD = np.sqrt(((pt_C[0] - pt_D[0]) ** 2) + ((pt_C[1] - pt_D[1]) ** 2))
-    # maxHeight = max(int(height_AB), int(height_CD))
-
-    # src = np.float32([pt_A, pt_B, pt_C, pt_D])
-    # dst = np.float32([[0, 0],
-    #                         [0, maxHeight - 1],
-    #                         [maxWidth - 1, maxHeight - 1],
-    #                         [maxWidth - 1, 0]])
-
-    # M = cv2.getPerspectiveTransform(src, dst)
-
-    # transformed_image = cv2.warpPerspective(image,M,(maxWidth, maxHeight),flags=cv2.INTER_LINEAR)
 
     ####################### TODO: Your code ends Here #######################
     

@@ -16,9 +16,9 @@ torch.cuda.ipc_collect()
 # Configurations
 BATCH_SIZE = 8
 LR = 0.0001
-EPOCHS = 96
+EPOCHS = 64
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DATASET_PATH =  "/home/ap/Documents/UIUC/ECE 484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"
+DATASET_PATH =  "/home/ap/Documents/UIUC/ece_484/MP/MP1/MP1_Code/mp-release-sp25/src/mp1/data/tusimple"
 CHECKPOINT_DIR = "checkpoints"
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
@@ -140,7 +140,7 @@ def train():
 
             
             # 4. Sum the losses (`loss = binary_loss + instance_loss`) for backpropagation.
-            loss = binary_loss + instance_loss
+            loss = (1 * binary_loss) + (1 * instance_loss)
             epoch_loss += loss.item()
             binary_losses.append(binary_loss.item())
             instance_losses.append(instance_loss.item())

@@ -1,6 +1,4 @@
 ---
-
----
 # MP1: Model Training, Evaluation, and Testing Guide
 
 This document provides detailed instructions for training, evaluating, and testing the model for lane detection. Follow the steps carefully to achieve optimal results.
@@ -38,18 +36,18 @@ To train the model effectively, follow these steps:
 
 To evaluate the trained model:
 
-4. Run the `eval.py` script.
+1. Run the `eval.py` script.
     
-5. Ensure that the dataset is present locally and correctly mapped in the script configuration.
+2. Ensure that the dataset is present locally and correctly mapped in the script configuration.
     
-6. The evaluation process will output metrics that help assess model performance.
+3. The evaluation process will output metrics that help assess model performance.
     
 
 ## Model Testing for Lane Detection
 
 To test lane detection using your trained model:
 
-## 1. Source Point Selection for Perspective Transformation
+### 1. Source Point Selection for Perspective Transformation
 
 - Use `point_finder.py` to identify source points in test images:
     
@@ -64,7 +62,7 @@ To test lane detection using your trained model:
     - Update the `src` points in `test_lane_detection.py` based on this output.
 
 
-## 2. Visualize Lane Detection
+### 2. Visualize Lane Detection
 
 - Run `test_lane_detection.py` to visualize lane detection results.
 

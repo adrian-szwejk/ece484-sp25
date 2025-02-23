@@ -3,7 +3,7 @@
 
 In EVERY NEW TERMINAL run this for ROS:
 
-1) source /opt/ros/neotic/setup.bash
+1) source /opt/ros/noetic/setup.bash
 
 2) catkin_make
 

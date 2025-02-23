@@ -41,6 +41,37 @@ class vehicleController():
 
         ####################### TODO: Your TASK 1 code starts Here #######################
         pos_x, pos_y, vel, yaw = 0, 0, 0, 0
+        
+        # currentPose -> ModelState {model_name : string, pose : geometry_msgs/Pose, twist : geometry_msgs/Twist, reference_frame : string}
+            # model_name = model to set state (pose/twist)
+            # pose = Desired pose in reference frame
+                # position : Point
+                    # x : float64
+                    # y : float64
+                    # z : float64
+                # orientation : Quaternion
+                    # x : float64
+                    # y : float64
+                    # z : float64
+                    # w : float64
+            # twist = Desired twist in reference frame
+                # linear : Vector3
+                    # x : float64
+                    # y : float64
+                    # z : float64
+                # angular : Vector3
+                    # x : float64
+                    # y : float64
+                    # z : float64
+            # reference_frame = set pose/twist relative to frame of this entity
+                # Leaving reference_frame = "word"/"map"/empty -> defaults to world-frame
+        pos_x = currentPose.pose.position.x
+        pos_y = currentPose.pose.position.y
+
+        # [roll, pitch, yaw] = quaternion_to_euler(x, y, z, w)
+        x, y, z, w = currentPose.pose.orientation.x, currentPose.pose.orientation.y, currentPose.pose.orientation.z, currentPose.pose.orientation.w
+        roll, pitch, yaw =  quaternion_to_euler(x, y, z, w)
+        
 
         ####################### TODO: Your Task 1 code ends Here #######################
 

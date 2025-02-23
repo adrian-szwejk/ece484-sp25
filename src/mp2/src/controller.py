@@ -68,10 +68,13 @@ class vehicleController():
         pos_x = currentPose.pose.position.x
         pos_y = currentPose.pose.position.y
 
+        linear_vel = currentPose.twist.linear
+        vel = math.sqrt(linear_vel.x**2 + linear_vel.y**2 + linear_vel.z**2)
+
         # [roll, pitch, yaw] = quaternion_to_euler(x, y, z, w)
         x, y, z, w = currentPose.pose.orientation.x, currentPose.pose.orientation.y, currentPose.pose.orientation.z, currentPose.pose.orientation.w
         roll, pitch, yaw =  quaternion_to_euler(x, y, z, w)
-        
+
 
         ####################### TODO: Your Task 1 code ends Here #######################
 
@@ -91,10 +94,36 @@ class vehicleController():
 
     # Task 3: Lateral Controller (Pure Pursuit)
     def pure_pursuit_lateral_controller(self, curr_x, curr_y, curr_yaw, target_point, future_unreached_waypoints):
-
+        
         ####################### TODO: Your TASK 3 code starts Here #######################
-        target_steering = 0
+        # target_point = [target_x, target_y]
+        # future_enreached_waypoints = [[target_x, target_y], ...] ???
+        target_x, target_y = target_point
 
+        # Paremeters to tune
+        Kdd = 0.1
+        min_ld =0
+        max_ld = 0 
+
+        # Wheel base
+        L = 5
+
+        # target is look-ahead distance away from vehicle
+        # np.clip(Kdd * speed, min_ld, max_ld)
+        ld = target_x - curr_x
+
+
+        # alpha = arctan2(target_y, target_x)
+        alpha = np.arctan2(target_y, target_x)
+
+        # δ = arctan(2*L*sin(α) / ld)
+            # L = wheel base
+            # δ = target angle
+            # α = Angle between line of current direction to line toward TP
+            # ld = Distance vehicle -> TP
+
+        target_steering = np.arctan(2*L*np.sin(alpha) / ld)
+        print('target angle: ', target_steering)
         ####################### TODO: Your TASK 3 code starts Here #######################
         return target_steering
 
@@ -109,6 +138,10 @@ class vehicleController():
         # Output: None
 
         curr_x, curr_y, curr_vel, curr_yaw = self.extract_vehicle_info(currentPose)
+        # Start should be [x,y,z] = [0.015203, -98.006679, 0.105925]
+        # [roll, pitch, yaw] = [0.000002, 0.000082, -0.009020]
+
+        # print('cur info, x: ', curr_x, 'y: ', curr_y, 'vel: ', curr_vel, 'yaw: ', curr_yaw)
 
         # Acceleration Profile
         if self.log_acceleration:

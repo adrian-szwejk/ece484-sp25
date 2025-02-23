@@ -8,3 +8,11 @@ In EVERY NEW TERMINAL run this for ROS:
 2) catkin_make
 
 3) source devel/setup.bash
+
+MP2:
+
+1) roslaunch mp2 mp2.launch
+
+2) cd src/mp2/src
+
+3) python3 main.py

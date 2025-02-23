@@ -102,16 +102,26 @@ class vehicleController():
 
         # Paremeters to tune
         Kdd = 0.1
-        min_ld =0
-        max_ld = 0 
+        min_ld = 5
+        max_ld = 20
+        # min_ld = 3, max_ld = 15
+            # Works well until about 30th waypoint? When starts to swing side to side a bit (waypoints not in a straight line??)
+            # Then fails at 47th waypoint b/c just turns into grass???
+        # min_ld = 5, max_ld = 20
+            #  Smoothed out issue at 30th waypoint but on some curves was turning a little late
+        # Reached all the waypoints: 134.35
 
         # target is look-ahead distance away from vehicle
         # np.clip(Kdd * speed, min_ld, max_ld)
-        ld = target_x - curr_x
+        dx = target_x - curr_x
+        dy = target_y - curr_y
+        ld = np.sqrt((dx)**2 + (dy)**2)
+        print('ld', ld)
+        ld = np.clip(ld, min_ld, max_ld)
 
-
-        # alpha = arctan2(target_y, target_x)
-        alpha = np.arctan2(target_y, target_x)
+        # alpha = arctan2(target_y, target_x) - yaw
+        target_angle = np.arctan2(dy, dx)
+        alpha = target_angle - curr_yaw
 
         # δ = arctan(2*L*sin(α) / ld)
             # L = wheel base
@@ -121,6 +131,7 @@ class vehicleController():
 
         target_steering = np.arctan(2*self.L*np.sin(alpha) / ld)
         print('target angle: ', target_steering)
+        
         ####################### TODO: Your TASK 3 code starts Here #######################
         return target_steering
 

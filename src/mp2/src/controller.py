@@ -105,9 +105,6 @@ class vehicleController():
         min_ld =0
         max_ld = 0 
 
-        # Wheel base
-        L = 5
-
         # target is look-ahead distance away from vehicle
         # np.clip(Kdd * speed, min_ld, max_ld)
         ld = target_x - curr_x
@@ -122,7 +119,7 @@ class vehicleController():
             # α = Angle between line of current direction to line toward TP
             # ld = Distance vehicle -> TP
 
-        target_steering = np.arctan(2*L*np.sin(alpha) / ld)
+        target_steering = np.arctan(2*self.L*np.sin(alpha) / ld)
         print('target angle: ', target_steering)
         ####################### TODO: Your TASK 3 code starts Here #######################
         return target_steering

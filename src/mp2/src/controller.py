@@ -118,6 +118,52 @@ class vehicleController():
         print("target_velocity: ", target_velocity)
         print("curvature: ", curvature)   
 
+        """ TRY THIS
+        target_velocity = 11.0  # Conservative default speed
+        curvature = 0.0
+        min_dist = float('inf')  # Start with infinity for proper comparison
+        target_point = None
+        
+        # Safety-first waypoint selection
+        if future_unreached_waypoints:
+            # Find nearest valid waypoint within reasonable range
+            for i, wp in enumerate(future_unreached_waypoints):
+                dy = wp[1] - curr_y
+                dist = math.hypot(wp[0] - curr_x, wp[1] - curr_y)
+                
+                # Dynamic acceptance range (5-50 meters)
+                if 5 <= dist <= 50 and dist < min_dist:
+                    min_dist = dist
+                    target_point = wp
+
+            # Fallback to last waypoint if none found in range
+            if target_point is None:
+                target_point = future_unreached_waypoints[-1]
+                dy = target_point[1] - curr_y
+                min_dist = math.hypot(target_point[0] - curr_x, target_point[1] - curr_y)
+
+            # Calculate curvature using relative vehicle coordinates
+            if min_dist > 1e-3:  # Prevent division by zero
+                # Convert to vehicle coordinate system (assuming 0 heading alignment)
+                lateral_error = dy  # Simplified for demonstration
+                curvature = 2 * lateral_error / (min_dist ** 2)
+                
+                # Continuous velocity adaptation
+                curvature_magnitude = abs(curvature)
+                if curvature_magnitude < 0.05:
+                    target_velocity = 15.0
+                elif curvature_magnitude > 0.15:
+                    target_velocity = 11
+                else:
+                    # Linear interpolation between 15-8 m/s for 0.05-0.15 curvature
+                    target_velocity = 15.0 - ((curvature_magnitude - 0.05) * 40) # (40 = 15 - 8 / 0.15 - 0.05)
+                
+                # Enforce absolute limits
+                target_velocity = max(8.0, min(15.0, target_velocity))
+
+        # Diagnostic safeguards
+        print(f"Target velocity: {target_velocity:.2f} m/s | Curvature: {curvature:.4f}")"""
+
         ####################### TODO: Your TASK 2 code ends Here #######################
         return target_velocity
 

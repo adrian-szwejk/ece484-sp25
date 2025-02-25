@@ -85,8 +85,38 @@ class vehicleController():
     def longititudal_controller(self, curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints):
 
         ####################### TODO: Your TASK 2 code starts Here #######################
-        target_velocity = 10
+        target_velocity = 11
 
+         # 1. Set a constant target speed
+        #target_velocity = 10
+
+        # 2. Set a dynamic target speed based on the curvature of the track
+        # Calculate the curvature of the track
+        curvature = 0
+        min_dist = 50 #need to tune
+        for i in range(len(future_unreached_waypoints)):
+            dist = math.sqrt((future_unreached_waypoints[i][0] - curr_x)**2 + (future_unreached_waypoints[i][1] - curr_y)**2)
+            if dist < min_dist:
+                min_dist = dist
+                target_point = future_unreached_waypoints[i]
+        #not my code this one vvv
+        if min_dist > 0:    
+            curvature = 2 * (target_point[0] - curr_x) / (min_dist**2)  #need to fix this bug; condition doesnt work because target point is being reference before assignment. 
+                                                                        #But then what will the target point be? and how is the curvature actually being computed when this is the only formula for it here lmao
+
+        if abs(curvature) <= 0.1:
+            target_velocity = 15 # for less curvatures
+        elif abs(curvature) > 0.1:
+            target_velocity = 11 #this is the max we can go for the turns, doc says 8
+
+        # Limit the target speed
+        if target_velocity > 15:
+            target_velocity = 16
+        elif target_velocity < 11:
+            target_velocity = 11
+
+        print("target_velocity: ", target_velocity)
+        print("curvature: ", curvature)   
 
         ####################### TODO: Your TASK 2 code ends Here #######################
         return target_velocity
@@ -131,6 +161,8 @@ class vehicleController():
 
         target_steering = np.arctan(2*self.L*np.sin(alpha) / ld)
         print('target angle: ', target_steering)
+
+        
         
         ####################### TODO: Your TASK 3 code starts Here #######################
         return target_steering

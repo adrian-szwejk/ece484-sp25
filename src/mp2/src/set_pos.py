@@ -1,6 +1,7 @@
 import sys
 import os
 import argparse
+import random
 
 import numpy as np
 
@@ -54,9 +55,9 @@ def set_position(x = 0,y = 0, yaw=0):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = 'Set the x, y position of the vehicle')
 
-    x_default = 0
-    y_default = -98
-    yaw_default = 0
+    x_default = random.uniform(0, 3)
+    y_default = random.uniform(-98.5, -97.5)
+    yaw_default = random.uniform(-0.1, 0.1)
 
     # x_default = 160
     # y_default = 96.5

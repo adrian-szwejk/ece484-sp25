@@ -15,7 +15,7 @@ class vehicleController():
         self.controlPub = rospy.Publisher("/ackermann_cmd", AckermannDrive, queue_size = 1)
         self.prev_vel = 0
         self.L = 1.75 # Wheelbase, can be get from gem_control.py
-        self.log_acceleration = False
+        self.log_acceleration = True
 
     def getModelState(self):
         # Get the current state of the vehicle
@@ -85,7 +85,6 @@ class vehicleController():
     def longititudal_controller(self, curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints):
 
         ####################### TODO: Your TASK 2 code starts Here #######################
-        # """
         target_velocity = 11
 
          # 1. Set a constant target speed
@@ -268,7 +267,7 @@ class vehicleController():
             acceleration = (curr_vel- self.prev_vel) * 100 # Since we are running in 100Hz
 
 
-
+        print("Acceleration: ", acceleration) # Why is this too high ? Is it because we set it not in m / s^2 ?
         target_velocity = self.longititudal_controller(curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints)
         target_steering = self.pure_pursuit_lateral_controller(curr_x, curr_y, curr_yaw, target_point, future_unreached_waypoints)
 

@@ -85,9 +85,119 @@ class vehicleController():
     def longititudal_controller(self, curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints):
 
         ####################### TODO: Your TASK 2 code starts Here #######################
-        target_velocity = 10
+        # """
+        target_velocity = 11
 
+         # 1. Set a constant target speed
+        #target_velocity = 10
 
+        # 2. Set a dynamic target speed based on the curvature of the track
+        # Calculate the curvature of the track
+        curvature = 0
+        target_point = None
+        min_dist = 15 #need to tune (10 worked but then failed at the next simulation, why (?))
+
+        for i, wp in enumerate(future_unreached_waypoints):
+            dist = math.sqrt((wp[0] - curr_x)**2 + (wp[1] - curr_y)**2)
+            if dist <= min_dist:
+                min_dist = dist
+                target_point = wp
+
+        if target_point is None:
+            target_point = future_unreached_waypoints[-1]
+            min_dist = math.sqrt((target_point[0] - curr_x)**2 + (target_point[1] - curr_y)**2)
+
+        if min_dist > 0:    
+            curvature = 2 * (target_point[0] - curr_x) / (min_dist**2) #https://www.ri.cmu.edu/pub_files/pub3/coulter_r_craig_1992_1/coulter_r_craig_1992_1.pdf
+        
+        if abs(curvature) <= 0.1:
+            target_velocity = 15 # for less curvatures
+        elif abs(curvature) > 0.1:
+            target_velocity = 11 #this is the max we can go for the turns, doc says 8
+
+        # Limit the target speed
+        if target_velocity > 15:
+            target_velocity = 15
+        elif target_velocity < 11:
+            target_velocity = 11
+
+        # print("target_velocity: ", target_velocity)
+        # print("curvature: ", curvature)  
+        print(f"Target velocity: {target_velocity:.2f} m/s | Curvature: {curvature:.4f} | Min_Dist: {min_dist:.4f}") 
+        # """
+
+        """ TRY THIS
+        target_velocity = 11.0  # Conservative default speed
+        curvature = 0.0
+        min_dist = float('inf')  # Start with infinity for proper comparison
+        target_point = None
+        
+        # Safety-first waypoint selection
+        if future_unreached_waypoints:
+            # Find nearest valid waypoint within reasonable range
+            for i, wp in enumerate(future_unreached_waypoints):
+                dy = wp[1] - curr_y
+                dist = math.hypot(wp[0] - curr_x, wp[1] - curr_y)
+                
+                # Dynamic acceptance range (5-50 meters)
+                if 5 <= dist <= 50 and dist < min_dist:
+                    min_dist = dist
+                    target_point = wp
+
+            # Fallback to last waypoint if none found in range
+            if target_point is None:
+                target_point = future_unreached_waypoints[-1]
+                dy = target_point[1] - curr_y
+                min_dist = math.hypot(target_point[0] - curr_x, target_point[1] - curr_y)
+
+            # Calculate curvature using relative vehicle coordinates
+            if min_dist > 1e-3:  # Prevent division by zero
+                # Convert to vehicle coordinate system (assuming 0 heading alignment)
+                lateral_error = dy  # Simplified for demonstration
+                curvature = 2 * lateral_error / (min_dist ** 2)
+                
+                # Continuous velocity adaptation
+                curvature_magnitude = abs(curvature)
+                if curvature_magnitude < 0.05:
+                    target_velocity = 15.0
+                elif curvature_magnitude > 0.15:
+                    target_velocity = 11
+                else:
+                    # Linear interpolation between 15-8 m/s for 0.05-0.15 curvature
+                    target_velocity = 15.0 - ((curvature_magnitude - 0.05) * 40) # (40 = 15 - 8 / 0.15 - 0.05)
+                
+                # Enforce absolute limits
+                target_velocity = max(8.0, min(15.0, target_velocity))
+
+        # Diagnostic safeguards
+        print(f"Target velocity: {target_velocity:.2f} m/s | Curvature: {curvature:.4f}")
+
+        """
+        """
+        high_speed = 14
+        low_speed = 10
+        target_velocity = low_speed
+
+        look_ahead = 5
+        if(len(future_unreached_waypoints) <= look_ahead):
+            decision_waypoint = future_unreached_waypoints[-1]
+        else:
+            decision_waypoint = future_unreached_waypoints[look_ahead]
+        
+        # decision_waypoint = future_unreached_waypoints[look_ahead]
+        if(abs(curr_x - decision_waypoint[0]) > 5 and abs(curr_y - decision_waypoint[1]) > 5): # if curvve
+            if(target_velocity > low_speed):
+                target_velocity -= 2
+            else:
+                target_velocity = low_speed
+        else: # if straight road
+            if(target_velocity < high_speed):
+                target_velocity += 4
+            else:
+                target_velocity = high_speed
+
+        print("target_velocity: ", target_velocity)
+        """
         ####################### TODO: Your TASK 2 code ends Here #######################
         return target_velocity
 
@@ -101,9 +211,9 @@ class vehicleController():
         target_x, target_y = target_point
 
         # Paremeters to tune
-        Kdd = 0.1
+        Kdd = 0.1 # where are we using this??
         min_ld = 5
-        max_ld = 20
+        max_ld = 20 #lookahead is set as 15 for the longitudinal controller and 20 here. should we keep it as it is or change (keep same)?
         # min_ld = 3, max_ld = 15
             # Works well until about 30th waypoint? When starts to swing side to side a bit (waypoints not in a straight line??)
             # Then fails at 47th waypoint b/c just turns into grass???
@@ -131,6 +241,8 @@ class vehicleController():
 
         target_steering = np.arctan(2*self.L*np.sin(alpha) / ld)
         print('target angle: ', target_steering)
+
+        
         
         ####################### TODO: Your TASK 3 code starts Here #######################
         return target_steering

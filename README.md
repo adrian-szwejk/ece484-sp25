@@ -15,4 +15,4 @@ MP2:
 
 2) cd src/mp2/src
 
-3) python3 main.py
+3) python3 main.py. To re-run, run python3 set_pos.py before running python3 main.py. 

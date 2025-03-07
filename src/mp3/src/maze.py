@@ -250,7 +250,24 @@ class Maze(object):
             d4 += 1
 
         ## TODO: Add 4 additional sensor directions #####
+        # Front Left
+        pos_x = x
+        pos_y = y
+        d5 = 0
 
+        dx = np.cos(orientation) * 1 - np.sin(orientation) * 0
+        dy = np.sin(orientation) * 1 + np.cos(orientation) * 0
+        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d1 < sensor_limit:
+            pos_x = pos_x + dx
+            pos_y = pos_y + dy
+            d1 += 1
+        
+        dx = np.cos(orientation+np.pi/2) * 1 - np.sin(orientation+np.pi/2) * 0
+        dy = np.sin(orientation+np.pi/2) * 1 + np.cos(orientation+np.pi/2) * 0
+        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d4 < sensor_limit:
+            pos_x = pos_x + dx
+            pos_y = pos_y + dy
+            d4 += 1
 
         ###############
 

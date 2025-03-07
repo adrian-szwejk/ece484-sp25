@@ -164,7 +164,34 @@ class LidarProcessing:
         
         ## TODO: Add 4 additional sensor directions #####
         # Handle sensor at 4 diagnal direction
+        # Front Left
+        filter_front_left = np.logical_and(filter_left, filter_front)
+        indices = np.argwhere(filter_front_left).flatten()
+
+        self.x_front_left = np.mean(x_points[indices])
+        self.y_front_left = np.mean(y_points[indices])
+
+
+        # Front right
+        filter_front_right = np.logical_and(filter_right, filter_front)
+        indices = np.argwhere(filter_front_right).flatten()
+
+        self.x_front_right = np.mean(x_points[indices])
+        self.y_front_right = np.mean(y_points[indices])
         
+        # Rear left
+        filter_rear_left = np.logical_and(filter_rear, filter_right)
+        indices = np.argwhere(filter_rear_left).flatten()
+
+        self.x_rear_left = np.mean(x_points[indices])
+        self.y_rear_left = np.mean(y_points[indices])
+
+        # Rear right
+        filter_rear_right = np.logical_and(filter_rear, filter_right)
+        indices = np.argwhere(filter_rear_right).flatten()
+
+        self.x_rear_right = np.mean(x_points[indices])
+        self.y_rear_right = np.mean(y_points[indices])
         
         ###############
 

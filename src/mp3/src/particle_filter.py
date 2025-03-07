@@ -95,8 +95,11 @@ class particleFilter:
         """
 
         ## TODO #####
+        # To assign the weights to the particles, we need to compare the similarities between the real
+        # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
+        # Kernel to calculate the likelihood between the two sensor readings.
 
-
+        
         ###############
         # pass
 
@@ -135,5 +138,16 @@ class particleFilter:
         count = 0 
         while True:
             ## TODO: (i) Implement Section 3.2.2. (ii) Display robot and particles on map. (iii) Compute and save position/heading error to plot. #####
-            
+            # Each time the runFilter function is run, do not forget to clear particles. Note:
+            # Additionally, if you encounter lag, consider adjusting the show_frequency parameter.
+            # PSUEDO CODE:
+                # sampleMotionModel(p)
+                # reading = vehicle_read_sensor()
+                # updateWeight(p, reading)
+                # p = resampleParticle(p)
+            particleMotionModel(p)
+            reading = getModelState()
+            updateWeight(p, reading)
+            p = resampleParticle(p)
+            count += 1
             ###############

@@ -31,15 +31,16 @@ class particleFilter:
         for i in range(num_particles):
 
             # (Default) The whole map
-            x = np.random.uniform(0, world.width)
-            y = np.random.uniform(0, world.height)
+            # x = np.random.uniform(0, world.width / 2)
+            # y = np.random.uniform(0, world.height / 2)
 
 
             ## first quadrant
-            # x = 
-            # y =
+            x = np.random.uniform(0, world.width / 2)
+            y = np.random.uniform(world.height / 2, world.height)
 
-            particles.append(Particle(x = x, y = y, maze = world, sensor_limit = sensor_limit))
+
+            particles.append(Particle(x = -x, y = y, maze = world, sensor_limit = sensor_limit))
 
         ###############
 
@@ -98,8 +99,9 @@ class particleFilter:
         # To assign the weights to the particles, we need to compare the similarities between the real
         # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
         # Kernel to calculate the likelihood between the two sensor readings.
-
-        
+        for particle in self.particles:
+            particle_sensor_measurement = particles.read_sensor()
+            particle.weight = self.weight_gaussian_kernel(particle_sensor_measurement, reading_robot)
         ###############
         # pass
 

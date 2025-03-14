@@ -113,7 +113,12 @@ class particleFilter:
         particles_new = list()
 
         ## TODO #####
+        # 1. Calculate an array of the cumulative sum of the weights.
         
+        # 2. Randomly generate a number and determine which range in that cumulative weight array to which
+        # the number belongs.
+        # 3. The index of that range would correspond to the particle that should be created.
+        # 4. Repeat sampling until you have the desired number of samples
 
         ###############
 

@@ -39,7 +39,6 @@ class particleFilter:
             x = np.random.uniform(0, world.width / 2)
             y = np.random.uniform(world.height / 2, world.height)
 
-
             particles.append(Particle(x = -x, y = y, maze = world, sensor_limit = sensor_limit))
 
         ###############
@@ -99,9 +98,14 @@ class particleFilter:
         # To assign the weights to the particles, we need to compare the similarities between the real
         # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
         # Kernel to calculate the likelihood between the two sensor readings.
+        sum_of_particle_weight = 0
         for particle in self.particles:
             particle_sensor_measurement = particles.read_sensor()
             particle.weight = self.weight_gaussian_kernel(particle_sensor_measurement, reading_robot)
+            sum_of_particle_weight += particle.weight
+        # Normalize the weight of the particles so that the sum of the weight equals to 1
+        for particle in self.particles:
+            particle.weight = particle.weight / sum_of_particle_weight
         ###############
         # pass
 
@@ -110,19 +114,42 @@ class particleFilter:
         Description:
             Perform resample to get a new list of particles 
         """
-        particles_new = list()
-
-        ## TODO #####
-        # 1. Calculate an array of the cumulative sum of the weights.
-        
-        # 2. Randomly generate a number and determine which range in that cumulative weight array to which
-        # the number belongs.
-        # 3. The index of that range would correspond to the particle that should be created.
-        # 4. Repeat sampling until you have the desired number of samples
-
-        ###############
-
-        self.particles = particles_new
+        num_of_samples = self.num_particles // 2
+        t = 0
+        while t < num_of_samples:
+            particles_new = list()
+            ## TODO #####
+            # 1. Calculate an array of the cumulative sum of the weights.
+            cumulative_sum_of_weight = []
+            for i in range(self.num_particles):
+                s = 0
+                if len(cumulative_sum_of_weight) != 0:
+                    s = cumulative_sum_of_weight[-1]
+                s += particles[i].weight
+                cumulative_sum_of_weight.append(s)
+            # 2. Randomly generate a number and determine which range in that cumulative weight array to which
+            # the number belongs.
+            num = random.random()
+            paricle_index = 0
+            while cumulative_sum_of_weight[particle_index] < num and particle_index < len(cumulative_sum_of_weight):
+                particle_index += 1
+            # 3. The index of that range would correspond to the particle that should be created.
+            # 4. Repeat sampling until you have the desired number of samples
+            for i in range(self.num_particles):
+                if i != particle_index:
+                    particles_new.append(self.particles[i]) 
+                else:
+                    current_particle = self.particle[i]
+                    particle = Particle(x = current_particle.x, y = current_particle.y, maze = current_particle.maze, heading = current_particle.heading, weight = current_particle.weight, sensor_limit = current_particle.sensor_limit, noisy = True)
+            ###############
+            self.particles = particles_new
+            # Normalize the particle weight
+            sum_of_particle_weight = 0
+            for particle in self.particles:
+                sum_of_particle_weight += particle.weight
+            for particle in self.particles:
+                particle.weight = particle.weight / sum_of_particle_weight
+            t += 1
 
     def particleMotionModel(self):
         """
@@ -131,7 +158,7 @@ class particleFilter:
             You can either use ode function or vehicle_dynamics function provided above
         """
         ## TODO #####
-        
+        # print(self.control)
 
         ###############
         # pass
@@ -152,9 +179,9 @@ class particleFilter:
                 # reading = vehicle_read_sensor()
                 # updateWeight(p, reading)
                 # p = resampleParticle(p)
-            particleMotionModel(p)
-            reading = getModelState()
-            updateWeight(p, reading)
-            p = resampleParticle(p)
+            self.particleMotionModel()
+            reading = self.getModelState()
+            self.updateWeight(reading)
+            self.resampleParticle()
             count += 1
             ###############

@@ -99,9 +99,10 @@ class particleFilter:
         # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
         # Kernel to calculate the likelihood between the two sensor readings.
         sum_of_particle_weight = 0
+        # print("Reading robot is ", readings_robot.deserialize('orientation'))
         for particle in self.particles:
-            particle_sensor_measurement = particles.read_sensor()
-            particle.weight = self.weight_gaussian_kernel(particle_sensor_measurement, reading_robot)
+            particle_sensor_measurement = particle.read_sensor()
+            particle.weight = self.weight_gaussian_kernel(readings_robot, particle_sensor_measurement)
             sum_of_particle_weight += particle.weight
         # Normalize the weight of the particles so that the sum of the weight equals to 1
         for particle in self.particles:
@@ -116,7 +117,7 @@ class particleFilter:
         """
         num_of_samples = self.num_particles // 2
         t = 0
-        while t < num_of_samples:
+        while t < 100:
             particles_new = list()
             ## TODO #####
             # 1. Calculate an array of the cumulative sum of the weights.
@@ -125,12 +126,12 @@ class particleFilter:
                 s = 0
                 if len(cumulative_sum_of_weight) != 0:
                     s = cumulative_sum_of_weight[-1]
-                s += particles[i].weight
+                s += self.particles[i].weight
                 cumulative_sum_of_weight.append(s)
             # 2. Randomly generate a number and determine which range in that cumulative weight array to which
             # the number belongs.
             num = random.random()
-            paricle_index = 0
+            particle_index = 0
             while cumulative_sum_of_weight[particle_index] < num and particle_index < len(cumulative_sum_of_weight):
                 particle_index += 1
             # 3. The index of that range would correspond to the particle that should be created.
@@ -139,8 +140,9 @@ class particleFilter:
                 if i != particle_index:
                     particles_new.append(self.particles[i]) 
                 else:
-                    current_particle = self.particle[i]
+                    current_particle = self.particles[i]
                     particle = Particle(x = current_particle.x, y = current_particle.y, maze = current_particle.maze, heading = current_particle.heading, weight = current_particle.weight, sensor_limit = current_particle.sensor_limit, noisy = True)
+                    particles_new.append(particle)
             ###############
             self.particles = particles_new
             # Normalize the particle weight
@@ -158,7 +160,7 @@ class particleFilter:
             You can either use ode function or vehicle_dynamics function provided above
         """
         ## TODO #####
-        # print(self.control)
+        # print(self.controlSub)
 
         ###############
         # pass
@@ -180,7 +182,7 @@ class particleFilter:
                 # updateWeight(p, reading)
                 # p = resampleParticle(p)
             self.particleMotionModel()
-            reading = self.getModelState()
+            reading = self.bob.read_sensor()
             self.updateWeight(reading)
             self.resampleParticle()
             count += 1

@@ -7,6 +7,7 @@ from gazebo_msgs.srv import GetModelState
 import shutil
 from std_msgs.msg import Float32MultiArray
 from scipy.integrate import ode
+import turtle
 
 import random
 
@@ -36,10 +37,10 @@ class particleFilter:
 
 
             ## first quadrant
-            x = np.random.uniform(0, world.width / 2)
+            x = np.random.uniform(world.width / 2, world.width)
             y = np.random.uniform(world.height / 2, world.height)
 
-            particles.append(Particle(x = -x, y = y, maze = world, sensor_limit = sensor_limit))
+            particles.append(Particle(x = x, y = y, maze = world, sensor_limit = sensor_limit))
 
         ###############
 
@@ -117,7 +118,7 @@ class particleFilter:
         """
         num_of_samples = self.num_particles // 2
         t = 0
-        while t < 100:
+        while t < num_of_samples:
             particles_new = list()
             ## TODO #####
             # 1. Calculate an array of the cumulative sum of the weights.
@@ -160,8 +161,17 @@ class particleFilter:
             You can either use ode function or vehicle_dynamics function provided above
         """
         ## TODO #####
-        # print(self.controlSub)
-
+        
+        # print(self.control)
+        for control_input in self.control:
+            v = control_input[0]
+            delta = control_input[1]
+            for particle in self.particles:
+                x, y, heading = particle.x, particle.y, particle.heading 
+                dx, dy, dtheta = vehicle_dynamics(0, [x, y, heading], v, delta)
+                particle.x = x + 0.01 * dx
+                particle.y = y + 0.01 * dy
+                particle.heading += 0.01 * dtheta
         ###############
         # pass
 
@@ -184,6 +194,9 @@ class particleFilter:
             self.particleMotionModel()
             reading = self.bob.read_sensor()
             self.updateWeight(reading)
+            self.world.show_robot(self.bob)
+            self.world.show_particles(self.particles)
+            self.world.clear_objects()
             self.resampleParticle()
             count += 1
             ###############

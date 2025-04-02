@@ -8,8 +8,9 @@ import shutil
 from std_msgs.msg import Float32MultiArray
 from scipy.integrate import ode
 import turtle
-
+import matplotlib.pyplot as plt
 import random
+import math
 
 def vehicle_dynamics(t, vars, vr, delta):
     curr_x = vars[0]
@@ -32,13 +33,13 @@ class particleFilter:
         for i in range(num_particles):
 
             # (Default) The whole map
-            x = np.random.uniform(0, world.width)
-            y = np.random.uniform(0, world.height)
+            # x = np.random.uniform(0, world.width)
+            # y = np.random.uniform(0, world.height)
 
 
             ## first quadrant
-            # x = np.random.uniform(world.width / 2, world.width)
-            # y = np.random.uniform(world.height / 2, world.height)
+            x = np.random.uniform(world.width / 2, world.width)
+            y = np.random.uniform(world.height / 2, world.height)
 
             particles.append(Particle(x = x, y = y, maze = world, sensor_limit = sensor_limit))
 
@@ -145,12 +146,6 @@ class particleFilter:
             particles_new.append(particle)
             ###############
         self.particles = particles_new
-            # Normalize the particle weight
-            # sum_of_particle_weight = 0
-            # for particle in self.particles:
-            #     sum_of_particle_weight += particle.weight
-            # for particle in self.particles:
-            #     particle.weight = particle.weight / sum_of_particle_weight
         
 
     def particleMotionModel(self):
@@ -162,7 +157,12 @@ class particleFilter:
         ## TODO #####
         
         # print(self.control)
-        for control_input in self.control:
+        for control_input in self.control:# Normalize the particle weight
+            # sum_of_particle_weight = 0
+            # for particle in self.particles:
+            #     sum_of_particle_weight += particle.weight
+            # for particle in self.particles:
+            #     particle.weight = particle.weight / sum_of_particle_weight
             v = control_input[0]
             delta = control_input[1]
             for particle in self.particles:
@@ -182,7 +182,10 @@ class particleFilter:
             Run PF localization
         """
         count = 0 
-        while True:
+        h_error = []
+        d_error = []
+        nums = []
+        while count < 10000:
             ## TODO: (i) Implement Section 3.2.2. (ii) Display robot and particles on map. (iii) Compute and save position/heading error to plot. #####
             # Each time the runFilter function is run, do not forget to clear particles. Note:
             # Additionally, if you encounter lag, consider adjusting the show_frequency parameter.
@@ -196,8 +199,19 @@ class particleFilter:
             self.updateWeight(reading)
             self.resampleParticle()
             self.world.show_robot(self.bob)
-            self.world.show_estimated_location(self.particles)
+            [x_estimate,y_estimate, heading_estimate] = self.world.show_estimated_location(self.particles)
             self.world.show_particles(self.particles)
             self.world.clear_objects()
+
+            heading_error = (heading_estimate - self.bob.heading) / self.bob.heading 
+            distance_error = math.sqrt((self.bob.x - x_estimate)**2 + (self.bob.y - y_estimate)**2)
+
+            h_error.append(heading_error)
+            d_error.append(distance_error)
             count += 1
+            nums.append(count)
+        
+        plt.plot(h_error, nums)
+        plt.plot(d_error, nums)
+        plt.show()
             ###############

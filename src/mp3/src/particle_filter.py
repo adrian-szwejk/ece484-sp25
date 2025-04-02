@@ -32,13 +32,13 @@ class particleFilter:
         for i in range(num_particles):
 
             # (Default) The whole map
-            # x = np.random.uniform(0, world.width / 2)
-            # y = np.random.uniform(0, world.height / 2)
+            x = np.random.uniform(0, world.width)
+            y = np.random.uniform(0, world.height)
 
 
             ## first quadrant
-            x = np.random.uniform(world.width / 2, world.width)
-            y = np.random.uniform(world.height / 2, world.height)
+            # x = np.random.uniform(world.width / 2, world.width)
+            # y = np.random.uniform(world.height / 2, world.height)
 
             particles.append(Particle(x = x, y = y, maze = world, sensor_limit = sensor_limit))
 
@@ -99,7 +99,7 @@ class particleFilter:
         # To assign the weights to the particles, we need to compare the similarities between the real
         # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
         # Kernel to calculate the likelihood between the two sensor readings.
-        '''sum_of_particle_weight = 0
+        sum_of_particle_weight = 0
         # print("Reading robot is ", readings_robot.deserialize('orientation'))
         for particle in self.particles:
             particle_sensor_measurement = particle.read_sensor()
@@ -107,101 +107,53 @@ class particleFilter:
             sum_of_particle_weight += particle.weight
         # Normalize the weight of the particles so that the sum of the weight equals to 1
         for particle in self.particles:
-            particle.weight = particle.weight / sum_of_particle_weight'''
+            particle.weight = particle.weight / sum_of_particle_weight
         ###############
         # pass
 
-        weights = []
-        eps = 1e-8  # Small value to prevent division by zero
-
-        # Compute weights for each particle
-        for i in range(self.num_particles):
-            readings_particle = self.particles[i].read_sensor()
-            weight = self.weight_gaussian_kernel(readings_robot, readings_particle)
-            weights.append(weight)
-
-        # Normalize the weights
-        norm = np.sum(weights) + eps  # Avoid division by zero
-        norm_weights = np.array(weights) / norm
-
-        # Assign normalized weights
-        for i in range(self.num_particles):
-            self.particles[i].weight = norm_weights[i]
-
-
-    '''def resampleParticle(self):
+    def resampleParticle(self):
         """
         Description:
             Perform resample to get a new list of particles 
         """
-        num_of_samples = self.num_particles // 2
-        t = 0
-        while t < num_of_samples:
-            particles_new = list()
-            ##TODO #####
+        cumulative_sum_of_weight = []
+        for i in range(self.num_particles):
+            s = 0
+            if len(cumulative_sum_of_weight) != 0:
+                s = cumulative_sum_of_weight[-1]
+            s += self.particles[i].weight
+            cumulative_sum_of_weight.append(s)
+        particles_new = list()
+        for _ in range(self.num_particles):
+            ## TODO #####
             # 1. Calculate an array of the cumulative sum of the weights.
-            cumulative_sum_of_weight = []
-            for i in range(self.num_particles):
-                s = 0
-                if len(cumulative_sum_of_weight) != 0:
-                    s = cumulative_sum_of_weight[-1]
-                s += self.particles[i].weight
-                cumulative_sum_of_weight.append(s)
-            # 2. Randomly generate a number and determine which range in that cumulative weight array to which the number belongs.
+            # 2. Randomly generate a number and determine which range in that cumulative weight array to which
+            # the number belongs.
             num = random.random()
-            particle_index = 0
-            while cumulative_sum_of_weight[particle_index] < num and particle_index < len(cumulative_sum_of_weight):
-                particle_index += 1
+            particle_index = bisect.bisect_left(cumulative_sum_of_weight, num)
             # 3. The index of that range would correspond to the particle that should be created.
             # 4. Repeat sampling until you have the desired number of samples
-            for i in range(self.num_particles):
-                if i != particle_index:
-                    particles_new.append(self.particles[i]) 
-                else:
-                    current_particle = self.particles[i]
-                    particle = Particle(x = current_particle.x, y = current_particle.y, maze = current_particle.maze, heading = current_particle.heading, weight = current_particle.weight, sensor_limit = current_particle.sensor_limit, noisy = True)
-                    particles_new.append(particle)
+            current_particle = self.particles[particle_index]
+            particle = Particle(
+                        x = current_particle.x, 
+                        y = current_particle.y, 
+                        maze = current_particle.maze, 
+                        heading = current_particle.heading, 
+                        weight = 1, 
+                        sensor_limit = current_particle.sensor_limit, 
+                        noisy = True)
+            particles_new.append(particle)
             ###############
-            self.particles = particles_new
+        self.particles = particles_new
             # Normalize the particle weight
-            sum_of_particle_weight = 0
-            for particle in self.particles:
-                sum_of_particle_weight += particle.weight
-            for particle in self.particles:
-                particle.weight = particle.weight / sum_of_particle_weight
-            t += 1'''
-
-    def resampleParticle(self):
-    """
-    Description:
-        Perform resampling to get a new list of particles.
-    """
-    particles_new = []
-    weights = np.array([p.weight for p in self.particles])  # Extract weights
-    cumulative_sum = np.cumsum(weights)  # Step 1: Compute cumulative sum
-    num_particles = self.num_particles
-
-    # Generate `num_particles` random numbers in [0,1] and map to cumulative sum
-    random_samples = np.random.uniform(0, 1, num_particles)
-
-    for r in random_samples:
-        index = np.searchsorted(cumulative_sum, r)  # Step 2 & 3: Find corresponding index
-        selected_particle = self.particles[index]  # Select particle
+            # sum_of_particle_weight = 0
+            # for particle in self.particles:
+            #     sum_of_particle_weight += particle.weight
+            # for particle in self.particles:
+            #     particle.weight = particle.weight / sum_of_particle_weight
         
-        # Create a new particle with noise
-        new_particle = Particle(
-            x=selected_particle.x + np.random.normal(0, selected_particle.noisy),
-            y=selected_particle.y + np.random.normal(0, selected_particle.noisy),
-            theta=selected_particle.theta + np.random.normal(0, selected_particle.noisy),
-            weight=1.0 / num_particles  # Reset weight
-        )
-        
-        particles_new.append(new_particle)
 
-    self.particles = particles_new
-
-
-    '''def particleMotionModel(self):
+    def particleMotionModel(self):
         """
         Description:
             Estimate the next state for each particle according to the control input from actual robot 
@@ -219,43 +171,12 @@ class particleFilter:
                 particle.x = x + 0.01 * dx
                 particle.y = y + 0.01 * dy
                 particle.heading += 0.01 * dtheta
+        self.control = []
         ###############
-        # pass 
-        '''
-
-    def particleMotionModel(self):
-        """
-        Description:
-            Estimate the next state for each particle according to the control input from actual robot 
-            You can either use ode function or vehicle_dynamics function provided above
-        """
-        ## TODO #####
-        if len(self.control) == 0:
-            return
-
-        dt = 0.01
-        for i in range(self.num_particles):
-        # Initialize state of the particle
-        x, y, theta = self.particles[i].x, self.particles[i].y, self.particles[i].heading
-
-            # Integrate through the entire control history
-            for vr, delta in self.control:
-                x += vr * np.cos(theta) * dt
-                y += vr * np.sin(theta) * dt
-                theta += delta * dt
-
-        # Update particle state after applying all control inputs
-            self.particles[i].x = x
-            self.particles[i].y = y
-            self.particles[i].heading = theta
-
-        # Clear control history after applying it to all particles
-        self.control.clear()
+        # pass
 
 
-
-
-'''    def runFilter(self):
+    def runFilter(self):
         """
         Description:
             Run PF localization
@@ -273,32 +194,10 @@ class particleFilter:
             self.particleMotionModel()
             reading = self.bob.read_sensor()
             self.updateWeight(reading)
+            self.resampleParticle()
             self.world.show_robot(self.bob)
+            self.world.show_estimated_location(self.particles)
             self.world.show_particles(self.particles)
             self.world.clear_objects()
-            self.resampleParticle()
-            count += 1'''
-            ############### 
-
-def runFilter(self, true_pos):
-    count = 0 
-    position_errors = []
-    heading_errors = []
-    
-    while True:
-        self.particles = self.sample_motion_model(self.particles)
-        readings = self.vehicle_read_sensor()
-        weights = self.update_weight(self.particles, readings)
-        self.particles = self.resample_particles(self.particles, weights)
-        
-        estimated_pos = np.mean(self.particles, axis=0)
-        pos_error, head_error = self.compute_error(estimated_pos, true_pos)
-        position_errors.append(pos_error)
-        heading_errors.append(head_error)
-        
-        if count % self.show_frequency == 0:
-            self.visualize(self.particles, estimated_pos, true_pos)
-        
-        count += 1
-        if count > 100:  # Stop condition for testing
-            break
+            count += 1
+            ###############

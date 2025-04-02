@@ -255,19 +255,48 @@ class Maze(object):
         pos_y = y
         d5 = 0
 
-        dx = np.cos(orientation) * 1 - np.sin(orientation) * 0
-        dy = np.sin(orientation) * 1 + np.cos(orientation) * 0
-        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d1 < sensor_limit:
+        dx = np.cos(orientation + np.pi/4) * 1 - np.sin(orientation + np.pi/4) * 0
+        dy = np.sin(orientation + np.pi/4) * 1 + np.cos(orientation + np.pi/4) * 0
+        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d5 < sensor_limit:
             pos_x = pos_x + dx
             pos_y = pos_y + dy
-            d1 += 1
+            d5 += 1
         
-        dx = np.cos(orientation+np.pi/2) * 1 - np.sin(orientation+np.pi/2) * 0
-        dy = np.sin(orientation+np.pi/2) * 1 + np.cos(orientation+np.pi/2) * 0
-        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d4 < sensor_limit:
+        # Front Right
+        pos_x = x
+        pos_y = y
+        d6 = 0
+
+        dx = np.cos(orientation - np.pi/4) * 1 - np.sin(orientation - np.pi/4) * 0
+        dy = np.sin(orientation - np.pi/4) * 1 + np.cos(orientation - np.pi/4) * 0
+        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d6 < sensor_limit:
             pos_x = pos_x + dx
             pos_y = pos_y + dy
-            d4 += 1
+            d6 += 1
+        
+        # Rear Left
+        pos_x = x
+        pos_y = y
+        d7 = 0
+
+        dx = np.cos(orientation + 3*np.pi/4) * 1 - np.sin(orientation + 3*np.pi/4) * 0
+        dy = np.sin(orientation + 3*np.pi/4) * 1 + np.cos(orientation + 3*np.pi/4) * 0
+        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d7 < sensor_limit:
+            pos_x = pos_x + dx
+            pos_y = pos_y + dy
+            d7 += 1
+        
+        # Rear Right
+        pos_x = x
+        pos_y = y
+        d8 = 0
+
+        dx = np.cos(orientation - 3*np.pi/4) * 1 - np.sin(orientation - 3*np.pi/4) * 0
+        dy = np.sin(orientation - 3*np.pi/4) * 1 + np.cos(orientation - 3*np.pi/4) * 0
+        while not self.colide_wall(int(round(pos_y)),int(round(pos_x))) and d8 < sensor_limit:
+            pos_x = pos_x + dx
+            pos_y = pos_y + dy
+            d8 += 1
 
         ###############
 

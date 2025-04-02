@@ -99,7 +99,7 @@ class particleFilter:
         # To assign the weights to the particles, we need to compare the similarities between the real
         # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
         # Kernel to calculate the likelihood between the two sensor readings.
-        sum_of_particle_weight = 0
+        '''sum_of_particle_weight = 0
         # print("Reading robot is ", readings_robot.deserialize('orientation'))
         for particle in self.particles:
             particle_sensor_measurement = particle.read_sensor()
@@ -107,11 +107,29 @@ class particleFilter:
             sum_of_particle_weight += particle.weight
         # Normalize the weight of the particles so that the sum of the weight equals to 1
         for particle in self.particles:
-            particle.weight = particle.weight / sum_of_particle_weight
+            particle.weight = particle.weight / sum_of_particle_weight'''
         ###############
         # pass
 
-    def resampleParticle(self):
+        weights = []
+        eps = 1e-8  # Small value to prevent division by zero
+
+        # Compute weights for each particle
+        for i in range(self.num_particles):
+            readings_particle = self.particles[i].read_sensor()
+            weight = self.weight_gaussian_kernel(readings_robot, readings_particle)
+            weights.append(weight)
+
+        # Normalize the weights
+        norm = np.sum(weights) + eps  # Avoid division by zero
+        norm_weights = np.array(weights) / norm
+
+        # Assign normalized weights
+        for i in range(self.num_particles):
+            self.particles[i].weight = norm_weights[i]
+
+
+    '''def resampleParticle(self):
         """
         Description:
             Perform resample to get a new list of particles 
@@ -120,7 +138,7 @@ class particleFilter:
         t = 0
         while t < num_of_samples:
             particles_new = list()
-            ## TODO #####
+            ##TODO #####
             # 1. Calculate an array of the cumulative sum of the weights.
             cumulative_sum_of_weight = []
             for i in range(self.num_particles):
@@ -129,8 +147,7 @@ class particleFilter:
                     s = cumulative_sum_of_weight[-1]
                 s += self.particles[i].weight
                 cumulative_sum_of_weight.append(s)
-            # 2. Randomly generate a number and determine which range in that cumulative weight array to which
-            # the number belongs.
+            # 2. Randomly generate a number and determine which range in that cumulative weight array to which the number belongs.
             num = random.random()
             particle_index = 0
             while cumulative_sum_of_weight[particle_index] < num and particle_index < len(cumulative_sum_of_weight):
@@ -152,9 +169,39 @@ class particleFilter:
                 sum_of_particle_weight += particle.weight
             for particle in self.particles:
                 particle.weight = particle.weight / sum_of_particle_weight
-            t += 1
+            t += 1'''
 
-    def particleMotionModel(self):
+    def resampleParticle(self):
+    """
+    Description:
+        Perform resampling to get a new list of particles.
+    """
+    particles_new = []
+    weights = np.array([p.weight for p in self.particles])  # Extract weights
+    cumulative_sum = np.cumsum(weights)  # Step 1: Compute cumulative sum
+    num_particles = self.num_particles
+
+    # Generate `num_particles` random numbers in [0,1] and map to cumulative sum
+    random_samples = np.random.uniform(0, 1, num_particles)
+
+    for r in random_samples:
+        index = np.searchsorted(cumulative_sum, r)  # Step 2 & 3: Find corresponding index
+        selected_particle = self.particles[index]  # Select particle
+        
+        # Create a new particle with noise
+        new_particle = Particle(
+            x=selected_particle.x + np.random.normal(0, selected_particle.noisy),
+            y=selected_particle.y + np.random.normal(0, selected_particle.noisy),
+            theta=selected_particle.theta + np.random.normal(0, selected_particle.noisy),
+            weight=1.0 / num_particles  # Reset weight
+        )
+        
+        particles_new.append(new_particle)
+
+    self.particles = particles_new
+
+
+    '''def particleMotionModel(self):
         """
         Description:
             Estimate the next state for each particle according to the control input from actual robot 
@@ -173,10 +220,42 @@ class particleFilter:
                 particle.y = y + 0.01 * dy
                 particle.heading += 0.01 * dtheta
         ###############
-        # pass
+        # pass 
+        '''
+
+    def particleMotionModel(self):
+        """
+        Description:
+            Estimate the next state for each particle according to the control input from actual robot 
+            You can either use ode function or vehicle_dynamics function provided above
+        """
+        ## TODO #####
+        if len(self.control) == 0:
+            return
+
+        dt = 0.01
+        for i in range(self.num_particles):
+        # Initialize state of the particle
+        x, y, theta = self.particles[i].x, self.particles[i].y, self.particles[i].heading
+
+            # Integrate through the entire control history
+            for vr, delta in self.control:
+                x += vr * np.cos(theta) * dt
+                y += vr * np.sin(theta) * dt
+                theta += delta * dt
+
+        # Update particle state after applying all control inputs
+            self.particles[i].x = x
+            self.particles[i].y = y
+            self.particles[i].heading = theta
+
+        # Clear control history after applying it to all particles
+        self.control.clear()
 
 
-    def runFilter(self):
+
+
+'''    def runFilter(self):
         """
         Description:
             Run PF localization
@@ -198,5 +277,28 @@ class particleFilter:
             self.world.show_particles(self.particles)
             self.world.clear_objects()
             self.resampleParticle()
-            count += 1
-            ###############
+            count += 1'''
+            ############### 
+
+def runFilter(self, true_pos):
+    count = 0 
+    position_errors = []
+    heading_errors = []
+    
+    while True:
+        self.particles = self.sample_motion_model(self.particles)
+        readings = self.vehicle_read_sensor()
+        weights = self.update_weight(self.particles, readings)
+        self.particles = self.resample_particles(self.particles, weights)
+        
+        estimated_pos = np.mean(self.particles, axis=0)
+        pos_error, head_error = self.compute_error(estimated_pos, true_pos)
+        position_errors.append(pos_error)
+        heading_errors.append(head_error)
+        
+        if count % self.show_frequency == 0:
+            self.visualize(self.particles, estimated_pos, true_pos)
+        
+        count += 1
+        if count > 100:  # Stop condition for testing
+            break

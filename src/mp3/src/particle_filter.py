@@ -100,15 +100,17 @@ class particleFilter:
         # To assign the weights to the particles, we need to compare the similarities between the real
         # sensor measurements and the particle sensor measurements. In this MP, we recommend using a Gaussian
         # Kernel to calculate the likelihood between the two sensor readings.
-        sum_of_particle_weight = 0
-        # print("Reading robot is ", readings_robot.deserialize('orientation'))
-        for particle in self.particles:
-            particle_sensor_measurement = particle.read_sensor()
-            particle.weight = self.weight_gaussian_kernel(readings_robot, particle_sensor_measurement)
-            sum_of_particle_weight += particle.weight
-        # Normalize the weight of the particles so that the sum of the weight equals to 1
-        for particle in self.particles:
-            particle.weight = particle.weight / sum_of_particle_weight
+        weights = []
+        for i in range(self.num_particles):
+            readings_particle = self.particles[i].read_sensor()
+            weights.append(self.weight_gaussian_kernel(readings_robot, readings_particle))
+        #print(weights)
+        # Normalize the weights
+        norm = np.sum(weights)
+        norm_weights = weights / norm
+        #assign normalized weights
+        for i in range(self.num_particles):
+            self.particles[i].weight = norm_weights[i]
         ###############
         # pass
 
@@ -117,35 +119,29 @@ class particleFilter:
         Description:
             Perform resample to get a new list of particles 
         """
-        cumulative_sum_of_weight = []
-        for i in range(self.num_particles):
-            s = 0
-            if len(cumulative_sum_of_weight) != 0:
-                s = cumulative_sum_of_weight[-1]
-            s += self.particles[i].weight
-            cumulative_sum_of_weight.append(s)
-        particles_new = list()
-        for _ in range(self.num_particles):
-            ## TODO #####
-            # 1. Calculate an array of the cumulative sum of the weights.
-            # 2. Randomly generate a number and determine which range in that cumulative weight array to which
-            # the number belongs.
-            num = random.random()
-            particle_index = bisect.bisect_left(cumulative_sum_of_weight, num)
-            # 3. The index of that range would correspond to the particle that should be created.
-            # 4. Repeat sampling until you have the desired number of samples
-            current_particle = self.particles[particle_index]
-            particle = Particle(
-                        x = current_particle.x, 
-                        y = current_particle.y, 
-                        maze = current_particle.maze, 
-                        heading = current_particle.heading, 
-                        weight = 1, 
-                        sensor_limit = current_particle.sensor_limit, 
-                        noisy = True)
-            particles_new.append(particle)
-            ###############
+        particles_new = []
+        weights = np.array([p.weight for p in self.particles])  # Extract weights
+        cumulative_sum = np.cumsum(weights)  # Step 1: Compute cumulative sum
+        num_particles = self.num_particles
+
+        # Generate `num_particles` random numbers in [0,1] and map to cumulative sum
+        random_samples = np.random.uniform(0, 1, num_particles)
+
+        for r in random_samples:
+            index = bisect.bisect_left(cumulative_sum, r)
+            selected_particle = self.particles[index]
+            # Create a new particle to avoid modifying references
+            particles_new.append(Particle(
+                x=selected_particle.x,
+                y=selected_particle.y,
+                heading=selected_particle.heading,
+                maze=selected_particle.maze,
+                sensor_limit=selected_particle.sensor_limit,
+                noisy=True
+            ))
         self.particles = particles_new
+
+
         
 
     def particleMotionModel(self):
@@ -157,21 +153,27 @@ class particleFilter:
         ## TODO #####
         
         # print(self.control)
-        for control_input in self.control:# Normalize the particle weight
-            # sum_of_particle_weight = 0
-            # for particle in self.particles:
-            #     sum_of_particle_weight += particle.weight
-            # for particle in self.particles:
-            #     particle.weight = particle.weight / sum_of_particle_weight
-            v = control_input[0]
-            delta = control_input[1]
-            for particle in self.particles:
-                x, y, heading = particle.x, particle.y, particle.heading 
-                dx, dy, dtheta = vehicle_dynamics(0, [x, y, heading], v, delta)
-                particle.x = x + 0.01 * dx
-                particle.y = y + 0.01 * dy
-                particle.heading += 0.01 * dtheta
-        self.control = []
+        if len(self.control) == 0:
+            return
+
+        dt = 0.01
+        for i in range(self.num_particles):
+        # Initialize state of the particle
+        x, y, theta = self.particles[i].x, self.particles[i].y, self.particles[i].heading
+
+            # Integrate through the entire control history
+            for vr, delta in self.control:
+                x += vr * np.cos(theta) * dt
+                y += vr * np.sin(theta) * dt
+                theta += delta * dt
+
+        # Update particle state after applying all control inputs
+            self.particles[i].x = x
+            self.particles[i].y = y
+            self.particles[i].heading = theta
+
+        # Clear control history after applying it to all particles
+        self.control.clear()
         ###############
         # pass
 
@@ -182,10 +184,12 @@ class particleFilter:
             Run PF localization
         """
         count = 0 
+        time = 0.01
         h_error = []
         d_error = []
+        time_set = []
         nums = []
-        while count < 10000:
+        while True:
             ## TODO: (i) Implement Section 3.2.2. (ii) Display robot and particles on map. (iii) Compute and save position/heading error to plot. #####
             # Each time the runFilter function is run, do not forget to clear particles. Note:
             # Additionally, if you encounter lag, consider adjusting the show_frequency parameter.
@@ -203,15 +207,13 @@ class particleFilter:
             self.world.show_particles(self.particles)
             self.world.clear_objects()
 
+            time_set.append(time)   
+            time += 0.01
+
             heading_error = (heading_estimate - self.bob.heading) / self.bob.heading 
             distance_error = math.sqrt((self.bob.x - x_estimate)**2 + (self.bob.y - y_estimate)**2)
 
             h_error.append(heading_error)
             d_error.append(distance_error)
-            count += 1
-            nums.append(count)
-        
-        plt.plot(h_error, nums)
-        plt.plot(d_error, nums)
-        plt.show()
+            errors = [heading_error, distance_error]
             ###############

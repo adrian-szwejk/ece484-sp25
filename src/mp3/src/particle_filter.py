@@ -139,6 +139,7 @@ class particleFilter:
                 sensor_limit=selected_particle.sensor_limit,
                 noisy=True
             ))
+            
         self.particles = particles_new
 
 
@@ -157,9 +158,9 @@ class particleFilter:
             return
 
         dt = 0.01
-        for i in range(self.num_particles):
-        # Initialize state of the particle
-        x, y, theta = self.particles[i].x, self.particles[i].y, self.particles[i].heading
+        for particle in self.particles:
+            # Initialize state of the particle
+            x, y, theta = particle.x, particle.y, particle.heading
 
             # Integrate through the entire control history
             for vr, delta in self.control:
@@ -168,9 +169,9 @@ class particleFilter:
                 theta += delta * dt
 
         # Update particle state after applying all control inputs
-            self.particles[i].x = x
-            self.particles[i].y = y
-            self.particles[i].heading = theta
+            particle.x = x
+            particle.y = y
+            particle.heading = theta
 
         # Clear control history after applying it to all particles
         self.control.clear()
@@ -189,31 +190,46 @@ class particleFilter:
         d_error = []
         time_set = []
         nums = []
-        while True:
-            ## TODO: (i) Implement Section 3.2.2. (ii) Display robot and particles on map. (iii) Compute and save position/heading error to plot. #####
-            # Each time the runFilter function is run, do not forget to clear particles. Note:
-            # Additionally, if you encounter lag, consider adjusting the show_frequency parameter.
-            # PSUEDO CODE:
-                # sampleMotionModel(p)
-                # reading = vehicle_read_sensor()
-                # updateWeight(p, reading)
-                # p = resampleParticle(p)
-            self.particleMotionModel()
-            reading = self.bob.read_sensor()
-            self.updateWeight(reading)
-            self.resampleParticle()
-            self.world.show_robot(self.bob)
-            [x_estimate,y_estimate, heading_estimate] = self.world.show_estimated_location(self.particles)
-            self.world.show_particles(self.particles)
-            self.world.clear_objects()
+        try:
+            while True:
+                ## TODO: (i) Implement Section 3.2.2. (ii) Display robot and particles on map. (iii) Compute and save position/heading error to plot. #####
+                # Each time the runFilter function is run, do not forget to clear particles. Note:
+                # Additionally, if you encounter lag, consider adjusting the show_frequency parameter.
+                # PSUEDO CODE:
+                    # sampleMotionModel(p)
+                    # reading = vehicle_read_sensor()
+                    # updateWeight(p, reading)
+                    # p = resampleParticle(p)
+                self.particleMotionModel()
+                reading = self.bob.read_sensor()
+                self.updateWeight(reading)
+                self.resampleParticle()
+                self.world.show_robot(self.bob)
+                [x_estimate,y_estimate, heading_estimate] = self.world.show_estimated_location(self.particles)
+                self.world.show_particles(self.particles)
+                self.world.clear_objects()
 
-            time_set.append(time)   
-            time += 0.01
+                time_set.append(time)   
+                time += 0.01
 
-            heading_error = (heading_estimate - self.bob.heading) / self.bob.heading 
-            distance_error = math.sqrt((self.bob.x - x_estimate)**2 + (self.bob.y - y_estimate)**2)
+                heading_error = (heading_estimate - self.bob.heading) / self.bob.heading 
+                distance_error = math.sqrt((self.bob.x - x_estimate)**2 + (self.bob.y - y_estimate)**2)
 
-            h_error.append(heading_error)
-            d_error.append(distance_error)
-            errors = [heading_error, distance_error]
+                h_error.append(heading_error)
+                d_error.append(distance_error)
+                errors = [heading_error, distance_error]
+
+        except KeyboardInterrupt:
+            print("Termination. Plotting errors...")
+            # Plotting the errors
+            plt.figure(figsize=(10, 5))
+            plt.plot(time_set, h_error, label="Heading Error", linestyle="--", marker="o")
+            plt.plot(time_set, d_error, label="Distance Error", linestyle="-", marker="x")
+
+            plt.xlabel("Time (s)")
+            plt.ylabel("Error")
+            plt.title("Heading and Distance Error vs Time")
+            plt.legend()
+            plt.grid(True)
+            plt.show()
             ###############

@@ -11,16 +11,18 @@ import turtle
 import matplotlib.pyplot as plt
 import random
 import math
+from scipy.integrate import ode
 
-def vehicle_dynamics(t, vars, vr, delta):
-    curr_x = vars[0]
-    curr_y = vars[1] 
-    curr_theta = vars[2]
-    
-    dx = vr * np.cos(curr_theta)
-    dy = vr * np.sin(curr_theta)
-    dtheta = delta
-    return [dx,dy,dtheta]
+def vehicle_dynamics(t, state, v, delta):
+    """
+    This function defines the vehicle dynamics. 
+    The state includes [x, y, theta], and the inputs are [v, delta].
+    """
+    x, y, theta = state
+    dxdt = v * np.cos(theta)
+    dydt = v * np.sin(theta)
+    dthetadt = delta        
+    return [dxdt, dydt, dthetadt]
 
 class particleFilter:
     def __init__(self, bob, world, num_particles, sensor_limit, x_start, y_start):
@@ -79,7 +81,7 @@ class particleFilter:
             rospy.loginfo("Service did not process request: "+str(exc))
         return modelState
 
-    def weight_gaussian_kernel(self,x1, x2, std = 5000):
+    def weight_gaussian_kernel(self,x1, x2, std = 3000):
         if x1 is None: # If the robot recieved no sensor measurement, the weights are in uniform distribution.
             return 1./len(self.particles)
         else:
@@ -143,40 +145,80 @@ class particleFilter:
         self.particles = particles_new
 
 
-        
-
     def particleMotionModel(self):
         """
         Description:
-            Estimate the next state for each particle according to the control input from actual robot 
-            You can either use ode function or vehicle_dynamics function provided above
+            Estimate the next state for each particle according to the control input from the actual robot.
+            This version uses the `ode` solver from scipy.integrate for numerical integration.
         """
-        ## TODO #####
         
-        # print(self.control)
         if len(self.control) == 0:
             return
 
         dt = 0.01
+
         for particle in self.particles:
-            # Initialize state of the particle
-            x, y, theta = particle.x, particle.y, particle.heading
+            # Initialize the state of the particle [x, y, theta]
+            state = [particle.x, particle.y, particle.heading]
 
-            # Integrate through the entire control history
+            # Create the ODE solver object
+            solver = ode(vehicle_dynamics)
+
+            # Set initial conditions for the solver
+            solver.set_initial_value(state, 0)  # Start at time t = 0
+
+            # Integrate the dynamics through the entire control history
             for vr, delta in self.control:
-                x += vr * np.cos(theta) * dt
-                y += vr * np.sin(theta) * dt
-                theta += delta * dt
+                solver.set_integrator('dopri5', max_step=dt)  # Use the 'dopri5' method for integration
+                solver.set_f_params(vr, delta)  # Pass the current velocity and steering angle
 
-        # Update particle state after applying all control inputs
-            particle.x = x
-            particle.y = y
-            particle.heading = theta
+                # Integrate for a small time step
+                solver.integrate(solver.t + dt)
 
-        # Clear control history after applying it to all particles
+                # Update the particle state after integration
+                state = solver.y  # The state is updated in solver.y
+
+            # Update the particle with the final position and orientation
+            particle.x = state[0]
+            particle.y = state[1]
+            particle.heading = state[2]
+
+        # Clear the control history after applying it to all particles
         self.control.clear()
-        ###############
-        # pass
+    
+
+    # def particleMotionModel(self):
+    #     """
+    #     Description:
+    #         Estimate the next state for each particle according to the control input from actual robot 
+    #         You can either use ode function or vehicle_dynamics function provided above
+    #     """
+    #     ## TODO #####
+        
+    #     # print(self.control)
+    #     if len(self.control) == 0:
+    #         return
+
+    #     dt = 0.01
+    #     for particle in self.particles:
+    #         # Initialize state of the particle
+    #         x, y, theta = particle.x, particle.y, particle.heading
+
+    #         # Integrate through the entire control history
+    #         for vr, delta in self.control:
+    #             x += vr * np.cos(theta) * dt
+    #             y += vr * np.sin(theta) * dt
+    #             theta += delta * dt
+
+    #     # Update particle state after applying all control inputs
+    #         particle.x = x
+    #         particle.y = y
+    #         particle.heading = theta
+
+    #     # Clear control history after applying it to all particles
+    #     self.control.clear()
+    #     ###############
+    #     # pass
 
 
     def runFilter(self):

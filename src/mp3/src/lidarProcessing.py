@@ -164,42 +164,34 @@ class LidarProcessing:
         
         ## TODO: Add 4 additional sensor directions #####
         # Handle sensor at 4 diagnal direction
-        # Front Right
-        filter_FR = np.logical_and((x_points>0.1), (y_points<-0.1))
-        filter_FR = np.logical_and(filter_FR, abs(y_points - x_points) < 0.3)
-        filter_FR = np.logical_and(filter_FR, pixel_vals > 128)
-        indices = np.argwhere(filter_FR).flatten()
+        # Front Left
+        filter_front_left = np.logical_and(filter_left, filter_front)
+        indices = np.argwhere(filter_front_left).flatten()
+
+        self.x_front_left = np.mean(x_points[indices])
+        self.y_front_left = np.mean(y_points[indices])
+
+
+        # Front right
+        filter_front_right = np.logical_and(filter_right, filter_front)
+        indices = np.argwhere(filter_front_right).flatten()
 
         self.x_front_right = np.mean(x_points[indices])
         self.y_front_right = np.mean(y_points[indices])
         
-        # Front Left   
-        filter_FL = np.logical_and((x_points>0.1), (y_points>0.1))
-        filter_FL = np.logical_and(filter_FL, abs(y_points - x_points) < 0.3)
-        filter_FL = np.logical_and(filter_FL, pixel_vals > 128)
-        indices = np.argwhere(filter_FL).flatten()
-
-        self.x_front_left = np.mean(x_points[indices])
-        self.y_front_left = np.mean(y_points[indices])
-        
-        # Rear Right       
-        filter_RR = np.logical_and((x_points<-0.1), (y_points<-0.1))
-        filter_RR = np.logical_and(filter_RR, abs(y_points - x_points) < 0.3)
-        filter_RR = np.logical_and(filter_RR, pixel_vals > 128)
-        indices = np.argwhere(filter_RR).flatten()
-
-        self.x_rear_right = np.mean(x_points[indices])
-        self.y_rear_right = np.mean(y_points[indices])
-
-        # Rear Left    
-        filter_RL = np.logical_and((x_points<-0.1), (y_points>0.1))
-        filter_RL = np.logical_and(filter_RL, abs(y_points - x_points) < 0.3)
-        filter_RL = np.logical_and(filter_RL, pixel_vals > 128)
-        indices = np.argwhere(filter_RL).flatten()
+        # Rear left
+        filter_rear_left = np.logical_and(filter_rear, filter_right)
+        indices = np.argwhere(filter_rear_left).flatten()
 
         self.x_rear_left = np.mean(x_points[indices])
         self.y_rear_left = np.mean(y_points[indices])
 
+        # Rear right
+        filter_rear_right = np.logical_and(filter_rear, filter_right)
+        indices = np.argwhere(filter_rear_right).flatten()
+
+        self.x_rear_right = np.mean(x_points[indices])
+        self.y_rear_right = np.mean(y_points[indices])
         
         ###############
 

@@ -81,7 +81,7 @@ class particleFilter:
             rospy.loginfo("Service did not process request: "+str(exc))
         return modelState
 
-    def weight_gaussian_kernel(self,x1, x2, std = 10000):
+    def weight_gaussian_kernel(self,x1, x2, std = 4000):
         if x1 is None: # If the robot recieved no sensor measurement, the weights are in uniform distribution.
             return 1./len(self.particles)
         else:
@@ -155,7 +155,7 @@ class particleFilter:
         if len(self.control) == 0:
             return
 
-        dt = 0.01
+        dt = 0.0125
 
         for particle in self.particles:
             # Initialize the state of the particle [x, y, theta]
@@ -227,7 +227,7 @@ class particleFilter:
             Run PF localization
         """
         count = 0 
-        time = 0.01
+        time = 0.0125
         h_error = []
         d_error = []
         time_set = []
@@ -252,7 +252,7 @@ class particleFilter:
                 self.world.clear_objects()
 
                 time_set.append(time)   
-                time += 0.01
+                time += 0.0125
 
                 heading_error = (heading_estimate - self.bob.heading) / self.bob.heading 
                 distance_error = math.sqrt((self.bob.x - x_estimate)**2 + (self.bob.y - y_estimate)**2)

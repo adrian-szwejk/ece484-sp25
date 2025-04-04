@@ -81,7 +81,7 @@ class particleFilter:
             rospy.loginfo("Service did not process request: "+str(exc))
         return modelState
 
-    def weight_gaussian_kernel(self,x1, x2, std = 3000):
+    def weight_gaussian_kernel(self,x1, x2, std = 10000):
         if x1 is None: # If the robot recieved no sensor measurement, the weights are in uniform distribution.
             return 1./len(self.particles)
         else:
@@ -263,14 +263,22 @@ class particleFilter:
 
         except KeyboardInterrupt:
             print("Termination. Plotting errors...")
-            # Plotting the errors
+            # Plot for Heading Error
             plt.figure(figsize=(10, 5))
-            plt.plot(time_set, h_error, label="Heading Error", linestyle="--", marker="o")
-            plt.plot(time_set, d_error, label="Distance Error", linestyle="-", marker="x")
-
+            plt.plot(time_set, h_error, label="Heading Error", linestyle="-", color='b')
             plt.xlabel("Time (s)")
             plt.ylabel("Error")
-            plt.title("Heading and Distance Error vs Time")
+            plt.title("Heading Error vs Time")
+            plt.legend()
+            plt.grid(True)
+            plt.show()
+
+            # Plot for Distance Error
+            plt.figure(figsize=(10, 5))
+            plt.plot(time_set, d_error, label="Distance Error", linestyle="-", color='r')
+            plt.xlabel("Time (s)")
+            plt.ylabel("Error")
+            plt.title("Distance Error vs Time")
             plt.legend()
             plt.grid(True)
             plt.show()

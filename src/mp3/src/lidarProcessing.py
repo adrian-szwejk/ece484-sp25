@@ -163,7 +163,6 @@ class LidarProcessing:
         self.y_front = np.mean(y_points[indices])
         
         ## TODO: Add 4 additional sensor directions #####
-        # Handle sensor at 4 diagnal direction
         # Front Right
         filter_fr = np.logical_and((x_points>0.1), (y_points<-0.1))
         filter_fr = np.logical_and(filter_fr, abs(y_points - x_points) < 0.3)

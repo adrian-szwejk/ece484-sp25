@@ -40,6 +40,8 @@ chmod -R 777 ./
 
 #### *Build Workspace (not necessary if WS is placed in nx directory)*
 
+source /opt/ros/noetic/setup.bash
+
 catkin_make
 
 

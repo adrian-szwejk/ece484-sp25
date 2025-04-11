@@ -5,9 +5,18 @@
 # Slamtoolbox
     # https://github.com/SteveMacenski/slam_toolbox/tree/noetic-devel
 
+# Ros CreatePackage
+    # https://wiki.ros.org/ROS/Tutorials/CreatingPackage
+
 # Rosbag 
+    # https://wiki.ros.org/rosbag
     #  For record on car to view at home
 
+# Image sensor
+    # https://docs.ros.org/en/jade/api/sensor_msgs/html/msg/Image.html
+
+# Laser Scan
+    # https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/LaserScan.html
 import rospy
 from sensor_msgs.msg import LaserScan
 from cv_bridge import CvBridge, CvBridgeError

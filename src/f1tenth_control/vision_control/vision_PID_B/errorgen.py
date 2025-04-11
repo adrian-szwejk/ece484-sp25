@@ -24,15 +24,16 @@ class lanenet_detector():
 
         # Uncomment this line for lane detection of videos in rosbag and irl car
         self.sub_image = rospy.Subscriber('/D435I/color/image_raw', Image, self.img_callback, queue_size=1)
-
+        # Message type for lidar : Type: sensor_msgs/LaserScan
+        self.lidar_scan = rospy.Subscriber('/scan', Image, self.img_callback, queue_size=1)
         # Debugging rostopic
-        # To view cropped image
+        # To view cropped imageD435I/color/image_raw
         self.pub_image_cropped = rospy.Publisher("lane_detection/raw_cropped", Image, queue_size=1)
         # To view image in hsv
         self.pub_image_hsv = rospy.Publisher("lane_detection/hsv", Image, queue_size=1)
         # To view img in colour mask + edge detection
         self.pub_debug_combined = rospy.Publisher("lane_detection/combined_image", Image, queue_size=1)
-        # To view img in edge detection
+        # To viewSubscriber img in edge detection
         self.pub_debug_gray = rospy.Publisher("lane_detection/gray", Image, queue_size=1)
         # To view img in color mask
         self.pub_debug_color = rospy.Publisher("lane_detection/color", Image, queue_size=1)

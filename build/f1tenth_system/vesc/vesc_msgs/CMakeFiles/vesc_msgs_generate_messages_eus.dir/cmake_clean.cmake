@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/nx/f1tenth_ros1_ws/devel/share/roseus/ros/vesc_msgs/manifest.l"
-  "/home/nx/f1tenth_ros1_ws/devel/share/roseus/ros/vesc_msgs/msg/VescState.l"
-  "/home/nx/f1tenth_ros1_ws/devel/share/roseus/ros/vesc_msgs/msg/VescStateStamped.l"
+  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/vesc_msgs/manifest.l"
+  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/vesc_msgs/msg/VescState.l"
+  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/vesc_msgs/msg/VescStateStamped.l"
   "CMakeFiles/vesc_msgs_generate_messages_eus"
 )
 

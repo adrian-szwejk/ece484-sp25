@@ -1,8 +1,8 @@
-# Install script for directory: /home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joy
+# Install script for directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nx/f1tenth_ros1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/joystick_drivers/joy/catkin_generated/installspace/joy.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/joystick_drivers/joy/catkin_generated/installspace/joy.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joy/cmake" TYPE FILE FILES
-    "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/joystick_drivers/joy/catkin_generated/installspace/joyConfig.cmake"
-    "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/joystick_drivers/joy/catkin_generated/installspace/joyConfig-version.cmake"
+    "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/joystick_drivers/joy/catkin_generated/installspace/joyConfig.cmake"
+    "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/joystick_drivers/joy/catkin_generated/installspace/joyConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joy" TYPE FILE FILES "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joy/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joy" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joy/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/joy/joy_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/joy" TYPE EXECUTABLE FILES "/home/nx/f1tenth_ros1_ws/devel/lib/joy/joy_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/joy" TYPE EXECUTABLE FILES "/home/abhipai/ece_484/f1ninth/devel/lib/joy/joy_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/joy/joy_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/joy/joy_node")
     file(RPATH_CHANGE
@@ -73,6 +73,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joy" TYPE DIRECTORY FILES "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joy/migration_rules")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joy" TYPE DIRECTORY FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joy/migration_rules")
 endif()
 

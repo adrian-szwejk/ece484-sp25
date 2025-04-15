@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/nx/f1tenth_ros1_ws/src/f1tenth_system/vesc/vesc
-# Build directory: /home/nx/f1tenth_ros1_ws/build/f1tenth_system/vesc/vesc
+# Source directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc
+# Build directory: /home/abhipai/ece_484/f1ninth/build/f1tenth_system/vesc/vesc
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

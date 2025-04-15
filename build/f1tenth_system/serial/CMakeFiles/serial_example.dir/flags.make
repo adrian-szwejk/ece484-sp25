@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1
 
-CXX_INCLUDES = -I/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/include 
+CXX_INCLUDES = -I/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include 
 

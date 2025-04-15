@@ -1,8 +1,8 @@
-prefix=/home/nx/f1tenth_ros1_ws/devel
+prefix=/home/abhipai/ece_484/f1ninth/devel
 
 Name: vesc_ackermann
 Description: Description of vesc_ackermann
 Version: 0.0.1
-Cflags: -I/home/nx/f1tenth_ros1_ws/src/f1tenth_system/vesc/vesc_ackermann/include
+Cflags: -I/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/include
 Libs: -L${prefix}/lib 
 Requires: nodelet pluginlib roscpp nav_msgs std_msgs geometry_msgs tf ackermann_msgs vesc_msgs

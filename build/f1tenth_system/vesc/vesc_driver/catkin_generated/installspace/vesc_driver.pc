@@ -1,4 +1,4 @@
-prefix=/home/nx/f1tenth_ros1_ws/install
+prefix=/home/abhipai/ece_484/f1ninth/install
 
 Name: vesc_driver
 Description: Description of vesc_driver

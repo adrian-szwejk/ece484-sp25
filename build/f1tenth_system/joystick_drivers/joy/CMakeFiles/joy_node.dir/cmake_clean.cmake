@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/nx/f1tenth_ros1_ws/devel/lib/joy/joy_node"
-  "/home/nx/f1tenth_ros1_ws/devel/lib/joy/joy_node.pdb"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/joy/joy_node"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/joy/joy_node.pdb"
   "CMakeFiles/joy_node.dir/src/joy_node.cpp.o"
 )
 

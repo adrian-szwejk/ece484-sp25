@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/examples/serial_example.cc" "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
+  "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/examples/serial_example.cc" "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,12 +15,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/include"
+  "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/serial/CMakeFiles/serial.dir/DependInfo.cmake"
+  "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

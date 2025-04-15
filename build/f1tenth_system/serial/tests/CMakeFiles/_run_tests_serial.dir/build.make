@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nx/f1tenth_ros1_ws/src
+CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nx/f1tenth_ros1_ws/build
+CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
 
 # Utility rule file for _run_tests_serial.
 
@@ -63,10 +63,10 @@ f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/build: _run_tests_s
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/build
 
 f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/clean:
-	cd /home/nx/f1tenth_ros1_ws/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial.dir/cmake_clean.cmake
+	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial.dir/cmake_clean.cmake
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/clean
 
 f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/depend:
-	cd /home/nx/f1tenth_ros1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/f1tenth_ros1_ws/src /home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/tests /home/nx/f1tenth_ros1_ws/build /home/nx/f1tenth_ros1_ws/build/f1tenth_system/serial/tests /home/nx/f1tenth_ros1_ws/build/f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial.dir/depend
 

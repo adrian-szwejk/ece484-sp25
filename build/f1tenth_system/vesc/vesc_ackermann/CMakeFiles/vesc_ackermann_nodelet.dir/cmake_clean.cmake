@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/nx/f1tenth_ros1_ws/devel/lib/libvesc_ackermann_nodelet.pdb"
-  "/home/nx/f1tenth_ros1_ws/devel/lib/libvesc_ackermann_nodelet.so"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/libvesc_ackermann_nodelet.pdb"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/libvesc_ackermann_nodelet.so"
   "CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc.cpp.o"
   "CMakeFiles/vesc_ackermann_nodelet.dir/src/ackermann_to_vesc_nodelet.cpp.o"
   "CMakeFiles/vesc_ackermann_nodelet.dir/src/vesc_to_odom.cpp.o"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/nx/f1tenth_ros1_ws/devel/share/common-lisp/ros/vesc_msgs/msg/VescState.lisp"
-  "/home/nx/f1tenth_ros1_ws/devel/share/common-lisp/ros/vesc_msgs/msg/VescStateStamped.lisp"
+  "/home/abhipai/ece_484/f1ninth/devel/share/common-lisp/ros/vesc_msgs/msg/VescState.lisp"
+  "/home/abhipai/ece_484/f1ninth/devel/share/common-lisp/ros/vesc_msgs/msg/VescStateStamped.lisp"
   "CMakeFiles/vesc_msgs_generate_messages_lisp"
 )
 

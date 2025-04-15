@@ -67,14 +67,14 @@ set(serial_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(serial_SOURCE_PREFIX /home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial)
-  set(serial_DEVEL_PREFIX /home/nx/f1tenth_ros1_ws/devel)
+  set(serial_SOURCE_PREFIX /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial)
+  set(serial_DEVEL_PREFIX /home/abhipai/ece_484/f1ninth/devel)
   set(serial_INSTALL_PREFIX "")
   set(serial_PREFIX ${serial_DEVEL_PREFIX})
 else()
   set(serial_SOURCE_PREFIX "")
   set(serial_DEVEL_PREFIX "")
-  set(serial_INSTALL_PREFIX /home/nx/f1tenth_ros1_ws/install)
+  set(serial_INSTALL_PREFIX /home/abhipai/ece_484/f1ninth/install)
   set(serial_PREFIX ${serial_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(serial_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/include " STREQUAL " ")
+if(NOT "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include " STREQUAL " ")
   set(serial_INCLUDE_DIRS "")
-  set(_include_dirs "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/include")
+  set(_include_dirs "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include")
   if(NOT "https://github.com/wjwwood/serial/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/wjwwood/serial/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wjwwood.github.com/serial/ " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/include " STREQUAL " 
         message(FATAL_ERROR "Project 'serial' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'serial' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/nx/f1tenth_ros1_ws/src/f1tenth_system/serial/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'serial' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/${idir}'.  ${_report}")
     endif()
     _list_append_unique(serial_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nx/f1tenth_ros1_ws/devel/lib;/home/nx/f1tenth_ros1_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/abhipai/ece_484/f1ninth/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

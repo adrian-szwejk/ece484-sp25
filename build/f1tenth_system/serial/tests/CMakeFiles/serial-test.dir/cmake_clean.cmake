@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/nx/f1tenth_ros1_ws/devel/lib/serial/serial-test"
-  "/home/nx/f1tenth_ros1_ws/devel/lib/serial/serial-test.pdb"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test.pdb"
   "CMakeFiles/serial-test.dir/unix_serial_tests.cc.o"
 )
 

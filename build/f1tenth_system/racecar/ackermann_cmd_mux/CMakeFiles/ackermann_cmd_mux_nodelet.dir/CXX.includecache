@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nx/f1tenth_ros1_ws/devel/include/ackermann_cmd_mux/reloadConfig.h
+/home/abhipai/ece_484/f1ninth/devel/include/ackermann_cmd_mux/reloadConfig.h
 dynamic_reconfigure/config_tools.h
 -
 limits
@@ -24,7 +24,7 @@ dynamic_reconfigure/config_init_mutex.h
 boost/any.hpp
 -
 
-/home/nx/f1tenth_ros1_ws/devel/include/ackermann_msgs/AckermannDrive.h
+/home/abhipai/ece_484/f1ninth/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -40,7 +40,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/nx/f1tenth_ros1_ws/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/abhipai/ece_484/f1ninth/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -60,7 +60,7 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_mux_nodelet.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_mux_nodelet.hpp
 ros/ros.h
 -
 nodelet/nodelet.h
@@ -68,11 +68,11 @@ nodelet/nodelet.h
 dynamic_reconfigure/server.h
 -
 ackermann_cmd_mux/reloadConfig.h
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_mux/reloadConfig.h
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_mux/reloadConfig.h
 ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
 
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
@@ -80,11 +80,11 @@ ackermann_msgs/AckermannDriveStamped.h
 yaml-cpp/yaml.h
 -
 
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/exceptions.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/include/ackermann_cmd_mux/exceptions.hpp
 exception
 -
 
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux_nodelet.cpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux_nodelet.cpp
 fstream
 -
 std_msgs/String.h
@@ -92,17 +92,17 @@ std_msgs/String.h
 pluginlib/class_list_macros.h
 -
 ackermann_cmd_mux/ackermann_cmd_mux_nodelet.hpp
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/ackermann_cmd_mux_nodelet.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/ackermann_cmd_mux_nodelet.hpp
 ackermann_cmd_mux/exceptions.hpp
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/exceptions.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/exceptions.hpp
 
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_subscribers.cpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_subscribers.cpp
 fstream
 -
 ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/ackermann_cmd_subscribers.hpp
 ackermann_cmd_mux/exceptions.hpp
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/exceptions.hpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/ackermann_cmd_mux/src/ackermann_cmd_mux/exceptions.hpp
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind.hpp
@@ -721,8 +721,6 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
-boost/bind.hpp
--
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -767,7 +765,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind.hpp
+boost/bind/bind.hpp
 -
 boost/thread/mutex.hpp
 -

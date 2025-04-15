@@ -1,8 +1,8 @@
-# Install script for directory: /home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joystick_drivers
+# Install script for directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joystick_drivers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nx/f1tenth_ros1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joystick_drivers" TYPE FILE FILES "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joystick_drivers/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/joystick_drivers" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joystick_drivers/package.xml")
 endif()
 

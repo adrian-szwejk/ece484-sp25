@@ -1,8 +1,8 @@
-# Install script for directory: /home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/racecar
+# Install script for directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/racecar
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nx/f1tenth_ros1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/racecar/racecar/catkin_generated/installspace/racecar.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/racecar/racecar/catkin_generated/installspace/racecar.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar/cmake" TYPE FILE FILES
-    "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/racecar/racecar/catkin_generated/installspace/racecarConfig.cmake"
-    "/home/nx/f1tenth_ros1_ws/build/f1tenth_system/racecar/racecar/catkin_generated/installspace/racecarConfig-version.cmake"
+    "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/racecar/racecar/catkin_generated/installspace/racecarConfig.cmake"
+    "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/racecar/racecar/catkin_generated/installspace/racecarConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar" TYPE FILE FILES "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/racecar/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/racecar/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar" TYPE DIRECTORY FILES "/home/nx/f1tenth_ros1_ws/src/f1tenth_system/racecar/racecar/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar" TYPE DIRECTORY FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/racecar/launch")
 endif()
 

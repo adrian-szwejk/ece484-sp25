@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/nx/f1tenth_ros1_ws/build'
+export CMAKE_PREFIX_PATH="/home/abhipai/ece_484/f1ninth/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/abhipai/ece_484/f1ninth/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/abhipai/ece_484/f1ninth/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/abhipai/ece_484/f1ninth/src:$ROS_PACKAGE_PATH"

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joy/src/joy_node.cpp
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joy/src/joy_node.cpp
 unistd.h
 -
 math.h
@@ -22,7 +22,7 @@ dirent.h
 diagnostic_updater/diagnostic_updater.h
 -
 ros/ros.h
-/home/nx/f1tenth_ros1_ws/src/f1tenth_system/joystick_drivers/joy/src/ros/ros.h
+/home/abhipai/ece_484/f1ninth/src/f1tenth_system/joystick_drivers/joy/src/ros/ros.h
 sensor_msgs/Joy.h
 -
 sensor_msgs/JoyFeedbackArray.h
@@ -393,8 +393,6 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
-boost/bind.hpp
--
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -439,7 +437,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind.hpp
+boost/bind/bind.hpp
 -
 boost/thread/mutex.hpp
 -

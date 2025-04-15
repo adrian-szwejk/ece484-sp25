@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/nx/f1tenth_ros1_ws/devel/lib/libackermann_cmd_mux_nodelet.pdb"
-  "/home/nx/f1tenth_ros1_ws/devel/lib/libackermann_cmd_mux_nodelet.so"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/libackermann_cmd_mux_nodelet.pdb"
+  "/home/abhipai/ece_484/f1ninth/devel/lib/libackermann_cmd_mux_nodelet.so"
   "CMakeFiles/ackermann_cmd_mux_nodelet.dir/src/ackermann_cmd_mux_nodelet.cpp.o"
   "CMakeFiles/ackermann_cmd_mux_nodelet.dir/src/ackermann_cmd_subscribers.cpp.o"
 )

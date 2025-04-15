@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest/googletest
-# Build directory: /home/nx/f1tenth_ros1_ws/build/gtest/googletest
+# Build directory: /home/abhipai/ece_484/f1ninth/build/gtest/googletest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

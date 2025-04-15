@@ -1,0 +1,8 @@
+prefix=/home/abhipai/ece_484/f1ninth/devel
+
+Name: vision_control
+Description: Description of vision_control
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

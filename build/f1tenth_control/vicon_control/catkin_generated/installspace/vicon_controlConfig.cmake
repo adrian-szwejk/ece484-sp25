@@ -67,14 +67,14 @@ set(vicon_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(vicon_control_SOURCE_PREFIX /home/nx/f1tenth_ros1_ws/src/f1tenth_control/vicon_control)
-  set(vicon_control_DEVEL_PREFIX /home/nx/f1tenth_ros1_ws/devel)
+  set(vicon_control_SOURCE_PREFIX /home/abhipai/ece_484/f1ninth/src/f1tenth_control/vicon_control)
+  set(vicon_control_DEVEL_PREFIX /home/abhipai/ece_484/f1ninth/devel)
   set(vicon_control_INSTALL_PREFIX "")
   set(vicon_control_PREFIX ${vicon_control_DEVEL_PREFIX})
 else()
   set(vicon_control_SOURCE_PREFIX "")
   set(vicon_control_DEVEL_PREFIX "")
-  set(vicon_control_INSTALL_PREFIX /home/nx/f1tenth_ros1_ws/install)
+  set(vicon_control_INSTALL_PREFIX /home/abhipai/ece_484/f1ninth/install)
   set(vicon_control_PREFIX ${vicon_control_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nx/f1tenth_ros1_ws/install/lib;/home/nx/f1tenth_ros1_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/abhipai/ece_484/f1ninth/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

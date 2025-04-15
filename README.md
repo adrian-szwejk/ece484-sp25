@@ -1,3 +1,47 @@
+# for F1_Nineth
+
+## Initial setup
+
+source setup.sh
+
+## Start Environment
+
+### Tunnel Env
+
+roslaunch f1tenth-sim racecar.launch world_name:=racecar_tunnel
+
+### Walker Env
+
+roslaunch f1tenth-sim racecar.launch world_name:=racecar_walker
+
+### Levine Track Env
+
+roslaunch f1tenth-sim racecar.launch world_name:=track_levine
+
+### Porto Env
+
+roslaunch f1tenth-sim racecar.launch world_name:=track_porto yaw:=0.75
+
+## Start Hector mapping
+
+roslaunch hector_mapping mapping_default.launch
+
+## Start rviz
+
+rosrun rviz rviz
+
+Add: TF, Map (select /map under Topic option), LaserScan (select /car1/scan under Topic option)
+
+## Keyboard teleop
+
+rosrun f1tenth-sim keyboard_teleop.py
+
+(in case it needs to be made executable do 
+
+chmod +x ~/ece_484/f1ninth/src/f1tenth-sim/scripts/keyboard_teleop.py
+)
+
+
 # *ECE484 Final Project: Starter Code Guide*
 There is 2 different starter code available for you:
 ##  *I. Vicon Pure Pursuit Tracker*

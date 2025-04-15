@@ -32,13 +32,15 @@ rosrun rviz rviz
 
 Add: TF, Map (select /map under Topic option), LaserScan (select /car1/scan under Topic option)
 
+(need to write script to automate this)
+
 ## Keyboard teleop
 
 rosrun f1tenth-sim keyboard_teleop.py
 
 (in case it needs to be made executable do 
 
-chmod +x ~/ece_484/f1ninth/src/f1tenth-sim/scripts/keyboard_teleop.py
+chmod +x ~ece484-sp25/src/f1tenth-sim/scripts/keyboard_teleop.py
 )
 
 

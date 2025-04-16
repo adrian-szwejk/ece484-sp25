@@ -17,6 +17,21 @@
 
 # Laser Scan
     # https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/LaserScan.html
+
+# Hector Mapping
+    # https://wiki.ros.org/hector_mapping
+
+# Hector Geotiff
+    # https://wiki.ros.org/hector_geotiff
+
+# Build map using logged data
+    # https://wiki.ros.org/hector_slam/Tutorials/MappingUsingLoggedData
+
+# Hector Slam alternative (gmapping)
+    # https://wiki.ros.org/gmapping
+
+# Github
+    # https://github.com/tu-darmstadt-ros-pkg/hector_slam
 import rospy
 from sensor_msgs.msg import LaserScan
 from cv_bridge import CvBridge, CvBridgeError

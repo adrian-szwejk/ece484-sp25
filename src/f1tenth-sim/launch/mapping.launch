@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">
+    <param name="base_frame" value="car_1_base_link"/>
+    <param name="odom_frame" value="car_1_base_link"/>
+    <remap from="/scan" to="car_1/scan"/>
+  </node>
+</launch>

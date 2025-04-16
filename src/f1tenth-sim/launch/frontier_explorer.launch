@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="f1tenth-sim" type="frontier_explorer.py" name="frontier_explorer" output="screen"/>
+</launch>

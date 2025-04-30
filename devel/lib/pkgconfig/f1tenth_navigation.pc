@@ -1,0 +1,8 @@
+prefix=/home/abhipai/ece_484/f1ninth/devel
+
+Name: f1tenth_navigation
+Description: Description of f1tenth_navigation
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

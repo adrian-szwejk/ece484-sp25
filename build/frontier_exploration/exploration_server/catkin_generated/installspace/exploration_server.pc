@@ -1,0 +1,8 @@
+prefix=/home/abhipai/ece_484/f1ninth/install
+
+Name: exploration_server
+Description: Description of exploration_server
+Version: 0.4.2
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: actionlib costmap_2d exploration_msgs roscpp tf

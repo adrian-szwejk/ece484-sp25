@@ -1,0 +1,34 @@
+<!-- exploration.launch: Unified SLAM + move_base + frontier_exploration + cmd_vel bridge -->
+<launch>
+
+  <!-- Sim Time -->
+  <param name="use_sim_time" value="true"/>
+
+  <!-- SLAM Toolbox -->
+  <include file="$(find slam_toolbox)/online_async.launch"/>
+
+  <!-- Move Base with Husarion-like config -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen">
+    <rosparam file="$(find f1tenth_navigation)/config/costmap_common_params.yaml" command="load"/>
+    <rosparam file="$(find f1tenth_navigation)/config/local_costmap_params.yaml" command="load"/>
+    <rosparam file="$(find f1tenth_navigation)/config/global_costmap_params.yaml" command="load"/>
+    <rosparam file="$(find f1tenth_navigation)/config/dwa_planner_params.yaml" command="load"/>
+  </node>
+
+<node pkg="explore_lite" type="explore" name="explore_lite" output="screen">
+  <param name="robot_base_frame" value="car_1_base_link"/>
+  <param name="visualize" value="true"/>
+  <param name="planner_frequency" value="0.5"/>
+  <param name="progress_timeout" value="30.0"/>
+  <param name="potential_scale" value="1.0"/>
+  <param name="orientation_scale" value="0.0"/>
+  <param name="gain_scale" value="1.0"/>
+  <param name="transform_tolerance" value="0.3"/>
+  <param name="min_frontier_size" value="0.5"/>
+</node>
+
+
+  <!-- cmd_vel to Ackermann steering + wheel velocity bridge -->
+  <node pkg="f1tenth_navigation" type="cmd_vel_to_f1tenth.py" name="cmd_vel_bridge" output="screen"/>
+
+</launch>

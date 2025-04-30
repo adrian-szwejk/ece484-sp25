@@ -1,0 +1,8 @@
+prefix=/home/abhipai/ece_484/f1ninth/devel
+
+Name: exploration_msgs
+Description: Description of exploration_msgs
+Version: 0.4.2
+Cflags: -I/home/abhipai/ece_484/f1ninth/devel/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs geometry_msgs message_runtime

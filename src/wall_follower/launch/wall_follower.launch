@@ -1,0 +1,5 @@
+<launch>
+  <node name="wall_follower" pkg="wall_follower" type="wall_follower.py" output="screen">
+    <param name="use_sim_time" value="true" />
+  </node>
+</launch>

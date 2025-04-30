@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/abhipai/ece_484/f1ninth/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/abhipai/ece_484/f1ninth/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/abhipai/ece_484/f1ninth/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/abhipai/ece_484/f1ninth/build'
+export PYTHONPATH="/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/abhipai/ece_484/f1ninth/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/abhipai/ece_484/f1ninth/src:$ROS_PACKAGE_PATH"

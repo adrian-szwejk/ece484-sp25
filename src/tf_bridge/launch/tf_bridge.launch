@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="tf_bridge" type="ground_truth_tf_broadcaster.py" name="ground_truth_tf_broadcaster" output="screen"/>
+</launch>

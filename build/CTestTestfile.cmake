@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/abhipai/ece_484/f1ninth/src
-# Build directory: /home/abhipai/ece_484/f1ninth/build
+# Source directory: /home/nx/F1-Nineth/ece484-sp25/src
+# Build directory: /home/nx/F1-Nineth/ece484-sp25/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -23,12 +23,12 @@ subdirs("hector_slam/hector_marker_drawing")
 subdirs("f1tenth_system/racecar/ackermann_cmd_mux")
 subdirs("hector_slam/hector_compressed_map_transport")
 subdirs("f1tenth_system/joystick_drivers/joy")
-subdirs("f1tenth-sim")
 subdirs("hector_slam/hector_imu_attitude_to_tf")
 subdirs("hector_slam/hector_imu_tools")
 subdirs("hector_slam/hector_map_server")
 subdirs("hector_slam/hector_trajectory_server")
 subdirs("hector_slam/hector_mapping")
+subdirs("f1tenth_slam")
 subdirs("f1tenth_system/vesc/vesc_ackermann")
 subdirs("f1tenth_system/vesc/vesc_driver")
 subdirs("f1tenth_control/vicon_control")

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node.pdb"
   "CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o"
 )
 

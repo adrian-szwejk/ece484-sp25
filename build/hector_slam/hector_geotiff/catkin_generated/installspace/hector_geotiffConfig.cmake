@@ -67,14 +67,14 @@ set(hector_geotiff_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hector_geotiff_SOURCE_PREFIX /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_geotiff)
-  set(hector_geotiff_DEVEL_PREFIX /home/abhipai/ece_484/f1ninth/devel)
+  set(hector_geotiff_SOURCE_PREFIX /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_geotiff)
+  set(hector_geotiff_DEVEL_PREFIX /home/nx/F1-Nineth/ece484-sp25/devel)
   set(hector_geotiff_INSTALL_PREFIX "")
   set(hector_geotiff_PREFIX ${hector_geotiff_DEVEL_PREFIX})
 else()
   set(hector_geotiff_SOURCE_PREFIX "")
   set(hector_geotiff_DEVEL_PREFIX "")
-  set(hector_geotiff_INSTALL_PREFIX /home/abhipai/ece_484/f1ninth/install)
+  set(hector_geotiff_INSTALL_PREFIX /home/nx/F1-Nineth/ece484-sp25/install)
   set(hector_geotiff_PREFIX ${hector_geotiff_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(hector_geotiff_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/usr/include/eigen3;/usr/include/x86_64-linux-gnu/qt5/;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5//mkspecs/linux-g++ " STREQUAL " ")
+if(NOT "include;/usr/include/eigen3;/usr/include/aarch64-linux-gnu/qt5/;/usr/include/aarch64-linux-gnu/qt5/QtWidgets;/usr/include/aarch64-linux-gnu/qt5/QtGui;/usr/include/aarch64-linux-gnu/qt5/QtCore;/usr/lib/aarch64-linux-gnu/qt5//mkspecs/linux-g++ " STREQUAL " ")
   set(hector_geotiff_INCLUDE_DIRS "")
-  set(_include_dirs "include;/usr/include/eigen3;/usr/include/x86_64-linux-gnu/qt5/;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5//mkspecs/linux-g++")
+  set(_include_dirs "include;/usr/include/eigen3;/usr/include/aarch64-linux-gnu/qt5/;/usr/include/aarch64-linux-gnu/qt5/QtWidgets;/usr/include/aarch64-linux-gnu/qt5/QtGui;/usr/include/aarch64-linux-gnu/qt5/QtCore;/usr/lib/aarch64-linux-gnu/qt5//mkspecs/linux-g++")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/hector_geotiff " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "include;/usr/include/eigen3;/usr/include/x86_64-linux-gnu/qt5/;/usr/incl
   endforeach()
 endif()
 
-set(libraries "geotiff_writer;/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8")
+set(libraries "geotiff_writer;/usr/lib/aarch64-linux-gnu/libQt5Widgets.so.5.12.8")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/abhipai/ece_484/f1ninth/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nx/F1-Nineth/ece484-sp25/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

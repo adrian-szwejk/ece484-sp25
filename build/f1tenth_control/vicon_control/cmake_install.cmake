@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_control/vicon_control
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_control/vicon_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/f1tenth_control/vicon_control/catkin_generated/installspace/vicon_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vicon_control/catkin_generated/installspace/vicon_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vicon_control/cmake" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/f1tenth_control/vicon_control/catkin_generated/installspace/vicon_controlConfig.cmake"
-    "/home/abhipai/ece_484/f1ninth/build/f1tenth_control/vicon_control/catkin_generated/installspace/vicon_controlConfig-version.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vicon_control/catkin_generated/installspace/vicon_controlConfig.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vicon_control/catkin_generated/installspace/vicon_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vicon_control" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_control/vicon_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/vicon_control" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_control/vicon_control/package.xml")
 endif()
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/ackermann_msgs/manifest.l"
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDrive.l"
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDriveStamped.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/ackermann_msgs/manifest.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDrive.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/ackermann_msgs/msg/AckermannDriveStamped.l"
   "CMakeFiles/ackermann_msgs_generate_messages_eus"
 )
 

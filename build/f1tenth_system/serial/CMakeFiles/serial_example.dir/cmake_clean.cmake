@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial_example"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial_example.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial_example"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial_example.pdb"
   "CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
 )
 

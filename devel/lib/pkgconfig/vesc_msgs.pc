@@ -1,8 +1,8 @@
-prefix=/home/abhipai/ece_484/f1ninth/devel
+prefix=/home/nx/F1-Nineth/ece484-sp25/devel
 
 Name: vesc_msgs
 Description: Description of vesc_msgs
 Version: 0.0.1
-Cflags: -I/home/abhipai/ece_484/f1ninth/devel/include
+Cflags: -I/home/nx/F1-Nineth/ece484-sp25/devel/include
 Libs: -L${prefix}/lib 
 Requires: std_msgs message_runtime

@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1 -Dserial_EXPORTS
 
-CXX_INCLUDES = -I/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include 
+CXX_INCLUDES = -I/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/include 
 

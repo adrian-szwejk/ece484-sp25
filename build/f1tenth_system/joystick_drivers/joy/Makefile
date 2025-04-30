@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/abhipai/ece_484/f1ninth/build/CMakeFiles /home/abhipai/ece_484/f1ninth/build/f1tenth_system/joystick_drivers/joy/CMakeFiles/progress.marks
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abhipai/ece_484/f1ninth/build/CMakeFiles 0
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/joystick_drivers/joy/CMakeFiles/progress.marks
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/clean
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/preinstall
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/preinstall
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
 .PHONY : f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ joy_node: f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/rule
 
 # fast build rule for target.
 joy_node/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build
 .PHONY : joy_node/fast
 
 # Convenience name for target.
 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
 .PHONY : f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ diagnostic_msgs_generate_messages_py: f1tenth_system/joystick_drivers/joy/CMakeF
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_py/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
 .PHONY : diagnostic_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 .PHONY : f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ diagnostic_msgs_generate_messages_nodejs: f1tenth_system/joystick_drivers/joy/CM
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_nodejs/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
 .PHONY : diagnostic_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 .PHONY : f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ diagnostic_msgs_generate_messages_lisp: f1tenth_system/joystick_drivers/joy/CMak
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_lisp/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
 .PHONY : diagnostic_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
 .PHONY : f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ diagnostic_msgs_generate_messages_eus: f1tenth_system/joystick_drivers/joy/CMake
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_eus/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
 .PHONY : diagnostic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 .PHONY : f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -254,7 +254,7 @@ diagnostic_msgs_generate_messages_cpp: f1tenth_system/joystick_drivers/joy/CMake
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_cpp/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
 .PHONY : diagnostic_msgs_generate_messages_cpp/fast
 
 src/joy_node.o: src/joy_node.cpp.o
@@ -263,7 +263,7 @@ src/joy_node.o: src/joy_node.cpp.o
 
 # target to build an object file
 src/joy_node.cpp.o:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.o
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.o
 .PHONY : src/joy_node.cpp.o
 
 src/joy_node.i: src/joy_node.cpp.i
@@ -272,7 +272,7 @@ src/joy_node.i: src/joy_node.cpp.i
 
 # target to preprocess a source file
 src/joy_node.cpp.i:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.i
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.i
 .PHONY : src/joy_node.cpp.i
 
 src/joy_node.s: src/joy_node.cpp.s
@@ -281,7 +281,7 @@ src/joy_node.s: src/joy_node.cpp.s
 
 # target to generate assembly for a file
 src/joy_node.cpp.s:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.s
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/build.make f1tenth_system/joystick_drivers/joy/CMakeFiles/joy_node.dir/src/joy_node.cpp.s
 .PHONY : src/joy_node.cpp.s
 
 # Help Target
@@ -317,6 +317,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

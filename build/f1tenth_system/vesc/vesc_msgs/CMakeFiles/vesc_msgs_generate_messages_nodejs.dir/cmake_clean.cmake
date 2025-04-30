@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/share/gennodejs/ros/vesc_msgs/msg/VescState.js"
-  "/home/abhipai/ece_484/f1ninth/devel/share/gennodejs/ros/vesc_msgs/msg/VescStateStamped.js"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/gennodejs/ros/vesc_msgs/msg/VescState.js"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/gennodejs/ros/vesc_msgs/msg/VescStateStamped.js"
   "CMakeFiles/vesc_msgs_generate_messages_nodejs"
 )
 

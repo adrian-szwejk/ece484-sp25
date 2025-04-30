@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/abhipai/ece_484/f1ninth/devel/include/ackermann_msgs/AckermannDrive.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,15 +42,15 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
 vesc_ackermann/ackermann_to_vesc.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 cmath
 -
 sstream
@@ -58,11 +58,11 @@ sstream
 std_msgs/Float64.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc_node.cpp
 ros/ros.h
 -
 vesc_ackermann/ackermann_to_vesc.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -335,6 +335,8 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
+boost/bind.hpp
+-
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -379,7 +381,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 boost/thread/mutex.hpp
 -

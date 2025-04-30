@@ -1,0 +1,10 @@
+digraph G {
+"map" -> "laser"[label=" Broadcaster: /laser_transform\nAverage rate: 95.66\nBuffer length: 4.976\nMost recent transform: 1745354824.107\nOldest transform: 1745354819.131\n"];
+"map" -> "odom"[label=" Broadcaster: /slam_toolbox\nAverage rate: 50.213\nBuffer length: 4.959\nMost recent transform: 1745354824.3\nOldest transform: 1745354819.341\n"];
+"D435I_link" -> "D435I_color_frame"[label=" Broadcaster: /D435I/realsense2_camera_manager\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"D435I_color_frame" -> "D435I_color_optical_frame"[label=" Broadcaster: /D435I/realsense2_camera_manager\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1745354824.1275985"[ shape=plaintext ] ;
+}->"D435I_link";
+}

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_trajectory_server/hector_trajectory_server"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_trajectory_server/hector_trajectory_server.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_trajectory_server/hector_trajectory_server"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_trajectory_server/hector_trajectory_server.pdb"
   "CMakeFiles/hector_trajectory_server.dir/src/hector_trajectory_server.cpp.o"
 )
 

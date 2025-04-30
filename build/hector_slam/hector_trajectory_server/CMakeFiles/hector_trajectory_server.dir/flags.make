@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"hector_trajectory_server\"
 
-CXX_INCLUDES = -I/home/abhipai/ece_484/f1ninth/devel/include -I/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_map_tools/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/nx/F1-Nineth/ece484-sp25/devel/include -I/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_map_tools/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
 

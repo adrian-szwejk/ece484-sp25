@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py"
   "CMakeFiles/hector_nav_msgs_generate_messages_py"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_map_server/hector_map_server"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_map_server/hector_map_server.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_map_server/hector_map_server"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_map_server/hector_map_server.pdb"
   "CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o"
 )
 

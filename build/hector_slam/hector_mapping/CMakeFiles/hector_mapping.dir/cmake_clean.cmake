@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_mapping/hector_mapping"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_mapping/hector_mapping.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_mapping/hector_mapping"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_mapping/hector_mapping.pdb"
   "CMakeFiles/hector_mapping.dir/src/HectorMappingRos.cpp.o"
   "CMakeFiles/hector_mapping.dir/src/PoseInfoContainer.cpp.o"
   "CMakeFiles/hector_mapping.dir/src/main.cpp.o"

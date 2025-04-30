@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_geotiff/include;/usr/include/eigen3;/usr/include/x86_64-linux-gnu/qt5/;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5//mkspecs/linux-g++".split(';') if "/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_geotiff/include;/usr/include/eigen3;/usr/include/x86_64-linux-gnu/qt5/;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5//mkspecs/linux-g++" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_geotiff/include;/usr/include/eigen3;/usr/include/aarch64-linux-gnu/qt5/;/usr/include/aarch64-linux-gnu/qt5/QtWidgets;/usr/include/aarch64-linux-gnu/qt5/QtGui;/usr/include/aarch64-linux-gnu/qt5/QtCore;/usr/lib/aarch64-linux-gnu/qt5//mkspecs/linux-g++".split(';') if "/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_geotiff/include;/usr/include/eigen3;/usr/include/aarch64-linux-gnu/qt5/;/usr/include/aarch64-linux-gnu/qt5/QtWidgets;/usr/include/aarch64-linux-gnu/qt5/QtGui;/usr/include/aarch64-linux-gnu/qt5/QtCore;/usr/lib/aarch64-linux-gnu/qt5//mkspecs/linux-g++" != "" else []
 PROJECT_CATKIN_DEPENDS = "hector_map_tools;hector_nav_msgs;nav_msgs;pluginlib;roscpp;std_msgs".replace(';', ' ')
-PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lgeotiff_writer;/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8".split(';') if "-lgeotiff_writer;/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8" != "" else []
+PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lgeotiff_writer;/usr/lib/aarch64-linux-gnu/libQt5Widgets.so.5.12.8".split(';') if "-lgeotiff_writer;/usr/lib/aarch64-linux-gnu/libQt5Widgets.so.5.12.8" != "" else []
 PROJECT_NAME = "hector_geotiff"
-PROJECT_SPACE_DIR = "/home/abhipai/ece_484/f1ninth/devel"
+PROJECT_SPACE_DIR = "/home/nx/F1-Nineth/ece484-sp25/devel"
 PROJECT_VERSION = "0.5.2"

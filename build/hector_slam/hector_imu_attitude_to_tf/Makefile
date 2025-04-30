@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/abhipai/ece_484/f1ninth/build/CMakeFiles /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/progress.marks
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abhipai/ece_484/f1ninth/build/CMakeFiles 0
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/progress.marks
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/clean
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/preinstall
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/preinstall
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/rule:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/rule
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/rule
 .PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/rule
 
 # Convenience name for target.
@@ -179,8 +179,233 @@ imu_attitude_to_tf_node: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_at
 
 # fast build rule for target.
 imu_attitude_to_tf_node/fast:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build
 .PHONY : imu_attitude_to_tf_node/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_nodejs: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+.PHONY : tf_generate_messages_nodejs
+
+# fast build rule for target.
+tf_generate_messages_nodejs/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_eus.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_eus.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
 
 src/imu_attitude_to_tf_node.o: src/imu_attitude_to_tf_node.cpp.o
 
@@ -188,7 +413,7 @@ src/imu_attitude_to_tf_node.o: src/imu_attitude_to_tf_node.cpp.o
 
 # target to build an object file
 src/imu_attitude_to_tf_node.cpp.o:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.o
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.o
 .PHONY : src/imu_attitude_to_tf_node.cpp.o
 
 src/imu_attitude_to_tf_node.i: src/imu_attitude_to_tf_node.cpp.i
@@ -197,7 +422,7 @@ src/imu_attitude_to_tf_node.i: src/imu_attitude_to_tf_node.cpp.i
 
 # target to preprocess a source file
 src/imu_attitude_to_tf_node.cpp.i:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.i
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.i
 .PHONY : src/imu_attitude_to_tf_node.cpp.i
 
 src/imu_attitude_to_tf_node.s: src/imu_attitude_to_tf_node.cpp.s
@@ -206,7 +431,7 @@ src/imu_attitude_to_tf_node.s: src/imu_attitude_to_tf_node.cpp.s
 
 # target to generate assembly for a file
 src/imu_attitude_to_tf_node.cpp.s:
-	cd /home/abhipai/ece_484/f1ninth/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.s
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.s
 .PHONY : src/imu_attitude_to_tf_node.cpp.s
 
 # Help Target
@@ -223,6 +448,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... imu_attitude_to_tf_node"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... tf_generate_messages_nodejs"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... tf_generate_messages_eus"
+	@echo "... tf_generate_messages_py"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... src/imu_attitude_to_tf_node.o"
 	@echo "... src/imu_attitude_to_tf_node.i"
 	@echo "... src/imu_attitude_to_tf_node.s"
@@ -237,6 +477,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

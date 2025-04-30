@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 # Include any dependencies generated for this target.
 include f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/depend.make
@@ -58,17 +58,17 @@ include f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/progress.make
 include f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/flags.make
 
 f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/flags.make
-f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests/unix_serial_tests.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o"
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial-test.dir/unix_serial_tests.cc.o -c /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests/unix_serial_tests.cc
+f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o: /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests/unix_serial_tests.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial-test.dir/unix_serial_tests.cc.o -c /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests/unix_serial_tests.cc
 
 f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial-test.dir/unix_serial_tests.cc.i"
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests/unix_serial_tests.cc > CMakeFiles/serial-test.dir/unix_serial_tests.cc.i
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests/unix_serial_tests.cc > CMakeFiles/serial-test.dir/unix_serial_tests.cc.i
 
 f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial-test.dir/unix_serial_tests.cc.s"
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests/unix_serial_tests.cc -o CMakeFiles/serial-test.dir/unix_serial_tests.cc.s
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests/unix_serial_tests.cc -o CMakeFiles/serial-test.dir/unix_serial_tests.cc.s
 
 # Object files for target serial-test
 serial__test_OBJECTS = \
@@ -77,24 +77,24 @@ serial__test_OBJECTS = \
 # External object files for target serial-test
 serial__test_EXTERNAL_OBJECTS =
 
-/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o
-/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/build.make
-/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test: gtest/lib/libgtest.so
-/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test: /home/abhipai/ece_484/f1ninth/devel/lib/libserial.so
-/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test"
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial-test.dir/link.txt --verbose=$(VERBOSE)
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/build.make
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test: gtest/lib/libgtest.so
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test: /home/nx/F1-Nineth/ece484-sp25/devel/lib/libserial.so
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test: f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial-test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/build: /home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test
+f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/build: /home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test
 
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/build
 
 f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/clean:
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/serial-test.dir/cmake_clean.cmake
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/serial-test.dir/cmake_clean.cmake
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/clean
 
 f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/serial-test.dir/depend
 

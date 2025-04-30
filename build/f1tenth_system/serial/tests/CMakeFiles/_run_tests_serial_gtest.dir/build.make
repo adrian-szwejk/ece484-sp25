@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 # Utility rule file for _run_tests_serial_gtest.
 
@@ -63,10 +63,10 @@ f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/build: _run_t
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/build
 
 f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/clean:
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest.dir/cmake_clean.cmake
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest.dir/cmake_clean.cmake
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/clean
 
 f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/depend
 

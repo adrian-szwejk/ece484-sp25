@@ -1,8 +1,8 @@
-prefix=/home/abhipai/ece_484/f1ninth/devel
+prefix=/home/nx/F1-Nineth/ece484-sp25/devel
 
 Name: ackermann_msgs
 Description: Description of ackermann_msgs
 Version: 1.0.1
-Cflags: -I/home/abhipai/ece_484/f1ninth/devel/include -I/usr/include
+Cflags: -I/home/nx/F1-Nineth/ece484-sp25/devel/include -I/usr/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime std_msgs

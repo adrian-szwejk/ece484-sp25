@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorDebugInfo.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorIterData.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_mapping/msg/__init__.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_mapping/srv/_ResetMapping.py"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_mapping/srv/__init__.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorDebugInfo.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorIterData.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_mapping/msg/__init__.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_mapping/srv/_ResetMapping.py"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_mapping/srv/__init__.py"
   "CMakeFiles/hector_mapping_generate_messages_py"
 )
 

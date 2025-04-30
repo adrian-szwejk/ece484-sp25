@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/abhipai/ece_484/f1ninth/build/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/nx/F1-Nineth/ece484-sp25/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

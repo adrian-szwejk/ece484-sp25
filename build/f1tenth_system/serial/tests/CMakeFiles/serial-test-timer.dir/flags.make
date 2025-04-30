@@ -6,5 +6,5 @@ CXX_FLAGS =   -DGTEST_HAS_PTHREAD=1
 
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1
 
-CXX_INCLUDES = -I/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
+CXX_INCLUDES = -I/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
 

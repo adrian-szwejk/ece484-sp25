@@ -67,14 +67,14 @@ set(hector_nav_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hector_nav_msgs_SOURCE_PREFIX /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs)
-  set(hector_nav_msgs_DEVEL_PREFIX /home/abhipai/ece_484/f1ninth/devel)
+  set(hector_nav_msgs_SOURCE_PREFIX /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs)
+  set(hector_nav_msgs_DEVEL_PREFIX /home/nx/F1-Nineth/ece484-sp25/devel)
   set(hector_nav_msgs_INSTALL_PREFIX "")
   set(hector_nav_msgs_PREFIX ${hector_nav_msgs_DEVEL_PREFIX})
 else()
   set(hector_nav_msgs_SOURCE_PREFIX "")
   set(hector_nav_msgs_DEVEL_PREFIX "")
-  set(hector_nav_msgs_INSTALL_PREFIX /home/abhipai/ece_484/f1ninth/install)
+  set(hector_nav_msgs_INSTALL_PREFIX /home/nx/F1-Nineth/ece484-sp25/install)
   set(hector_nav_msgs_PREFIX ${hector_nav_msgs_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/abhipai/ece_484/f1ninth/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nx/F1-Nineth/ece484-sp25/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

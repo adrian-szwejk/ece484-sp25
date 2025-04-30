@@ -67,14 +67,14 @@ set(racecar_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(racecar_SOURCE_PREFIX /home/abhipai/ece_484/f1ninth/src/f1tenth_system/racecar/racecar)
-  set(racecar_DEVEL_PREFIX /home/abhipai/ece_484/f1ninth/devel)
+  set(racecar_SOURCE_PREFIX /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/racecar/racecar)
+  set(racecar_DEVEL_PREFIX /home/nx/F1-Nineth/ece484-sp25/devel)
   set(racecar_INSTALL_PREFIX "")
   set(racecar_PREFIX ${racecar_DEVEL_PREFIX})
 else()
   set(racecar_SOURCE_PREFIX "")
   set(racecar_DEVEL_PREFIX "")
-  set(racecar_INSTALL_PREFIX /home/abhipai/ece_484/f1ninth/install)
+  set(racecar_INSTALL_PREFIX /home/nx/F1-Nineth/ece484-sp25/install)
   set(racecar_PREFIX ${racecar_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/abhipai/ece_484/f1ninth/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nx/F1-Nineth/ece484-sp25/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

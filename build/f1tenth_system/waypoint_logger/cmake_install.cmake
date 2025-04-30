@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src/f1tenth_system/waypoint_logger
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/waypoint_logger
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/waypoint_logger/catkin_generated/installspace/waypoint_logger.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/catkin_generated/installspace/waypoint_logger.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_logger/cmake" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig.cmake"
-    "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig-version.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/catkin_generated/installspace/waypoint_loggerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_logger" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/waypoint_logger/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_logger" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/waypoint_logger/package.xml")
 endif()
 

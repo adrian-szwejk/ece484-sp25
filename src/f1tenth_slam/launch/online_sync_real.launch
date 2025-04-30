@@ -1,0 +1,16 @@
+<launch>
+  <!-- wall‐clock time -->
+  <param name="use_sim_time" value="true"/>
+    
+  <!-- launch map to  odom tf -->
+  <!-- node name='map_odom_link' pkg='tf' type='static_transform_publisher' args='0.0 0.0 0.0 0.0 0.0 0.0 /odom /base_link 100' -->
+  
+  <!-- launch map to  odom tf -->
+  <node name='attach_laser' pkg='tf' type='static_transform_publisher' args='0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 100' />
+
+	
+  <!-- slam_toolbox online_async -->
+  <include file="$(find slam_toolbox)/online_sync.launch"/>
+
+</launch>
+

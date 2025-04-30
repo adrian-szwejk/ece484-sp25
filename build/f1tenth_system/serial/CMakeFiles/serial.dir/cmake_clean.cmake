@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/libserial.pdb"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/libserial.so"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/libserial.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/libserial.so"
   "CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
   "CMakeFiles/serial.dir/src/impl/unix.cc.o"
   "CMakeFiles/serial.dir/src/serial.cc.o"

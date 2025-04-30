@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 # Utility rule file for run_tests_serial_gtest_serial-test-timer.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
 include f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/progress.make
 
 f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer:
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/abhipai/ece_484/f1ninth/build/test_results/serial/gtest-serial-test-timer.xml "/home/abhipai/ece_484/f1ninth/devel/lib/serial/serial-test-timer --gtest_output=xml:/home/abhipai/ece_484/f1ninth/build/test_results/serial/gtest-serial-test-timer.xml"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/nx/F1-Nineth/ece484-sp25/build/test_results/serial/gtest-serial-test-timer.xml "/home/nx/F1-Nineth/ece484-sp25/devel/lib/serial/serial-test-timer --gtest_output=xml:/home/nx/F1-Nineth/ece484-sp25/build/test_results/serial/gtest-serial-test-timer.xml"
 
 run_tests_serial_gtest_serial-test-timer: f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer
 run_tests_serial_gtest_serial-test-timer: f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/build.make
@@ -67,10 +67,10 @@ f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/build
 
 f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/clean:
-	cd /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/cmake_clean.cmake
+	cd /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/cmake_clean.cmake
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/clean
 
 f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests /home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/tests /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_system/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir/depend
 

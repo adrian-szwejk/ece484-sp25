@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/examples/serial_example.cc
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/examples/serial_example.cc
 string
 -
 iostream
@@ -18,9 +18,9 @@ windows.h
 unistd.h
 -
 serial/serial.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/examples/serial/serial.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/examples/serial/serial.h
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include/serial/serial.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/include/serial/serial.h
 limits
 -
 vector
@@ -38,7 +38,7 @@ stdexcept
 serial/v8stdint.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include/serial/v8stdint.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/include/serial/v8stdint.h
 stddef.h
 -
 stdio.h

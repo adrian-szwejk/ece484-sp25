@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools
-# Build directory: /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_tools
+# Source directory: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools
+# Build directory: /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_tools
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

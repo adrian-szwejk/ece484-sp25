@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src/racecar_worlds
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src/racecar_worlds
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/racecar_worlds/catkin_generated/installspace/racecar_worlds.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/build/racecar_worlds/catkin_generated/installspace/racecar_worlds.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar_worlds/cmake" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/racecar_worlds/catkin_generated/installspace/racecar_worldsConfig.cmake"
-    "/home/abhipai/ece_484/f1ninth/build/racecar_worlds/catkin_generated/installspace/racecar_worldsConfig-version.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/racecar_worlds/catkin_generated/installspace/racecar_worldsConfig.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/racecar_worlds/catkin_generated/installspace/racecar_worldsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar_worlds" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/racecar_worlds/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/racecar_worlds" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/src/racecar_worlds/package.xml")
 endif()
 

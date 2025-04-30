@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "racecar_worlds"
-PROJECT_SPACE_DIR = "/home/abhipai/ece_484/f1ninth/devel"
+PROJECT_SPACE_DIR = "/home/nx/F1-Nineth/ece484-sp25/devel"
 PROJECT_VERSION = "0.0.0"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 # Utility rule file for hector_mapping_gencpp.
 
@@ -63,10 +63,10 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/build: hector_ma
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/build
 
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/clean:
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_mapping && $(CMAKE_COMMAND) -P CMakeFiles/hector_mapping_gencpp.dir/cmake_clean.cmake
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_mapping && $(CMAKE_COMMAND) -P CMakeFiles/hector_mapping_gencpp.dir/cmake_clean.cmake
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/clean
 
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_mapping /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_mapping /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/depend
 

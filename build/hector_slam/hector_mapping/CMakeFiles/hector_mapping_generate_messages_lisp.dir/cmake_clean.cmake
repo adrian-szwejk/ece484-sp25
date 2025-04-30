@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/share/common-lisp/ros/hector_mapping/msg/HectorDebugInfo.lisp"
-  "/home/abhipai/ece_484/f1ninth/devel/share/common-lisp/ros/hector_mapping/msg/HectorIterData.lisp"
-  "/home/abhipai/ece_484/f1ninth/devel/share/common-lisp/ros/hector_mapping/srv/ResetMapping.lisp"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/common-lisp/ros/hector_mapping/msg/HectorDebugInfo.lisp"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/common-lisp/ros/hector_mapping/msg/HectorIterData.lisp"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/common-lisp/ros/hector_mapping/srv/ResetMapping.lisp"
   "CMakeFiles/hector_mapping_generate_messages_lisp"
 )
 

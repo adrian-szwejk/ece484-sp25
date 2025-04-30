@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/hector_mapping/manifest.l"
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/hector_mapping/msg/HectorDebugInfo.l"
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/hector_mapping/msg/HectorIterData.l"
-  "/home/abhipai/ece_484/f1ninth/devel/share/roseus/ros/hector_mapping/srv/ResetMapping.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_mapping/manifest.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_mapping/msg/HectorDebugInfo.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_mapping/msg/HectorIterData.l"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_mapping/srv/ResetMapping.l"
   "CMakeFiles/hector_mapping_generate_messages_eus"
 )
 

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools/src/pose_and_orientation_to_imu_node.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools/src/pose_and_orientation_to_imu_node.cpp
 ros/ros.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools/src/ros/ros.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools/src/ros/ros.h
 tf/transform_broadcaster.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools/src/tf/transform_broadcaster.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools/src/tf/transform_broadcaster.h
 sensor_msgs/Imu.h
 -
 geometry_msgs/PoseStamped.h
@@ -575,6 +575,8 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
+boost/bind.hpp
+-
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -619,7 +621,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 boost/thread/mutex.hpp
 -

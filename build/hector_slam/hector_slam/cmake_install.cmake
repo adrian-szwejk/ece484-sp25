@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_slam
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_slam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_slam" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_slam/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_slam" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_slam/package.xml")
 endif()
 

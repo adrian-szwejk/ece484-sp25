@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_compressed_map_transport/map_to_image_node"
-  "/home/abhipai/ece_484/f1ninth/devel/lib/hector_compressed_map_transport/map_to_image_node.pdb"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_compressed_map_transport/map_to_image_node"
+  "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_compressed_map_transport/map_to_image_node.pdb"
   "CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o"
 )
 

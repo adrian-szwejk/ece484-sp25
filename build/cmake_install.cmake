@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,117 +49,117 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/abhipai/ece_484/f1ninth/install/_setup_util.py")
+   "/home/nx/F1-Nineth/ece484-sp25/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/abhipai/ece_484/f1ninth/install" TYPE PROGRAM FILES "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/nx/F1-Nineth/ece484-sp25/install" TYPE PROGRAM FILES "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/abhipai/ece_484/f1ninth/install/env.sh")
+   "/home/nx/F1-Nineth/ece484-sp25/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/abhipai/ece_484/f1ninth/install" TYPE PROGRAM FILES "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/nx/F1-Nineth/ece484-sp25/install" TYPE PROGRAM FILES "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/abhipai/ece_484/f1ninth/install/setup.bash;/home/abhipai/ece_484/f1ninth/install/local_setup.bash")
+   "/home/nx/F1-Nineth/ece484-sp25/install/setup.bash;/home/nx/F1-Nineth/ece484-sp25/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/abhipai/ece_484/f1ninth/install" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/setup.bash"
-    "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/nx/F1-Nineth/ece484-sp25/install" TYPE FILE FILES
+    "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/setup.bash"
+    "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/abhipai/ece_484/f1ninth/install/setup.sh;/home/abhipai/ece_484/f1ninth/install/local_setup.sh")
+   "/home/nx/F1-Nineth/ece484-sp25/install/setup.sh;/home/nx/F1-Nineth/ece484-sp25/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/abhipai/ece_484/f1ninth/install" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/setup.sh"
-    "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/nx/F1-Nineth/ece484-sp25/install" TYPE FILE FILES
+    "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/setup.sh"
+    "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/abhipai/ece_484/f1ninth/install/setup.zsh;/home/abhipai/ece_484/f1ninth/install/local_setup.zsh")
+   "/home/nx/F1-Nineth/ece484-sp25/install/setup.zsh;/home/nx/F1-Nineth/ece484-sp25/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/abhipai/ece_484/f1ninth/install" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/setup.zsh"
-    "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/nx/F1-Nineth/ece484-sp25/install" TYPE FILE FILES
+    "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/setup.zsh"
+    "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/abhipai/ece_484/f1ninth/install/.rosinstall")
+   "/home/nx/F1-Nineth/ece484-sp25/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/abhipai/ece_484/f1ninth/install" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/nx/F1-Nineth/ece484-sp25/install" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/abhipai/ece_484/f1ninth/build/gtest/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_geotiff_launch/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_slam/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_slam_launch/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/joystick_drivers/joystick_drivers/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/racecar/racecar/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/racecar_worlds/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/ackermann_msgs/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_map_tools/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/vesc/vesc/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/vesc/vesc_msgs/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_geotiff/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_geotiff_plugins/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_marker_drawing/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/racecar/ackermann_cmd_mux/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_compressed_map_transport/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/joystick_drivers/joy/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth-sim/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_attitude_to_tf/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_tools/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_map_server/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_trajectory_server/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_mapping/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/vesc/vesc_ackermann/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/vesc/vesc_driver/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_control/vicon_control/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_control/vision_control/cmake_install.cmake")
-  include("/home/abhipai/ece_484/f1ninth/build/f1tenth_system/waypoint_logger/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/gtest/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_geotiff_launch/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_slam/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_slam_launch/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/joystick_drivers/joystick_drivers/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/racecar/racecar/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/racecar_worlds/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/ackermann_msgs/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_map_tools/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/vesc/vesc/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/vesc/vesc_msgs/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_geotiff/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_geotiff_plugins/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_marker_drawing/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/racecar/ackermann_cmd_mux/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_compressed_map_transport/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/joystick_drivers/joy/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_attitude_to_tf/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_tools/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_map_server/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_trajectory_server/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_mapping/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_slam/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/vesc/vesc_ackermann/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/vesc/vesc_driver/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vicon_control/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vision_control/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/cmake_install.cmake")
 
 endif()
 
@@ -171,5 +171,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/abhipai/ece_484/f1ninth/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nx/F1-Nineth/ece484-sp25/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

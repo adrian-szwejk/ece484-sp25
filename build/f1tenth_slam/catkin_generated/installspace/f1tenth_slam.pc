@@ -1,0 +1,8 @@
+prefix=/home/nx/F1-Nineth/ece484-sp25/install
+
+Name: f1tenth_slam
+Description: Description of f1tenth_slam
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy tf2_ros

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/abhipai/ece_484/f1ninth/devel/include/ackermann_msgs/AckermannDrive.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/ackermann_msgs/AckermannDrive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/ackermann_msgs/AckermannDriveStamped.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/ackermann_msgs/AckermannDriveStamped.h
 string
 -
 vector
@@ -42,7 +42,7 @@ std_msgs/Header.h
 ackermann_msgs/AckermannDrive.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/vesc_msgs/VescState.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/vesc_msgs/VescState.h
 string
 -
 vector
@@ -58,7 +58,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/vesc_msgs/VescStateStamped.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/vesc_msgs/VescStateStamped.h
 string
 -
 vector
@@ -78,13 +78,13 @@ std_msgs/Header.h
 vesc_msgs/VescState.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/include/vesc_ackermann/vesc_to_odom.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/include/vesc_ackermann/vesc_to_odom.h
 ros/ros.h
 -
 vesc_msgs/VescStateStamped.h
@@ -96,9 +96,9 @@ boost/shared_ptr.hpp
 tf/transform_broadcaster.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc.cpp
 vesc_ackermann/ackermann_to_vesc.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 cmath
 -
 sstream
@@ -106,7 +106,7 @@ sstream
 std_msgs/Float64.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc_nodelet.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/ackermann_to_vesc_nodelet.cpp
 boost/shared_ptr.hpp
 -
 nodelet/nodelet.h
@@ -116,11 +116,11 @@ pluginlib/class_list_macros.h
 ros/ros.h
 -
 vesc_ackermann/ackermann_to_vesc.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/ackermann_to_vesc.h
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_to_odom.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_to_odom.cpp
 vesc_ackermann/vesc_to_odom.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
 cmath
 -
 nav_msgs/Odometry.h
@@ -128,7 +128,7 @@ nav_msgs/Odometry.h
 geometry_msgs/TransformStamped.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_to_odom_nodelet.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_to_odom_nodelet.cpp
 boost/shared_ptr.hpp
 -
 nodelet/nodelet.h
@@ -138,7 +138,7 @@ pluginlib/class_list_macros.h
 ros/ros.h
 -
 vesc_ackermann/vesc_to_odom.h
-/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
+/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/src/vesc_ackermann/vesc_to_odom.h
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind.hpp
@@ -807,6 +807,8 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
+boost/bind.hpp
+-
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -851,7 +853,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 boost/thread/mutex.hpp
 -

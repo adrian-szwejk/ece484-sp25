@@ -1,8 +1,8 @@
-# Install script for directory: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools
+# Install script for directory: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abhipai/ece_484/f1ninth/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nx/F1-Nineth/ece484-sp25/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_tools/catkin_generated/installspace/hector_imu_tools.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_tools/catkin_generated/installspace/hector_imu_tools.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_imu_tools/cmake" TYPE FILE FILES
-    "/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_tools/catkin_generated/installspace/hector_imu_toolsConfig.cmake"
-    "/home/abhipai/ece_484/f1ninth/build/hector_slam/hector_imu_tools/catkin_generated/installspace/hector_imu_toolsConfig-version.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_tools/catkin_generated/installspace/hector_imu_toolsConfig.cmake"
+    "/home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_imu_tools/catkin_generated/installspace/hector_imu_toolsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_imu_tools" TYPE FILE FILES "/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_imu_tools" TYPE FILE FILES "/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hector_imu_tools/pose_and_orientation_to_imu_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hector_imu_tools" TYPE EXECUTABLE FILES "/home/abhipai/ece_484/f1ninth/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hector_imu_tools" TYPE EXECUTABLE FILES "/home/nx/F1-Nineth/ece484-sp25/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hector_imu_tools/pose_and_orientation_to_imu_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hector_imu_tools/pose_and_orientation_to_imu_node")
     file(RPATH_CHANGE
@@ -73,6 +73,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_imu_tools/launch/" TYPE DIRECTORY FILES "/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_imu_tools/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hector_imu_tools/launch/" TYPE DIRECTORY FILES "/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_imu_tools/launch/")
 endif()
 

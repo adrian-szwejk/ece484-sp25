@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/src/impl/list_ports/list_ports_linux.cc" "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
-  "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/src/impl/unix.cc" "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/CMakeFiles/serial.dir/src/impl/unix.cc.o"
-  "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/src/serial.cc" "/home/abhipai/ece_484/f1ninth/build/f1tenth_system/serial/CMakeFiles/serial.dir/src/serial.cc.o"
+  "/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/src/impl/list_ports/list_ports_linux.cc" "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
+  "/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/src/impl/unix.cc" "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/CMakeFiles/serial.dir/src/impl/unix.cc.o"
+  "/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/src/serial.cc" "/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/serial/CMakeFiles/serial.dir/src/serial.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,7 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include"
+  "/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/include"
   )
 
 # Targets to which this target links.

@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"vesc_ackermann\" -Dvesc_ackermann_nodelet_EXPORTS
 
-CXX_INCLUDES = -I/home/abhipai/ece_484/f1ninth/src/f1tenth_system/vesc/vesc_ackermann/include -I/home/abhipai/ece_484/f1ninth/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/vesc/vesc_ackermann/include -I/home/nx/F1-Nineth/ece484-sp25/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

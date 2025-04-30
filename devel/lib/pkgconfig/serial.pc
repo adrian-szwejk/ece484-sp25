@@ -1,8 +1,8 @@
-prefix=/home/abhipai/ece_484/f1ninth/devel
+prefix=/home/nx/F1-Nineth/ece484-sp25/devel
 
 Name: serial
 Description: Description of serial
 Version: 1.2.1
-Cflags: -I/home/abhipai/ece_484/f1ninth/src/f1tenth_system/serial/include
+Cflags: -I/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/serial/include
 Libs: -L${prefix}/lib -lserial -lrt -lpthread
 Requires: 

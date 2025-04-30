@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/abhipai/ece_484/f1ninth/devel/include/hector_mapping/HectorDebugInfo.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/hector_mapping/HectorDebugInfo.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 hector_mapping/HectorIterData.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/hector_mapping/HectorIterData.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/hector_mapping/HectorIterData.h
 string
 -
 vector
@@ -40,7 +40,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/hector_mapping/ResetMapping.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/hector_mapping/ResetMapping.h
 ros/service_traits.h
 -
 hector_mapping/ResetMappingRequest.h
@@ -48,7 +48,7 @@ hector_mapping/ResetMappingRequest.h
 hector_mapping/ResetMappingResponse.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/hector_mapping/ResetMappingRequest.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/hector_mapping/ResetMappingRequest.h
 string
 -
 vector
@@ -66,7 +66,7 @@ ros/message_operations.h
 geometry_msgs/Pose.h
 -
 
-/home/abhipai/ece_484/f1ninth/devel/include/hector_mapping/ResetMappingResponse.h
+/home/nx/F1-Nineth/ece484-sp25/devel/include/hector_mapping/ResetMappingResponse.h
 string
 -
 vector
@@ -82,203 +82,203 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
 OccGridMapBase.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapBase.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapBase.h
 GridMapLogOdds.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapLogOdds.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapLogOdds.h
 GridMapReflectanceCount.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapReflectanceCount.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapReflectanceCount.h
 GridMapSimpleCount.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapSimpleCount.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapSimpleCount.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapBase.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapBase.h
 Eigen/Geometry
 -
 Eigen/LU
 -
 MapDimensionProperties.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/MapDimensionProperties.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/MapDimensionProperties.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapCacheArray.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapCacheArray.h
 Eigen/Core
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapLogOdds.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapLogOdds.h
 cmath
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapReflectanceCount.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapReflectanceCount.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapSimpleCount.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapSimpleCount.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/MapDimensionProperties.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/MapDimensionProperties.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapBase.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapBase.h
 GridMapBase.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapBase.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapBase.h
 ../scan/DataPointContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
 ../util/UtilFunctions.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
 Eigen/Geometry
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtil.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtil.h
 cmath
 -
 ../scan/DataPointContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
 ../util/UtilFunctions.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
 OccGridMapUtil.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtil.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtil.h
 GridMapCacheHash.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapCacheHash.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapCacheHash.h
 GridMapCacheArray.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapCacheArray.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMapCacheArray.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
 Eigen/Geometry
 -
 ../scan/DataPointContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
 ../util/UtilFunctions.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
 ../util/DrawInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
 ../util/HectorDebugInfoInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
 vector
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/HectorSlamProcessor.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/HectorSlamProcessor.h
 ../map/GridMap.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
 ../map/OccGridMapUtilConfig.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
 ../matcher/ScanMatcher.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
 ../scan/DataPointContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/scan/DataPointContainer.h
 ../util/UtilFunctions.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
 ../util/DrawInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
 ../util/HectorDebugInfoInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
 ../util/MapLockerInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/MapLockerInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/MapLockerInterface.h
 MapRepresentationInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepresentationInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepresentationInterface.h
 MapRepMultiMap.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepMultiMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepMultiMap.h
 float.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapProcContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapProcContainer.h
 ../map/GridMap.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
 ../map/OccGridMapUtilConfig.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
 ../matcher/ScanMatcher.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
 ../util/MapLockerInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/MapLockerInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/MapLockerInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepMultiMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepMultiMap.h
 MapRepresentationInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepresentationInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepresentationInterface.h
 MapProcContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapProcContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapProcContainer.h
 ../map/GridMap.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/GridMap.h
 ../map/OccGridMapUtilConfig.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/map/OccGridMapUtilConfig.h
 ../matcher/ScanMatcher.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/matcher/ScanMatcher.h
 ../util/DrawInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
 ../util/HectorDebugInfoInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepresentationInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/slam_main/MapRepresentationInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/DrawInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/HectorDebugInfoInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/MapLockerInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/MapLockerInterface.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/include/hector_slam_lib/util/UtilFunctions.h
 cmath
 -
 tf/LinearMath/Transform.h
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorDebugInfoProvider.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorDebugInfoProvider.h
 util/HectorDebugInfoInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/util/HectorDebugInfoInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/util/HectorDebugInfoInterface.h
 util/UtilFunctions.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/util/UtilFunctions.h
 ros/ros.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/ros/ros.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/ros/ros.h
 hector_mapping/HectorDebugInfo.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/hector_mapping/HectorDebugInfo.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/hector_mapping/HectorDebugInfo.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorDrawings.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorDrawings.h
 util/DrawInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/util/DrawInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/util/DrawInterface.h
 util/UtilFunctions.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/util/UtilFunctions.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/util/UtilFunctions.h
 ros/ros.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/ros/ros.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/ros/ros.h
 visualization_msgs/MarkerArray.h
 -
 Eigen/Dense
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorMapMutex.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorMapMutex.h
 util/MapLockerInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/util/MapLockerInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/util/MapLockerInterface.h
 boost/thread/mutex.hpp
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorMappingRos.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorMappingRos.cpp
 HectorMappingRos.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorMappingRos.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorMappingRos.h
 map/GridMap.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/map/GridMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/map/GridMap.h
 geometry_msgs/PoseWithCovarianceStamped.h
 -
 nav_msgs/Odometry.h
 -
 sensor_msgs/PointCloud2.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/sensor_msgs/PointCloud2.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/sensor_msgs/PointCloud2.h
 HectorDrawings.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorDrawings.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorDrawings.h
 HectorDebugInfoProvider.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorDebugInfoProvider.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorDebugInfoProvider.h
 HectorMapMutex.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorMapMutex.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorMapMutex.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorMappingRos.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorMappingRos.h
 ros/ros.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/ros/ros.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/ros/ros.h
 tf/transform_listener.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/tf/transform_listener.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/tf/transform_listener.h
 tf/transform_broadcaster.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/tf/transform_broadcaster.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/tf/transform_broadcaster.h
 tf/message_filter.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/tf/message_filter.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/tf/message_filter.h
 message_filters/subscriber.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/message_filters/subscriber.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/message_filters/subscriber.h
 sensor_msgs/LaserScan.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/sensor_msgs/LaserScan.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/sensor_msgs/LaserScan.h
 std_msgs/String.h
 -
 hector_mapping/ResetMapping.h
@@ -288,25 +288,21 @@ std_srvs/SetBool.h
 std_srvs/Trigger.h
 -
 laser_geometry/laser_geometry.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/laser_geometry/laser_geometry.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/laser_geometry/laser_geometry.h
 nav_msgs/GetMap.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/nav_msgs/GetMap.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/nav_msgs/GetMap.h
 slam_main/HectorSlamProcessor.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/slam_main/HectorSlamProcessor.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/slam_main/HectorSlamProcessor.h
 scan/DataPointContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/scan/DataPointContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/scan/DataPointContainer.h
 util/MapLockerInterface.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/util/MapLockerInterface.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/util/MapLockerInterface.h
 boost/thread.hpp
 -
 PoseInfoContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/PoseInfoContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/PoseInfoContainer.h
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/PoseInfoContainer.cpp
-PoseInfoContainer.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/PoseInfoContainer.h
-
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/PoseInfoContainer.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/PoseInfoContainer.h
 tf/transform_datatypes.h
 -
 geometry_msgs/PoseStamped.h
@@ -316,11 +312,11 @@ geometry_msgs/PoseWithCovarianceStamped.h
 Eigen/Core
 -
 
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/main.cpp
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/main.cpp
 ros/ros.h
 -
 HectorMappingRos.h
-/home/abhipai/ece_484/f1ninth/src/hector_slam/hector_mapping/src/HectorMappingRos.h
+/home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_mapping/src/HectorMappingRos.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string
@@ -671,7 +667,7 @@ ros/message_event.h
 -
 ros/parameter_adapter.h
 -
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 boost/thread/mutex.hpp
 -
@@ -687,7 +683,7 @@ ros/message_event.h
 -
 ros/subscription_callback_helper.h
 -
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 string
 -
@@ -1105,6 +1101,8 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
+boost/bind.hpp
+-
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -1149,7 +1147,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 boost/thread/mutex.hpp
 -
@@ -1766,44 +1764,12 @@ Quaternion.h
 ros/macros.h
 -
 
-/opt/ros/noetic/include/tf/LinearMath/MinMax.h
-
-/opt/ros/noetic/include/tf/LinearMath/QuadWord.h
-Scalar.h
-/opt/ros/noetic/include/tf/LinearMath/Scalar.h
-MinMax.h
-/opt/ros/noetic/include/tf/LinearMath/MinMax.h
-altivec.h
--
-
 /opt/ros/noetic/include/tf/LinearMath/Quaternion.h
 Vector3.h
 /opt/ros/noetic/include/tf/LinearMath/Vector3.h
 QuadWord.h
 /opt/ros/noetic/include/tf/LinearMath/QuadWord.h
 ros/macros.h
--
-
-/opt/ros/noetic/include/tf/LinearMath/Scalar.h
-math.h
--
-stdlib.h
--
-cstdlib
--
-cfloat
--
-float.h
--
-ppcintrinsics.h
--
-assert.h
--
-assert.h
--
-assert.h
--
-assert.h
 -
 
 /opt/ros/noetic/include/tf/LinearMath/Transform.h

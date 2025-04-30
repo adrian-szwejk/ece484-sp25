@@ -43,89 +43,89 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abhipai/ece_484/f1ninth/src
+CMAKE_SOURCE_DIR = /home/nx/F1-Nineth/ece484-sp25/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abhipai/ece_484/f1ninth/build
+CMAKE_BINARY_DIR = /home/nx/F1-Nineth/ece484-sp25/build
 
 # Utility rule file for hector_nav_msgs_generate_messages_py.
 
 # Include the progress variables for this target.
 include hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/progress.make
 
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py
 
 
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV hector_nav_msgs/GetDistanceToObstacle"
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV hector_nav_msgs/GetDistanceToObstacle"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv
 
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV hector_nav_msgs/GetRecoveryInfo"
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV hector_nav_msgs/GetRecoveryInfo"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv
 
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV hector_nav_msgs/GetRobotTrajectory"
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV hector_nav_msgs/GetRobotTrajectory"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv
 
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV hector_nav_msgs/GetSearchPosition"
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV hector_nav_msgs/GetSearchPosition"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv
 
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV hector_nav_msgs/GetNormal"
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV hector_nav_msgs/GetNormal"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv
 
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py
-/home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abhipai/ece_484/f1ninth/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for hector_nav_msgs"
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv --initpy
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py
+/home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for hector_nav_msgs"
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv --initpy
 
 hector_nav_msgs_generate_messages_py: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py
-hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py
-hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py
-hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py
-hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py
-hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py
-hector_nav_msgs_generate_messages_py: /home/abhipai/ece_484/f1ninth/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py
+hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py
+hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py
+hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py
+hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py
+hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py
+hector_nav_msgs_generate_messages_py: /home/nx/F1-Nineth/ece484-sp25/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py
 hector_nav_msgs_generate_messages_py: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/build.make
 
 .PHONY : hector_nav_msgs_generate_messages_py
@@ -136,10 +136,10 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/build
 
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/clean:
-	cd /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/hector_nav_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && $(CMAKE_COMMAND) -P CMakeFiles/hector_nav_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/clean
 
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/depend:
-	cd /home/abhipai/ece_484/f1ninth/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abhipai/ece_484/f1ninth/src /home/abhipai/ece_484/f1ninth/src/hector_slam/hector_nav_msgs /home/abhipai/ece_484/f1ninth/build /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs /home/abhipai/ece_484/f1ninth/build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nx/F1-Nineth/ece484-sp25/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nx/F1-Nineth/ece484-sp25/src /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs /home/nx/F1-Nineth/ece484-sp25/build /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/depend
 

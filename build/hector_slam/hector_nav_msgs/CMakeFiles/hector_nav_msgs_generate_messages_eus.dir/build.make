@@ -63,50 +63,50 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus: /h
 
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from hector_nav_msgs/GetDistanceToObstacle.srv"
 	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv
 
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from hector_nav_msgs/GetRecoveryInfo.srv"
 	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv
 
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from hector_nav_msgs/GetRobotTrajectory.srv"
 	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv
 
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from hector_nav_msgs/GetSearchPosition.srv"
 	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv
 
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
-/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from hector_nav_msgs/GetNormal.srv"
 	cd /home/nx/F1-Nineth/ece484-sp25/build/hector_slam/hector_nav_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/nx/F1-Nineth/ece484-sp25/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/noetic/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hector_nav_msgs -o /home/nx/F1-Nineth/ece484-sp25/devel/share/roseus/ros/hector_nav_msgs/srv
 

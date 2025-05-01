@@ -66,6 +66,7 @@ all: hector_slam/hector_map_tools/all
 all: hector_slam/hector_nav_msgs/all
 all: f1tenth_system/vesc/vesc/all
 all: f1tenth_system/vesc/vesc_msgs/all
+all: vision/all
 all: hector_slam/hector_geotiff/all
 all: hector_slam/hector_geotiff_plugins/all
 all: hector_slam/hector_marker_drawing/all
@@ -100,6 +101,7 @@ preinstall: hector_slam/hector_map_tools/preinstall
 preinstall: hector_slam/hector_nav_msgs/preinstall
 preinstall: f1tenth_system/vesc/vesc/preinstall
 preinstall: f1tenth_system/vesc/vesc_msgs/preinstall
+preinstall: vision/preinstall
 preinstall: hector_slam/hector_geotiff/preinstall
 preinstall: hector_slam/hector_geotiff_plugins/preinstall
 preinstall: hector_slam/hector_marker_drawing/preinstall
@@ -139,6 +141,7 @@ clean: hector_slam/hector_map_tools/clean
 clean: hector_slam/hector_nav_msgs/clean
 clean: f1tenth_system/vesc/vesc/clean
 clean: f1tenth_system/vesc/vesc_msgs/clean
+clean: vision/clean
 clean: hector_slam/hector_geotiff/clean
 clean: hector_slam/hector_geotiff_plugins/clean
 clean: hector_slam/hector_marker_drawing/clean
@@ -586,8 +589,8 @@ hector_slam/hector_compressed_map_transport/clean: hector_slam/hector_compressed
 
 # Recursive "all" directory target.
 hector_slam/hector_geotiff/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all
-hector_slam/hector_geotiff/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 hector_slam/hector_geotiff/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all
+hector_slam/hector_geotiff/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 
 .PHONY : hector_slam/hector_geotiff/all
 
@@ -597,19 +600,9 @@ hector_slam/hector_geotiff/preinstall:
 .PHONY : hector_slam/hector_geotiff/preinstall
 
 # Recursive "clean" directory target.
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean
 hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/clean
+hector_slam/hector_geotiff/clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean
 
 .PHONY : hector_slam/hector_geotiff/clean
 
@@ -914,6 +907,33 @@ racecar_worlds/preinstall:
 racecar_worlds/clean:
 
 .PHONY : racecar_worlds/clean
+
+#=============================================================================
+# Directory level rules for directory vision
+
+# Recursive "all" directory target.
+vision/all:
+
+.PHONY : vision/all
+
+# Recursive "preinstall" directory target.
+vision/preinstall:
+
+.PHONY : vision/preinstall
+
+# Recursive "clean" directory target.
+vision/clean: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+vision/clean: vision/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+vision/clean: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+vision/clean: vision/CMakeFiles/roscpp_generate_messages_py.dir/clean
+vision/clean: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+vision/clean: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+vision/clean: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+vision/clean: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+vision/clean: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+vision/clean: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : vision/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -3288,166 +3308,274 @@ f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/
 .PHONY : f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir
+# Target rules for target vision/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make vision/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make vision/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+vision/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+roscpp_generate_messages_cpp: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 .PHONY : roscpp_generate_messages_cpp
 
 # clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+vision/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make vision/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir
+# Target rules for target vision/CMakeFiles/roscpp_generate_messages_eus.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/build
+vision/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_eus.dir/build.make vision/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_eus.dir/build.make vision/CMakeFiles/roscpp_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+vision/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_eus: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+roscpp_generate_messages_eus: vision/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 .PHONY : roscpp_generate_messages_eus
 
 # clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+vision/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_eus.dir/build.make vision/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir
+# Target rules for target vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_py: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/rule
+rosgraph_msgs_generate_messages_nodejs: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target vision/CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+vision/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_py.dir/build.make vision/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_py.dir/build.make vision/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+vision/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: vision/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 .PHONY : roscpp_generate_messages_py
 
 # clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/clean
+vision/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_py.dir/build.make vision/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir
+# Target rules for target vision/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_nodejs: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+roscpp_generate_messages_nodejs: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 .PHONY : roscpp_generate_messages_nodejs
 
 # clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+rosgraph_msgs_generate_messages_cpp: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_cpp
 
 # clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+# Target rules for target vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+rosgraph_msgs_generate_messages_eus: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_eus
 
 # clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target vision/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make vision/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make vision/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+vision/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+vision/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make vision/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : vision/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir
@@ -3479,16 +3607,16 @@ hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_n
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build
@@ -3511,176 +3639,6 @@ geotiff_node: hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/rule
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/clean:
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/clean
 .PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/clean
-
-#=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir
-
-# All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/depend
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=17,18 "Built target geotiff_writer"
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
-
-# Build rule for subdir invocation for target.
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 22
-	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule
-
-# Convenience name for target.
-geotiff_writer: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule
-
-.PHONY : geotiff_writer
-
-# clean rule for target.
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean:
-	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean
-.PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean
 
 #=============================================================================
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir
@@ -3712,16 +3670,16 @@ hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build
@@ -3744,6 +3702,68 @@ geotiff_saver: hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/rule
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/clean:
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/clean
 .PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/clean
+
+#=============================================================================
+# Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir
+
+# All Build rule for target.
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: f1tenth_system/ackermann_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/depend
+	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles --progress-num=17,18 "Built target geotiff_writer"
+.PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
+
+# Build rule for subdir invocation for target.
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 22
+	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nx/F1-Nineth/ece484-sp25/build/CMakeFiles 0
+.PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule
+
+# Convenience name for target.
+geotiff_writer: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule
+
+.PHONY : geotiff_writer
+
+# clean rule for target.
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean:
+	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean
+.PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/clean
 
 #=============================================================================
 # Target rules for target hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir
@@ -3775,16 +3795,16 @@ hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: he
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build
@@ -5241,16 +5261,16 @@ hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_eus.dir/all
@@ -5327,16 +5347,16 @@ hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
@@ -5972,16 +5992,16 @@ f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_ackermann_nodelet.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_py.dir/all
@@ -6068,16 +6088,16 @@ f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/ackermann_to_vesc_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_py.dir/all
@@ -6164,16 +6184,16 @@ f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 f1tenth_system/vesc/vesc_ackermann/CMakeFiles/vesc_to_odom_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_py.dir/all
@@ -6241,16 +6261,16 @@ f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_nodelet.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_py.dir/all
@@ -6298,16 +6318,16 @@ f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_sys
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_lisp.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_eus.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_system/vesc/vesc_msgs/CMakeFiles/vesc_msgs_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_py.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 f1tenth_system/vesc/vesc_driver/CMakeFiles/vesc_driver_node.dir/all: f1tenth_system/racecar/ackermann_cmd_mux/CMakeFiles/bond_generate_messages_py.dir/all

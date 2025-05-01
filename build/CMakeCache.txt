@@ -489,6 +489,15 @@ f1tenth_slam_BINARY_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_slam
 //Value Computed by CMake
 f1tenth_slam_SOURCE_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_slam
 
+//Value Computed by CMake
+finalproj_BINARY_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/build/vision
+
+//Value Computed by CMake
+finalproj_SOURCE_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/src/vision
+
+//The directory containing a CMake configuration file for gazebo_ros.
+gazebo_ros_DIR:PATH=gazebo_ros_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
 
@@ -991,7 +1000,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=34
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=35
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

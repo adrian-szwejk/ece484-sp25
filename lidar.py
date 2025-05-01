@@ -53,7 +53,7 @@ def main():
     rospy.init_node('test')
     # Callback fn to only interrupt car when receives data
     rospy.Subscriber('/scan', LaserScan, scan_callback)
-    #rospy.Subscriber('D435I/color/image_raw', Image, img_callback, queue_size=1)
+    rospy.Subscriber('D435I/color/image_raw', Image, img_callback, queue_size=1)
     # Inifinite loop = .spin()
     rospy.spin()
 

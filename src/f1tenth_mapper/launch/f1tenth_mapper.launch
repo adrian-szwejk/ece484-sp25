@@ -1,0 +1,13 @@
+<launch>
+    
+  <!-- launch map to  odom tf -->
+  <node name='map_odom_link' pkg='tf' type='static_transform_publisher' args='0.0 0.0 0.0 0.0 0.0 0.0 /map /odom 100'/>
+  
+  <!-- launch map to  odom tf -->
+  <node name='attach_laser' pkg='tf' type='static_transform_publisher' args='0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 100'/>
+
+	
+  <!-- slam_toolbox online_async -->
+  <node name='f1tenth_mapper' pkg='f1tenth_mapper' type='f1tenth_mapper.py' output='screen'/>
+
+</launch>

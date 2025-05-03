@@ -7,6 +7,8 @@ from nav_msgs.msg import Odometry, OccupancyGrid
 import tf2_ros
 import tf  # for quaternion → Euler
 
+INTENSITY_THRESHOLD = 5.0
+
 class F1TENTHMapper:
     def __init__(self):
         rospy.init_node("f1tenth_mapper")
@@ -29,8 +31,8 @@ class F1TENTHMapper:
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
 
         # subscribers (your namespaces!)
-        rospy.Subscriber("/car_1/scan",   LaserScan, self.scan_callback, queue_size=1)
-        rospy.Subscriber("/car_1/ground_truth", Odometry,  self.odom_callback,  queue_size=1)
+        rospy.Subscriber("/scan",   LaserScan, self.scan_callback, queue_size=1)
+        rospy.Subscriber("/vesc/odom", Odometry,  self.odom_callback,  queue_size=1)
 
         # map publisher
         self.map_pub = rospy.Publisher("/f1tenth_map", OccupancyGrid, queue_size=1)
@@ -47,7 +49,7 @@ class F1TENTHMapper:
         try:
             xf = self.tf_buffer.lookup_transform(
                 "map",
-                "car_1_base_link",
+                "base_link",
                 msg.header.stamp,
                 rospy.Duration(0.2))
         except (tf2_ros.LookupException, tf2_ros.ExtrapolationException):
@@ -67,7 +69,7 @@ class F1TENTHMapper:
         try:
             xf = self.tf_buffer.lookup_transform(
                 "map",
-                "car_1_base_link",
+                "base_link",
                 scan.header.stamp,
                 rospy.Duration(0.2))
         except (tf2_ros.LookupException, tf2_ros.ExtrapolationException):
@@ -82,10 +84,22 @@ class F1TENTHMapper:
         )
 
         # build angle array
+        # n      = len(scan.ranges)
+        # angles = scan.angle_min + np.arange(n) * scan.angle_increment
+        # ranges = np.array(scan.ranges)
+        # valid  = np.isfinite(ranges)
+        # angles = angles[valid]
+        # ranges = ranges[valid]
+
         n      = len(scan.ranges)
         angles = scan.angle_min + np.arange(n) * scan.angle_increment
         ranges = np.array(scan.ranges)
-        valid  = np.isfinite(ranges)
+        valid  = np.logical_and(np.isfinite(ranges), ranges < (scan.range_max - 1e-3))
+
+        if len(scan.intensities) == n :
+            intensities = np.array(scan.intensities)
+            valid = np.logical_and(valid, intensities > INTENSITY_THRESHOLD)
+
         angles = angles[valid]
         ranges = ranges[valid]
 

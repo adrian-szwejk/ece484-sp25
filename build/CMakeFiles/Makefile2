@@ -71,6 +71,7 @@ all: f1tenth_system/vesc/vesc_driver/all
 all: f1tenth_control/vicon_control/all
 all: f1tenth_control/vision_control/all
 all: f1tenth_system/waypoint_logger/all
+all: yolo_fruit_detector/all
 
 .PHONY : all
 
@@ -93,6 +94,7 @@ preinstall: f1tenth_system/vesc/vesc_driver/preinstall
 preinstall: f1tenth_control/vicon_control/preinstall
 preinstall: f1tenth_control/vision_control/preinstall
 preinstall: f1tenth_system/waypoint_logger/preinstall
+preinstall: yolo_fruit_detector/preinstall
 
 .PHONY : preinstall
 
@@ -120,6 +122,7 @@ clean: f1tenth_system/vesc/vesc_driver/clean
 clean: f1tenth_control/vicon_control/clean
 clean: f1tenth_control/vision_control/clean
 clean: f1tenth_system/waypoint_logger/clean
+clean: yolo_fruit_detector/clean
 
 .PHONY : clean
 
@@ -618,6 +621,24 @@ vision/clean: vision/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 vision/clean: vision/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 .PHONY : vision/clean
+
+#=============================================================================
+# Directory level rules for directory yolo_fruit_detector
+
+# Recursive "all" directory target.
+yolo_fruit_detector/all:
+
+.PHONY : yolo_fruit_detector/all
+
+# Recursive "preinstall" directory target.
+yolo_fruit_detector/preinstall:
+
+.PHONY : yolo_fruit_detector/preinstall
+
+# Recursive "clean" directory target.
+yolo_fruit_detector/clean:
+
+.PHONY : yolo_fruit_detector/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir

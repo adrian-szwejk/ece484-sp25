@@ -48,6 +48,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "racecar_worlds/catkin_generated/package.cmake"
   "vision/catkin_generated/ordered_paths.cmake"
   "vision/catkin_generated/package.cmake"
+  "yolo_fruit_detector/catkin_generated/ordered_paths.cmake"
+  "yolo_fruit_detector/catkin_generated/package.cmake"
   "/home/nx/F1-Nineth/ece484-sp25/devel/share/ackermann_msgs/cmake/ackermann_msgs-msg-extras.cmake"
   "/home/nx/F1-Nineth/ece484-sp25/devel/share/ackermann_msgs/cmake/ackermann_msgs-msg-paths.cmake"
   "/home/nx/F1-Nineth/ece484-sp25/devel/share/ackermann_msgs/cmake/ackermann_msgsConfig-version.cmake"
@@ -96,6 +98,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/nx/F1-Nineth/ece484-sp25/src/racecar_worlds/package.xml"
   "/home/nx/F1-Nineth/ece484-sp25/src/vision/CMakeLists.txt"
   "/home/nx/F1-Nineth/ece484-sp25/src/vision/package.xml"
+  "/home/nx/F1-Nineth/ece484-sp25/src/yolo_fruit_detector/CMakeLists.txt"
+  "/home/nx/F1-Nineth/ece484-sp25/src/yolo_fruit_detector/package.xml"
+  "/home/nx/F1-Nineth/ece484-sp25/src/yolo_fruit_detector/scripts/ros_yolo_fruit_node.py"
   "/opt/ros/noetic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -378,6 +383,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "f1tenth_control/vicon_control/CMakeFiles/CMakeDirectoryInformation.cmake"
   "f1tenth_control/vision_control/CMakeFiles/CMakeDirectoryInformation.cmake"
   "f1tenth_system/waypoint_logger/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "yolo_fruit_detector/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

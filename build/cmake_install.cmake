@@ -148,6 +148,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vicon_control/cmake_install.cmake")
   include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_control/vision_control/cmake_install.cmake")
   include("/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/cmake_install.cmake")
+  include("/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/cmake_install.cmake")
 
 endif()
 

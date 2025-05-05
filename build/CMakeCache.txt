@@ -555,7 +555,7 @@ joystick_drivers_BINARY_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/build/f1tenth_
 joystick_drivers_SOURCE_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_system/joystick_drivers/joystick_drivers
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libtf2.so
+lib:FILEPATH=/opt/ros/noetic/lib/libroscpp_serialization.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
@@ -710,6 +710,12 @@ waypoint_logger_SOURCE_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/src/f1tenth_sys
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
+//Value Computed by CMake
+yolo_fruit_detector_BINARY_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector
+
+//Value Computed by CMake
+yolo_fruit_detector_SOURCE_DIR:STATIC=/home/nx/F1-Nineth/ece484-sp25/src/yolo_fruit_detector
+
 
 ########################
 # INTERNAL cache entries
@@ -860,7 +866,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

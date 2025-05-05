@@ -7,6 +7,8 @@ from nav_msgs.msg import Odometry, OccupancyGrid
 import tf2_ros
 import tf  # for quaternion → Euler
 
+INTENSITY_THRESHOLD = 5.0
+
 class F1TENTHMapper:
     def __init__(self):
         rospy.init_node("f1tenth_mapper")
@@ -82,10 +84,22 @@ class F1TENTHMapper:
         )
 
         # build angle array
+        # n      = len(scan.ranges)
+        # angles = scan.angle_min + np.arange(n) * scan.angle_increment
+        # ranges = np.array(scan.ranges)
+        # valid  = np.isfinite(ranges)
+        # angles = angles[valid]
+        # ranges = ranges[valid]
+
         n      = len(scan.ranges)
         angles = scan.angle_min + np.arange(n) * scan.angle_increment
         ranges = np.array(scan.ranges)
-        valid  = np.isfinite(ranges)
+        valid  = np.logical_and(np.isfinite(ranges), ranges < (scan.range_max - 1e-3))
+
+        if len(scan.intensities) == n :
+            intensities = np.array(scan.intensities)
+            valid = np.logical_and(valid, intensities > INTENSITY_THRESHOLD)
+
         angles = angles[valid]
         ranges = ranges[valid]
 

@@ -280,3 +280,10 @@
 /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/CMakeFiles/rebuild_cache.dir
 /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/CMakeFiles/edit_cache.dir
 /home/nx/F1-Nineth/ece484-sp25/build/f1tenth_system/waypoint_logger/CMakeFiles/test.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/install/strip.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/install/local.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/install.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/list_install_components.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/rebuild_cache.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/edit_cache.dir
+/home/nx/F1-Nineth/ece484-sp25/build/yolo_fruit_detector/CMakeFiles/test.dir

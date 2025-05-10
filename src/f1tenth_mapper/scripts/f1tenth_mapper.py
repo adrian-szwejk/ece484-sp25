@@ -45,7 +45,7 @@ class F1TENTHMapper:
 
 
     def odom_callback(self, msg):
-        # get transform: map ← car_1_base_link
+        # get transform: map ← base_link
         try:
             xf = self.tf_buffer.lookup_transform(
                 "map",
@@ -65,7 +65,7 @@ class F1TENTHMapper:
 
 
     def scan_callback(self, scan: LaserScan):
-        # get same transform: map ← car_1_base_link
+        # get same transform: map ← base_link
         try:
             xf = self.tf_buffer.lookup_transform(
                 "map",
@@ -82,14 +82,6 @@ class F1TENTHMapper:
         _, _, yaw = tf.transformations.euler_from_quaternion(
             [q.x, q.y, q.z, q.w]
         )
-
-        # build angle array
-        # n      = len(scan.ranges)
-        # angles = scan.angle_min + np.arange(n) * scan.angle_increment
-        # ranges = np.array(scan.ranges)
-        # valid  = np.isfinite(ranges)
-        # angles = angles[valid]
-        # ranges = ranges[valid]
 
         n      = len(scan.ranges)
         angles = scan.angle_min + np.arange(n) * scan.angle_increment
@@ -110,8 +102,7 @@ class F1TENTHMapper:
         R     = np.array([[c, -s], [s, c]])
         pts   = R.dot(np.vstack((xs, ys))) + np.array([[tx], [ty]])
 
-        # origin cell in grid coords (not yet applied to world)
-        # this is just for raytrace start; world offset handled at publish
+        # origin cell in grid coords
         x0 = int((tx - self.start_x + (self.size*self.resolution)/2) /
                  self.resolution)
         y0 = int((ty - self.start_y + (self.size*self.resolution)/2) /
@@ -164,23 +155,23 @@ class F1TENTHMapper:
 
 
     def publish_map(self, event):
+        if self.start_x is None:
+            return  # wait for initial pose
+
         grid = OccupancyGrid()
         grid.header.stamp    = rospy.Time.now()
         grid.header.frame_id = "map"
         grid.info.resolution = self.resolution
         grid.info.width      = self.size
         grid.info.height     = self.size
-        # grid.info.origin.position.x    = -self.origin * self.resolution
-        # grid.info.origin.position.y    = -self.origin * self.resolution
-        half = (self.size * self.resolution) / 2.0
-        # center grid on start_x, start_y:
-        ox = self.start_x + half
-        oy = self.start_y + half
 
-        grid.info.origin.position.x    = ox
-        grid.info.origin.position.y    = oy
-        grid.info.origin.orientation.z = 1.0
-        grid.info.origin.orientation.w = 0.0
+        half = (self.size * self.resolution) / 2.0
+
+        # FIXED: Center map origin around start_x/start_y
+        grid.info.origin.position.x = self.start_x - half
+        grid.info.origin.position.y = self.start_y - half
+        grid.info.origin.orientation.z = 0.0  # FIXED: Valid quaternion
+        grid.info.origin.orientation.w = 1.0
         grid.data = np.fliplr(np.flipud(self.map)).flatten().tolist()
         self.map_pub.publish(grid)
 

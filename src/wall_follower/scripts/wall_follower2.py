@@ -2,14 +2,14 @@
 import rospy
 import math
 from sensor_msgs.msg import LaserScan
-from std_msgs.msg import Float64
+from ackermann_msgs.msg import AckermannDriveStamped
 
 # --- Tunable constants ---
 KP = 1.0
 KD = 0.001
 KI = 0.005     # unused for now
 L = 1.0        # look-ahead distance (m)
-MIN_DIST_LEFT = 1.2  # desired clearance from left wall (m)
+MIN_DIST_LEFT = 0.5  # desired clearance from left wall (m)
 WHEEL_RADIUS = 0.05   # set this to your wheel radius in meters
 
 # --- State ---
@@ -17,18 +17,17 @@ prev_error = 0.0
 integral = 0.0
 last_time = None
 
-# Publishers (to be initialized in main)
-steering_pub = None
-motor_pub = None
+# Publisher (to be initialized in main)
+control_pub = None
 
 def scan_callback(scan: LaserScan):
-    global prev_error, integral, last_time
+    global prev_error, integral, last_time, control_pub
 
     if rospy.is_shutdown():
         return
 
-    if steering_pub is None or motor_pub is None:
-        rospy.logwarn("Publishers not ready yet.")
+    if control_pub is None:
+        rospy.logwarn("Publisher not ready yet.")
         return
 
     # compute indices for 45° and 90°
@@ -44,6 +43,9 @@ def scan_callback(scan: LaserScan):
         dist_a = scan.range_max
     if math.isinf(dist_b) or math.isnan(dist_b):
         dist_b = scan.range_max
+
+    # Debug print raw distances
+    rospy.loginfo(f"Raw distances - a: {dist_a:.2f}m, b: {dist_b:.2f}m")
 
     # wall-angle α and projected distance dt1
     alpha = math.atan2(
@@ -66,14 +68,19 @@ def scan_callback(scan: LaserScan):
     # speed schedule based on steering magnitude
     abs_st = abs(steer)
     if abs_st > math.radians(20):
-        speed = 0.3
+        speed = 0.75  # m/s
     else:
-        speed = 0.5
+        speed = 1.5  # m/s
 
-    # --- Publish commands ---
-    steering_pub.publish(Float64(steer))
-    # convert to angular velocity for motor: v (m/s) ÷ r (m) = ω (rad/s)
-    motor_pub.publish(Float64(speed / WHEEL_RADIUS))
+    # Create and publish Ackermann message
+    drive_msg = AckermannDriveStamped()
+    drive_msg.header.stamp = rospy.Time.now()
+    drive_msg.drive.steering_angle = steer
+    drive_msg.drive.speed = speed
+
+    # Debug print before publishing
+    rospy.loginfo(f"Publishing - Speed: {speed:.2f}m/s, Steering: {math.degrees(steer):.1f}°")
+    control_pub.publish(drive_msg)
 
     # update state
     prev_error = error
@@ -81,26 +88,28 @@ def scan_callback(scan: LaserScan):
 
 def shutdown():
     rospy.loginfo("Stopping car...")
-    if steering_pub:
-        steering_pub.publish(Float64(0.0))
-    if motor_pub:
-        motor_pub.publish(Float64(0.0))
+    if control_pub:
+        stop_msg = AckermannDriveStamped()
+        stop_msg.header.stamp = rospy.Time.now()
+        stop_msg.drive.speed = 0.0
+        stop_msg.drive.steering_angle = 0.0
+        control_pub.publish(stop_msg)
 
 def main():
-    global steering_pub, motor_pub, last_time
+    global control_pub, last_time
 
     rospy.init_node('wall_follow_lowlevel_car')
-    rospy.loginfo("Starting low-level wall_follow node on real car")
+    rospy.loginfo("Starting modified wall_follow node with AckermannDriveStamped")
 
-    # Steering: single servo
-    steering_pub = rospy.Publisher(
-        '/vesc/commands/servo/position',
-        Float64, queue_size=1)
+    # Single publisher for both steering and speed
+    control_pub = rospy.Publisher(
+        '/vesc/low_level/ackermann_cmd_mux/input/navigation',
+        AckermannDriveStamped,
+        queue_size=1
+    )
 
-    # Drive: single motor speed
-    motor_pub = rospy.Publisher(
-        '/vesc/commands/motor/speed',
-        Float64, queue_size=1)
+    # Wait for publisher to register
+    rospy.sleep(0.5)
 
     # initialize timing
     last_time = rospy.Time.now().to_sec()
